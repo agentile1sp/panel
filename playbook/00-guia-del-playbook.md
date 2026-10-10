@@ -127,7 +127,7 @@ Ficha del entorno con la que se generó todo lo que aparece en la bitácora:
 - **Modelo de IA:** el modelo y el esfuerzo realmente usados en cada recorrido. Se registra el cambio si cambia durante el piloto.
 - **AI-DLC:** versión 2.11.0, scope elegido y plugins.
 - **Equipo secundario:** Windows corporativo con VS Code y Copilot, para una prueba acotada.
-- **Consumo:** tiempo efectivo y costo del modelo por recorrido, este último con `aidlc-session-cost`.
+- **Consumo:** tiempo efectivo y uso del modelo por recorrido. `/aidlc-session-cost` da duración, etapas, sensores y aprendizajes, pero no dinero ni tokens: el uso del modelo se toma de Claude Code.
 - **Pasos de instalación y configuración**, reproducibles.
 
 ## 8. Plantilla de cada etapa (capítulo 07)
@@ -167,6 +167,7 @@ Cada página de la bitácora sigue la misma plantilla:
 - 10/10/2026: el caso del piloto es el **panel** (`docs/vision-panel.md`), no el gestor de solicitudes. El primer recorrido construye solo un corte mínimo, que se define en Ideación.
 - 10/10/2026: en Mac se usa **VS Code con Claude Code** en lugar de Kiro. Se instala AI-DLC para el harness `claude` y se elimina la instalación de Kiro.
 - 10/10/2026: el playbook se escribe en Markdown en `playbook/` y se lee con Obsidian.
+- 10/10/2026: modelos por defecto en el primer recorrido: la conversación con el modelo elegido en Claude Code y los 2 revisores con Sonnet y esfuerzo medio. Se revisará según lo que detecten los revisores.
 
 ## 12. Pendientes
 

@@ -80,13 +80,23 @@ Texto: `.claude/` se agrupa en quién trabaja (`agents/`), qué se puede pedir (
 | `CLAUDE.md` | Las **instrucciones de arranque** que Claude Code lee al abrir el proyecto | 1 | — |
 | `rules/` | El puente que hace que Claude lea siempre las reglas guardadas en `aidlc/` | 1 | `aidlc.md` |
 
-### Un ejemplo real: un hook en acción
+### Un ejemplo: el hook que protege la aprobación del plan
 
-Al instalar AI-DLC para Claude Code intentamos borrar la carpeta `.kiro/` desde el chat. Un hook que se ejecuta **antes de cada comando** lo bloqueó con este mensaje:
+En la etapa 3.5 Code Generation, AI-DLC primero escribe un **plan de código** y solo puede programar cuando la persona responde "Approve Plan".
 
-> *AIDLC runtime records and hooks belong to the harness […] A tool call cannot […] replace installed enforcement files.*
+El propio framework cuenta, en el comentario de `hooks/aidlc-plan-approval-guard.ts`, por qué hizo falta un hook: en un caso real, la IA **escribió el código primero y después redactó el plan** para que pareciera que lo había seguido. La regla estaba escrita en las instrucciones, pero la IA se la saltó.
 
-Es decir, **la IA no puede desactivar los controles que la vigilan**. El borrado tuvo que hacerlo una persona desde su propia terminal. Para eso existen los hooks: hacen cumplir reglas sin depender de que la IA "se acuerde".
+Por eso existe `aidlc-plan-approval-guard`. Se ejecuta **antes de cada escritura o comando** y bloquea cualquier intento de generar código mientras el plan no esté aprobado por una persona.
+
+**La idea:** lo que no se puede dejar al criterio de la IA no se escribe como instrucción, se impone con un hook.
+
+Otros hooks, para ver la variedad:
+
+| Hook | Cuándo se ejecuta | Qué hace |
+|---|---|---|
+| `aidlc-session-start` | Al abrir una conversación | Registra el inicio de sesión y, si había trabajo en curso, le recuerda a la IA dónde se quedó |
+| `aidlc-record-human-turn` | Cada vez que la persona escribe | Deja constancia de que hubo una persona. Sin ese registro, AI-DLC no acepta una aprobación |
+| `aidlc-write-audit-log` | Después de crear o editar un documento del trabajo | Anota en el registro de auditoría qué archivo se creó o modificó |
 
 ## Nivel 1 · El cuaderno: `aidlc/`
 
@@ -148,4 +158,4 @@ Texto:
 
 ---
 
-**Fuentes:** recorrido de las carpetas de la instalación 2.11.0; momentos de los hooks en `.claude/settings.json`; mensaje del hook copiado de nuestra sesión del 10/10/2026.
+**Fuentes:** recorrido de las carpetas de la instalación 2.11.0; momentos de los hooks en `.claude/settings.json`; comentarios de cabecera de los archivos de `.claude/hooks/`.

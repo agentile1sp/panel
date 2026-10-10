@@ -90,7 +90,7 @@ Por eso existe `aidlc-plan-approval-guard`. Se ejecuta **antes de cada escritura
 
 **La idea:** lo que no se puede dejar al criterio de la IA no se escribe como instrucción, se impone con un hook.
 
-Otros hooks, para ver la variedad:
+Otros hooks, para ver la variedad:_
 
 | Hook | Cuándo se ejecuta | Qué hace |
 |---|---|---|
@@ -136,25 +136,39 @@ La memoria y el registro se explican a fondo en el capítulo 03.
 
 ```mermaid
 flowchart TD
-    P["Persona escribe /aidlc"] --> S["skills/aidlc<br/>el director"]
-    S --> SC["scopes/<br/>qué etapas tocan"]
-    S --> ST["aidlc-common/stages/<br/>qué hace la etapa"]
-    ST --> A["agents/<br/>el rol que la ejecuta"]
-    A --> D["aidlc/intents/...<br/>documentos generados"]
-    T["tools/<br/>estado y siguiente paso"] --- S
-    H["hooks/ y sensors/<br/>vigilan y registran"] -.-> A
-    H -.-> D
-    D --> G{"Gate:<br/>¿la persona aprueba?"}
-    G -- Sí --> S
-    G -- Cambios --> A
+    A["1 · Tú escribes /aidlc<br/>y describes el trabajo"]
+    B["2 · El director elige las etapas<br/>según el scope"]
+    C["3 · Lee el manual de la etapa"]
+    D["4 · Un agente hace el trabajo"]
+    E["5 · Se guardan los documentos"]
+    F{"6 · ¿Apruebas?"}
+    G["Siguiente etapa<br/>vuelve al paso 3"]
+
+    A --> B --> C --> D --> E --> F
+    F -- Sí --> G
+    F -- Pido cambios --> D
+
+    classDef persona fill:#fde68a,stroke:#b45309,color:#1f2937
+    classDef motor fill:#dbeafe,stroke:#1d4ed8,color:#1f2937
+    class A,F persona
+    class B,C,D,E,G motor
 ```
 
-Texto:
-1. La persona escribe `/aidlc`.
-2. El skill `aidlc`, el director, consulta el **scope** para saber qué etapas tocan y el **manual de la etapa** para saber qué hacer.
-3. Un **agente** ejecuta la etapa y genera documentos en `aidlc/intents/`.
-4. Las **tools** llevan el estado y deciden el siguiente paso. Los **hooks** y **sensores** vigilan y registran todo.
-5. En el **gate**, la persona aprueba (se pasa a la siguiente etapa) o pide cambios (el agente corrige).
+En amarillo, lo que haces tú. En azul, lo que hace AI-DLC.
+
+| Paso | Qué pasa | Dónde está |
+|---|---|---|
+| 1 | Escribes `/aidlc` y describes lo que quieres construir | `skills/aidlc` |
+| 2 | El director decide qué etapas tocan según el scope | `scopes/` |
+| 3 | Lee la definición de la etapa: qué hacer, qué entra y qué sale | `aidlc-common/stages/` |
+| 4 | El agente que lidera la etapa hace preguntas y genera el trabajo | `agents/` |
+| 5 | Los documentos quedan guardados en la carpeta del trabajo | `aidlc/spaces/default/intents/` |
+| 6 | AI-DLC se detiene. Si apruebas, pasa a la siguiente etapa. Si pides cambios, el agente corrige | Gate |
+
+**En segundo plano, durante todos los pasos:**
+- Las **tools** (`tools/`) llevan la cuenta: en qué etapa vamos y cuál sigue.
+- Los **hooks** (`hooks/`) vigilan cada acción y la registran en la auditoría.
+- Los **sensores** (`sensors/`) revisan cada documento que se genera.
 
 ---
 

@@ -24,5 +24,4 @@ aidlc/diagnostics/
 .claude/settings.local.json
 aidlc/.aidlc-turn-counter
 aidlc/.aidlc-readonly-latch
-.kiro/steering/aidlc-active-memory.md
 # END AI-DLC:gitignore

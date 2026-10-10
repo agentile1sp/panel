@@ -23,12 +23,12 @@ mindmap
       Presentación de AI-DLC
     .gitignore
       Qué no se sube a Git
-    Archivos propios
-      docs/, playbook/, README.md
-      El código de la aplicación
+    Código de la aplicación
+      Lo genera AI-DLC en Construcción
+      Va en la raíz, por ejemplo src/
 ```
 
-Texto: Repositorio → `.claude/` (el motor), `aidlc/` (el cuaderno), `AGENTS.md` (presentación), `.gitignore` (qué no se sube a Git) y los archivos propios del proyecto.
+Texto: Repositorio → `.claude/` (el motor), `aidlc/` (el cuaderno), `AGENTS.md` (presentación), `.gitignore` (qué no se sube a Git) y el código de la aplicación, que se genera en la raíz.
 
 | Elemento | Qué es | ¿Quién lo escribe? |
 |---|---|---|
@@ -36,8 +36,7 @@ Texto: Repositorio → `.claude/` (el motor), `aidlc/` (el cuaderno), `AGENTS.md
 | `aidlc/` | El cuaderno: reglas del equipo, cada trabajo con sus documentos y el registro de lo que pasó | AI-DLC mientras trabaja, y nosotros en las reglas |
 | `AGENTS.md` | Explica en texto qué es AI-DLC y dónde está cada cosa. Lo leen las herramientas de IA | El instalador |
 | `.gitignore` | Lista lo que no se sube a Git: archivos personales o de cada máquina | El instalador añade su bloque |
-| `docs/`, `playbook/`, `README.md` | Documentos nuestros. No son parte de AI-DLC | Nosotros |
-| Código de la aplicación | Lo que construye AI-DLC en la fase de Construcción. Va en la raíz | AI-DLC, con nuestra aprobación |
+| Código de la aplicación | Lo que construye AI-DLC en la fase de Construcción. Va en la raíz del repositorio, por ejemplo en `src/`, **nunca dentro de `aidlc/`**. La estructura de carpetas la propone AI-DLC en su plan de código y la aprobamos nosotros | AI-DLC, con nuestra aprobación |
 
 **Si cambiamos de herramienta de IA**, solo cambia el motor: con Kiro sería `.kiro/` y con Codex, `.codex/`. La carpeta `aidlc/` es la misma para todas. En este piloto pasamos de Kiro a Claude Code y `aidlc/` no se tocó.
 

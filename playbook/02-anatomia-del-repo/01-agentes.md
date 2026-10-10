@@ -37,25 +37,25 @@ Texto: 11 agentes producen (producto y negocio, arquitectura, construcción, seg
 
 | Papel | Qué hace | Ejemplo |
 |---|---|---|
-| **Lidera** | Hace preguntas, decide la estructura y escribe el documento de la etapa | `product` lidera 2.3 Análisis de requisitos |
-| **Apoya** | Aporta su especialidad al documento del líder | `devsecops` añade la parte de seguridad en 3.2 Requisitos no funcionales |
+| **Lidera** | Hace preguntas, decide la estructura y escribe el documento de la etapa | `product` lidera 2.3 Requirements Analysis |
+| **Apoya** | Aporta su especialidad al documento del líder | `devsecops` añade la parte de seguridad en 3.2 NFR Requirements |
 | **Revisa** | Lee el resultado y señala problemas antes de tu aprobación. No escribe | `product-lead` revisa los requisitos de 2.3 |
 
 ## Los 11 que producen
 
 | Agente | Rol, en una frase | Lidera | Apoya |
 |---|---|---|---|
-| `product` | Producto: entiende qué se quiere y lo convierte en requisitos | 1.1 Captura de la intención · 1.2 Investigación de mercado · 1.4 Definición del alcance · 2.3 Análisis de requisitos · 2.4 Historias de usuario | 1.6 · 1.7 · 2.5 |
-| `design` | Diseño UX/UI: pantallas, interacción y accesibilidad | 1.6 Bocetos de pantallas · 2.5 Pantallas refinadas | 2.4 · 2.6 |
-| `delivery` | Gestión: equipo, orden de entregas y traspaso entre fases | 1.5 Formación del equipo · 1.7 Aprobación y traspaso · 2.9 Plan de entregas | 1.4 · 2.7 |
-| `architect` | Arquitectura: cómo se divide el sistema y cómo se comunican sus partes | 1.3 Viabilidad · 2.6 Diseño del dominio · 2.7 Generación de unidades · 2.8 Diseño de contratos · 3.1 Diseño funcional · 3.2 Requisitos no funcionales · 3.3 Diseño no funcional | 1.1 · 2.1 · 2.9 |
-| `aws-platform` | Nube AWS: infraestructura y entornos | 3.4 Diseño de infraestructura · 4.2 Preparación de entornos | 1.3 · 2.6 · 2.8 · 3.3 · 4.7 |
-| `developer` | Desarrollo: escribe el código y entiende el código existente | 2.1 Ingeniería inversa · 3.5 Generación de código | 2.2 · 2.4 · 3.1 · 4.3 |
-| `quality` | Calidad: estrategia de pruebas y rendimiento | 3.6 Compilación y pruebas · 4.6 Validación de rendimiento | 2.2 · 2.4 · 3.2 |
+| `product` | Producto: entiende qué se quiere y lo convierte en requisitos | 1.1 Intent Capture & Framing · 1.2 Market Research · 1.4 Scope Definition · 2.3 Requirements Analysis · 2.4 User Stories | 1.6 · 1.7 · 2.5 |
+| `design` | Diseño UX/UI: pantallas, interacción y accesibilidad | 1.6 Rough Mockups · 2.5 Refined Mockups | 2.4 · 2.6 |
+| `delivery` | Gestión: equipo, orden de entregas y traspaso entre fases | 1.5 Team Formation · 1.7 Approval & Handoff · 2.9 Delivery Planning | 1.4 · 2.7 |
+| `architect` | Arquitectura: cómo se divide el sistema y cómo se comunican sus partes | 1.3 Feasibility & Constraints · 2.6 Domain Design · 2.7 Units Generation · 2.8 Contract Design · 3.1 Functional Design · 3.2 NFR Requirements · 3.3 NFR Design | 1.1 · 2.1 · 2.9 |
+| `aws-platform` | Nube AWS: infraestructura y entornos | 3.4 Infrastructure Design · 4.2 Environment Provisioning | 1.3 · 2.6 · 2.8 · 3.3 · 4.7 |
+| `developer` | Desarrollo: escribe el código y entiende el código existente | 2.1 Reverse Engineering · 3.5 Code Generation | 2.2 · 2.4 · 3.1 · 4.3 |
+| `quality` | Calidad: estrategia de pruebas y rendimiento | 3.6 Build and Test · 4.6 Performance Validation | 2.2 · 2.4 · 3.2 |
 | `devsecops` | Seguridad: amenazas, requisitos y controles de seguridad | — | 2.2 · 3.2 · 3.4 · 3.6 · 4.2 |
 | `compliance` | Cumplimiento: normativas, clasificación de datos y riesgos | — | 1.3 · 3.2 · 3.4 · 4.2 |
-| `pipeline-deploy` | Despliegues: integración continua, pipeline y puesta en marcha | 2.2 Descubrimiento de prácticas · 3.7 Pipeline de integración · 4.1 Pipeline de despliegue · 4.3 Ejecución del despliegue | — |
-| `operations` | Operación: monitoreo, incidentes y mejora continua | 4.4 Observabilidad · 4.5 Respuesta a incidentes · 4.7 Retroalimentación y optimización | — |
+| `pipeline-deploy` | Despliegues: integración continua, pipeline y puesta en marcha | 2.2 Practices Discovery · 3.7 CI Pipeline · 4.1 Deployment Pipeline · 4.3 Deployment Execution | — |
+| `operations` | Operación: monitoreo, incidentes y mejora continua | 4.4 Observability Setup · 4.5 Incident Response · 4.7 Feedback & Optimization | — |
 
 - **`devsecops` y `compliance` nunca lideran:** solo aportan su especialidad en las etapas de otros.
 - **Las 3 etapas de Inicialización (0.1 a 0.3) no tienen agente.** Las ejecuta directamente el director (`skills/aidlc`).
@@ -81,7 +81,7 @@ La revisión tiene dos intensidades:
 
 En la mayoría de las etapas **no** se lanza una IA aparte por cada agente: la misma conversación "se pone el sombrero" del rol que toca. Se lanza un agente separado (un *subagente*) solo en estos casos:
 
-- **4 etapas delegadas:** 2.1 Ingeniería inversa, 2.2 Descubrimiento de prácticas, 2.4 Historias de usuario (varios agentes trabajan juntos) y 3.5 Generación de código.
+- **4 etapas delegadas:** 2.1 Reverse Engineering, 2.2 Practices Discovery, 2.4 User Stories (varios agentes trabajan juntos) y 3.5 Code Generation.
 - **Las revisiones**, para que el revisor no esté influido por quien escribió.
 - **`composer`**, cuando se le pide un recorrido a medida.
 

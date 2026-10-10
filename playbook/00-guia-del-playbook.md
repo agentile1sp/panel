@@ -33,6 +33,7 @@ Lectores: compañeros del equipo que no conocen AI-DLC. No hace falta que sepan 
   - `mindmap` para los mapas mentales de la estructura.
   - `flowchart` para los recorridos. Lo que no usamos en el piloto se pinta en gris claro.
   - Cada diagrama lleva debajo una versión en texto, por si no se renderiza.
+- **Nombres de las etapas en inglés**, con su número, tal como aparecen en AI-DLC (por ejemplo, `2.3 Requirements Analysis`). Así coinciden con lo que muestra la herramienta. Las fases van en español.
 - **Capturas** en `playbook/assets/`, con el nombre `cap<capítulo>-<etapa>-<nn>.png`. Por ejemplo: `cap07-2.3-requirements-01.png`.
 - **Presentaciones.** Si hace falta presentar, se generan slides o una página web a partir de los capítulos. El Markdown sigue siendo la fuente.
 

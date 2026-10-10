@@ -59,7 +59,7 @@ Claude Code lo lee al abrir el proyecto. Explica a la IA qué es AI-DLC, dónde 
 
 ### `rules/aidlc.md`: el puente hacia las reglas del equipo
 
-Es un archivo de 7 líneas que hace que Claude Code cargue siempre las reglas guardadas en `aidlc/spaces/default/memory/`: `org.md`, `team.md`, `project.md` y las 4 fases. Gracias a este puente, la IA tiene presentes las reglas del equipo en toda la conversación, no solo dentro de una etapa. Las reglas en sí se explican en el capítulo 03.
+Es un archivo corto con 7 importaciones que hacen que Claude Code cargue siempre las reglas guardadas en `aidlc/spaces/default/memory/`: `org.md`, `team.md`, `project.md` y las 4 fases. Gracias a este puente, la IA tiene presentes las reglas del equipo en toda la conversación, no solo dentro de una etapa. Las reglas en sí se explican en el capítulo 03.
 
 ```mermaid
 flowchart LR

@@ -73,7 +73,7 @@ Texto: `.claude/` se agrupa en quién trabaja (`agents/`), qué se puede pedir (
 | `aidlc-common/` | **El manual**: qué hace cada una de las 33 etapas (`stages/`) y las reglas comunes para ejecutarlas (`protocols/`) | 43 archivos | `stages/inception/requirements-analysis.md` |
 | `scopes/` | Los **tamaños de recorrido**: cada uno dice qué etapas se ejecutan | 11 | `aidlc-poc.md`: probar una idea rápido, 8 etapas |
 | `knowledge/` | **Guías y plantillas** de referencia para cada rol | 60 archivos | `aidlc-architect-agent/adr-template.md` |
-| `hooks/` | **Disparadores automáticos**: se ejecutan solos en momentos fijos, registran lo que pasa y bloquean lo que no está permitido | 19 | Ver el ejemplo real más abajo |
+| `hooks/` | **Disparadores automáticos**: se ejecutan solos en momentos fijos, registran lo que pasa y bloquean lo que no está permitido | 19 | Ver el ejemplo más abajo |
 | `sensors/` | **Revisiones automáticas** de los documentos que se generan | 6 | `aidlc-required-sections.md`: comprueba que el documento tenga sus secciones obligatorias |
 | `tools/` | **Programas** que hacen lo que debe ser exacto: dónde vamos, qué etapa sigue, escribir el registro | 113 archivos | `aidlc-orchestrate.ts`: decide la siguiente etapa |
 | `settings.json` | Configuración de Claude Code: **en qué momentos** se ejecuta cada hook y **qué permisos** tiene la IA | 1 | Registra hooks en 8 momentos: al iniciar sesión, antes y después de cada acción, al terminar… |
@@ -142,8 +142,8 @@ flowchart TD
     B["2 · El director elige las etapas según el scope<br/>⚙️ deciden qué etapas tocan y en qué orden"]
     C["3 · Lee el manual de la etapa<br/>⚙️ entregan la definición y las reglas de la etapa"]
     D["4 · Un agente hace el trabajo<br/>🛡️ le pasan las reglas y bloquean pasos fuera de orden"]
-    E["5 · Se guardan los documentos<br/>🛡️ anotan cada archivo en la auditoría<br/>🔍 revisan cada documento al escribirlo"]
-    F(["6 · Tú apruebas o pides cambios<br/>🔍 revisión final: un fallo grave bloquea la aprobación<br/>🛡️ comprueban que aprueba una persona<br/>⚙️ registran la decisión y eligen la siguiente etapa"])
+    E["5 · Se guardan los documentos<br/>🛡️ anotan cada archivo en la auditoría<br/>🔍 revisan el código al escribirlo"]
+    F(["6 · Tú apruebas o pides cambios<br/>🔍 revisan los documentos antes de aprobar<br/>🛡️ comprueban que aprueba una persona<br/>⚙️ registran la decisión y eligen la siguiente etapa"])
     G["Siguiente etapa<br/>vuelve al paso 3"]
 
     A --> B --> C --> D --> E --> F
@@ -164,8 +164,8 @@ En amarillo, lo que haces tú. En azul, lo que hace AI-DLC. Los íconos muestran
 | 2 · Elegir etapas | El director (`skills/aidlc`) consulta el scope (`scopes/`) | `aidlc-orchestrate`: decide qué etapas tocan | — | — |
 | 3 · Leer la etapa | Lee qué hacer, qué entra y qué sale (`aidlc-common/stages/`) | Entregan la definición y las reglas de la etapa | — | — |
 | 4 · El agente trabaja | El agente (`agents/`) pregunta y genera | — | `deliver-stage-rules`: le pasa las reglas al agente · `plan-approval-guard` y `state-transition-guard`: bloquean pasos fuera de orden | — |
-| 5 · Se guardan documentos | Quedan en `aidlc/spaces/default/intents/` | — | `write-audit-log`: anota cada archivo creado o modificado | Revisan el documento al escribirlo (solo avisan) |
-| 6 · Tú apruebas | Gate: apruebas o pides cambios | Registran la decisión y eligen la siguiente etapa | `record-human-turn`: sin una persona, no hay aprobación | Revisión final: un fallo grave bloquea la aprobación |
+| 5 · Se guardan documentos | Quedan en `aidlc/spaces/default/intents/` | — | `write-audit-log`: anota cada archivo creado o modificado | Revisan el código al escribirlo: estilo, tipos y trazabilidad |
+| 6 · Tú apruebas | Gate: apruebas o pides cambios | Registran la decisión y eligen la siguiente etapa | `record-human-turn`: sin una persona, no hay aprobación | Revisan los documentos: secciones obligatorias, fuentes y cobertura. Por defecto solo avisan |
 
 ---
 

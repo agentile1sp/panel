@@ -84,19 +84,19 @@ Ordenados de menor a mayor. Cada celda indica cuántas etapas de esa fase entran
 
 ### Con cuánto rigor
 
-| Scope | Detalle | Esqueleto | Revisión máxima | Controles | Aprobar plan de código | Confirmar resumen |
-|---|---|---|---|---|---|---|
-| `poc` | Minimal | sí | consultiva | apagados | no | sí |
-| `bugfix` | Minimal | no | consultiva | apagados | sí | no |
-| `express` | Minimal | no | **sin revisión** | apagados | no | no |
-| `refactor` | Minimal | no | sin límite | apagados | sí | sí |
-| `security-patch` | Minimal | no | sin límite | apagados | sí | sí |
-| `infra` | Standard | sí | sin límite | apagados | sí | sí |
-| `classic` | Standard | no | consultiva | apagados | sí | no |
-| `mvp` | Standard | sí | sin límite | apagados | sí | sí |
-| `workshop` | Standard | sí | consultiva | apagados | sí | sí |
-| `feature` | Standard | sí | sin límite | apagados | sí | sí |
-| `enterprise` | **Comprehensive** | sí | sin límite | **estrictos** | sí | sí |
+| Scope | Detalle | Esqueleto | Revisión máxima | Controles | Aprobar plan de código | Confirmar resumen | Agentes de apoyo |
+|---|---|---|---|---|---|---|---|
+| `poc` | Minimal | sí | consultiva | apagados | no | sí | no |
+| `bugfix` | Minimal | no | consultiva | apagados | sí | no | no |
+| `express` | Minimal | no | **sin revisión** | apagados | no | no | no |
+| `refactor` | Minimal | no | sin límite | apagados | sí | sí | no |
+| `security-patch` | Minimal | no | sin límite | apagados | sí | sí | no |
+| `infra` | Standard | sí | sin límite | apagados | sí | sí | no |
+| `classic` | Standard | no | consultiva | apagados | sí | no | no |
+| `mvp` | Standard | sí | sin límite | apagados | sí | sí | no |
+| `workshop` | Standard | sí | consultiva | apagados | sí | sí | no |
+| `feature` | Standard | sí | sin límite | apagados | sí | sí | no |
+| `enterprise` | **Comprehensive** | sí | sin límite | **estrictos** | sí | sí | **sí** |
 
 Qué significa cada columna:
 - **Detalle** (*depth*): cuánto profundiza cada etapa. **Minimal**: pedido claro y acotado. **Standard**: alcance moderado, con algunas incógnitas. **Comprehensive**: alcance grande o dominio complejo.
@@ -105,12 +105,13 @@ Qué significa cada columna:
 - **Controles** (*guard_policy*): el rigor ante cambios en documentos ya aprobados. **Apagados** no significa sin control: los cambios se registran y se avisan, y la presencia de una persona para aprobar se exige siempre.
 - **Aprobar plan de código** (*plan_approval*): si hay que aprobar el plan antes de que se escriba código. Es el control del hook `plan-approval-guard`.
 - **Confirmar resumen** (*summary_confirmation*): si, antes de escribir un documento, te muestra un resumen de lo que entendió para que lo confirmes.
+- **Agentes de apoyo** (*collaborators*): si participan los agentes que apoyan al líder. Cuando está en "no", cada etapa la hace solo el agente líder. Se puede activar con `/aidlc --collaborators on`.
 
 ### Cuatro cosas que no se ven a primera vista
 
 1. **El scope marca las etapas candidatas, pero las condicionales se siguen evaluando.** `poc` incluye 2.1 Reverse Engineering, pero si no hay código existente se salta. En un proyecto nuevo, `poc` ejecuta 7 etapas, no 8.
 2. **ALWAYS no significa "en todos los scopes".** 1.1 Intent Capture es ALWAYS, pero `bugfix` no la incluye porque un bug no necesita definir una intención.
-3. **`feature` y `enterprise` ejecutan las mismas 33 etapas.** Cambia el rigor: `enterprise` usa detalle Comprehensive, controles estrictos y la participación de todos los agentes de apoyo.
+3. **`feature` y `enterprise` ejecutan las mismas 33 etapas.** Cambia el rigor: `enterprise` usa detalle Comprehensive y controles estrictos, y es el único scope en el que participan los agentes de apoyo.
 4. **`poc` y `express` no piden aprobar el plan de código.** Lo dejan escrito y te avisan, pero empiezan a programar. Es decir, el scope puede relajar un control que en otros scopes es obligatorio.
 
 ---

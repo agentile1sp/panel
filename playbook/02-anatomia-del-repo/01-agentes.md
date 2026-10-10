@@ -57,7 +57,8 @@ Texto: 11 agentes producen (producto y negocio, arquitectura, construcción, seg
 | `pipeline-deploy` | Despliegues: integración continua, pipeline y puesta en marcha | 2.2 Practices Discovery · 3.7 CI Pipeline · 4.1 Deployment Pipeline · 4.3 Deployment Execution | — |
 | `operations` | Operación: monitoreo, incidentes y mejora continua | 4.4 Observability Setup · 4.5 Incident Response · 4.7 Feedback & Optimization | — |
 
-- **`devsecops` y `compliance` nunca lideran:** solo aportan su especialidad en las etapas de otros.
+- **Los agentes de apoyo solo participan si el scope lo activa.** Por defecto, solo el scope `enterprise` los incluye. En los demás, cada etapa la hace solo el agente líder, salvo que se active con `/aidlc --collaborators on`. Ver el archivo de etapas y scopes.
+- **`devsecops` y `compliance` nunca lideran:** solo aportan su especialidad en las etapas de otros. Por eso, fuera de `enterprise`, no intervienen si no se activan los agentes de apoyo.
 - **Las 3 etapas de Inicialización (0.1 a 0.3) no tienen agente.** Las ejecuta directamente el director (`skills/aidlc`).
 
 ## Los 2 que revisan

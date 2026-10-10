@@ -30,17 +30,34 @@ flowchart LR
 
 Texto: Inicialización → Ideación → Concepción → Construcción → Operación.
 
-| Fase | Pregunta que responde | Etapas | ALWAYS / condicionales | Ejemplo con el panel |
-|---|---|---:|---|---|
-| 0 · Inicialización (*Initialization*) | ¿Dónde guardamos el trabajo? | 3 | 3 / 0 | Crea la carpeta donde quedará todo lo del piloto |
-| 1 · Ideación (*Ideation*) | ¿Qué queremos y por qué? | 7 | 3 / 4 | Decidir qué parte mínima del panel construimos primero |
-| 2 · Concepción (*Inception*) | ¿Qué exactamente, en qué partes y en qué orden? | 9 | 3 / 6 | Requisitos del catálogo de productos, dividirlo en unidades y planificar |
-| 3 · Construcción (*Construction*) | ¿Funciona? | 7 | 2 / 5 | Escribir el código y las pruebas |
-| 4 · Operación (*Operation*) | ¿Corre bien en un entorno real? | 7 | 0 / 7 | Desplegarlo, observarlo y mejorarlo |
-| **Total** | | **33** | **11 / 22** | |
+| Fase                                  | Pregunta que responde                           | Etapas | ALWAYS | Condicionales |
+| ------------------------------------- | ----------------------------------------------- | -----: | -----: | ------------: |
+| 0 · Inicialización (*Initialization*) | ¿Dónde guardamos el trabajo?                    |      3 |      3 |             0 |
+| 1 · Ideación (*Ideation*)             | ¿Qué queremos y por qué?                        |      7 |      3 |             4 |
+| 2 · Concepción (*Inception*)          | ¿Qué exactamente, en qué partes y en qué orden? |      9 |      3 |             6 |
+| 3 · Construcción (*Construction*)     | ¿Funciona?                                      |      7 |      2 |             5 |
+| 4 · Operación (*Operation*)           | ¿Corre bien en un entorno real?                 |      7 |      0 |             7 |
+| **Total**                             |                                                 | **33** | **11** |        **22** |
 
-- **ALWAYS:** etapa que se ejecuta siempre que el scope elegido la incluya.
-- **Condicional:** etapa que solo se ejecuta si aplica al trabajo. Por ejemplo, "diseño de infraestructura" no aplica si no hay infraestructura.
+### ALWAYS y condicionales
+
+Cada etapa es de uno de los dos tipos. En cada fase, ALWAYS + condicionales = total de etapas. Por ejemplo, Ideación: 3 + 4 = 7.
+
+- **ALWAYS:** se ejecuta siempre, sin preguntar si hace falta.
+- **Condicional:** antes de ejecutarla, AI-DLC revisa si aplica a este trabajo. Si aplica, la ejecuta. Si no, la salta y deja anotado por qué.
+
+Ejemplos de etapas condicionales:
+
+| Etapa | Se ejecuta si… | Se salta si… |
+|---|---|---|
+| 1.2 Investigación de mercado | Hay que posicionarse en el mercado o decidir entre comprar y construir | Es una herramienta interna, un bug o un refactor |
+| 1.6 Bocetos de pantallas | El trabajo tiene interfaz de usuario | Es solo una API o infraestructura |
+| 2.1 Ingeniería inversa | Ya existe código que hay que entender | Se parte de cero |
+| 3.4 Diseño de infraestructura | Hay que definir servidores o recursos en la nube | No hay cambios de infraestructura |
+
+Por qué hay dos ceros en la tabla:
+- **Inicialización tiene 0 condicionales** porque sus 3 etapas (crear las carpetas, detectar el proyecto e iniciar el registro) siempre hacen falta. Ningún trabajo empieza sin ellas.
+- **Operación tiene 0 ALWAYS** porque no todo trabajo llega a desplegarse. Un prototipo puede terminar en Construcción, así que todas sus etapas dependen del caso.
 
 ## 4. Las piezas, en una línea cada una
 

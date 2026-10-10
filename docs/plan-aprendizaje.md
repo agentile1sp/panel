@@ -72,7 +72,7 @@ La ruta reducida debe ser soportada por la versión/harness, revisada y registra
 
 ## 5. Caso, entorno y alcance
 Caso del piloto: el **panel** de conocimiento, arquitectura y observabilidad de productos tecnológicos descrito en `docs/vision-panel.md` (reemplaza al caso didáctico anterior, el gestor de solicitudes internas). Se usan datos ficticios. El panel completo excede las 63 h: el primer recorrido construye solo un corte mínimo, cuyo alcance exacto se decide y registra en Ideación (1.1 Intent Capture y 1.4 Scope Definition). Los recorridos siguientes amplían ese corte.
-- Mac (equipo principal): VS Code + Claude Code. Cambio del 10 de octubre de 2026: sustituye a Kiro porque la versión gratuita de Kiro limita los modelos disponibles y Claude Code permite usar modelos más avanzados. El framework instalado para Kiro (`.kiro/`) se conserva, pero no se usa en las ejecuciones.
+- Mac (equipo principal): VS Code + Claude Code. Cambio del 10 de octubre de 2026: sustituye a Kiro porque la versión gratuita de Kiro limita los modelos disponibles y Claude Code permite usar modelos más avanzados. El framework instalado para Kiro (`.kiro/`) se elimina del repositorio y queda solo en el historial de Git.
 - Windows corporativo: VS Code + Copilot, sin cambios.
 - Seleccionar un equipo principal para las ejecuciones; comprobar el segundo con una prueba acotada. Ejecutar todos los recorridos dos veces no está incluido en las 63 h.
 - Reutilizar aplicación, artefactos y puntos de recuperación. Trabajar cambios en ramas/copias adecuadas; conservar evidencia previa.
@@ -208,7 +208,7 @@ Al 7 de octubre de 2026:
 Siguiente acción: retomar el paso 3 en Windows; luego fijar versión e instalar/configurar el framework en ambos equipos.
 
 Actualización al 10 de octubre de 2026:
-- Mac: AI-DLC 2.11.0 instalado para Kiro (commit `chore: configurar AI-DLC 2.11.0 para Kiro`). Se decide ejecutar con VS Code + Claude Code; falta instalar el framework para el harness `claude`.
+- Mac: AI-DLC 2.11.0 instalado para Kiro (commit `chore: configurar AI-DLC 2.11.0 para Kiro`). Se decide ejecutar con VS Code + Claude Code: AI-DLC 2.11.0 instalado para el harness `claude` (`.claude/`) y eliminada la instalación de Kiro.
 - Caso del piloto: el panel (`docs/vision-panel.md`), en lugar del gestor de solicitudes.
 - Se inicia el playbook para el equipo en `playbook/`, que se construye a medida que avanza el piloto.
 

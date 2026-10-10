@@ -12,8 +12,6 @@ aidlc/.aidlc-claim-registry.json
 aidlc/.aidlc-unit-releases/
 aidlc/.aidlc-unit-merges/
 aidlc/.aidlc-active-space-*.tmp
-aidlc/.aidlc-turn-counter
-aidlc/.aidlc-readonly-latch
 aidlc/.aidlc-sessions/
 aidlc/spaces/*/intents/.aidlc-*
 **/aidlc/spaces/*/intents/**/.aidlc-engine/
@@ -23,5 +21,7 @@ aidlc/spaces/*/knowledge/.sources.local.json
 aidlc/spaces/*/intents/*/runtime-graph.json
 aidlc/spaces/*/intents/*/.aidlc-*
 aidlc/diagnostics/
-.kiro/steering/aidlc-active-memory.md
+.claude/settings.local.json
+aidlc/.aidlc-turn-counter
+aidlc/.aidlc-readonly-latch
 # END AI-DLC:gitignore

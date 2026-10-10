@@ -6,9 +6,9 @@
 
 | | Skill | Hook |
 |---|---|---|
-| Qué es | Una **receta** escrita que la IA lee y sigue | Un **programa** que Claude Code ejecuta solo |
+| Qué es | Un **pedido** escrito: instrucciones que la IA lee y sigue | Un **programa** que Claude Code ejecuta solo |
 | Quién lo activa | Tú, al escribir `/nombre` | Claude Code, en momentos fijos |
-| ¿La IA puede desviarse? | Puede equivocarse al seguirla | No: el programa se ejecuta igual siempre |
+| ¿La IA puede desviarse? | Puede equivocarse al seguirlo | No: el programa se ejecuta igual siempre |
 
 Cada skill es una carpeta con un archivo `SKILL.md`, que contiene las instrucciones para la IA.
 
@@ -94,6 +94,44 @@ Ninguno cambia el trabajo ni avanza etapas: solo leen el registro.
 ## 5 · Documentos: 1 skill
 
 **`/aidlc-knowledge`** registra **documentos propios del equipo** (PDF, Word, Markdown, texto) en un catálogo para que los agentes los consulten y los citen. Por ejemplo, un manual interno de arquitectura o una normativa. Nunca avanza etapas ni aprueba nada. Se explica en el capítulo 03.
+
+## Skill, jefe, etapa, agente y hook: cómo se relacionan
+
+Son las piezas que más se confunden. Con el ejemplo de un restaurante:
+
+| Pieza | En el restaurante | En AI-DLC | ¿Quién lo activa? |
+|---|---|---|---|
+| **Skill** | El **pedido** que haces | El comando que escribes: `/aidlc`, `/aidlc-mvp`… | Tú |
+| **Jefe** | El **jefe de cocina**, que organiza | `/aidlc`: decide qué etapa toca y quién la hace | Cualquier skill de AI-DLC |
+| **Etapa** | La **receta** | La definición en `aidlc-common/stages/`: qué hacer, qué entra y qué sale | El jefe |
+| **Agente** | El **cocinero especialista** | El rol en `agents/`, con su conocimiento en `knowledge/` | El jefe, según la etapa |
+| **Hook** | El **inspector**, que vigila siempre | El programa en `hooks/` | Claude Code, solo |
+
+```mermaid
+flowchart TD
+    T["Tú escribes un skill<br/>/aidlc o un atajo"] --> J["El jefe /aidlc<br/>decide qué etapa toca"]
+    J --> E["La etapa dice<br/>qué hacer y quién lo lidera"]
+    E --> A["El agente especialista<br/>hace el trabajo"]
+    A --> R["El agente revisor<br/>revisa, si la etapa lo pide"]
+    R --> P(["Tú apruebas"])
+    P --> J
+
+    classDef persona fill:#fde68a,stroke:#b45309,color:#1f2937
+    classDef motor fill:#dbeafe,stroke:#1d4ed8,color:#1f2937
+    class T,P persona
+    class J,E,A,R motor
+```
+
+Texto: tú escribes un skill → el jefe decide la etapa → la etapa dice qué hacer y quién la lidera → el agente trabaja → el revisor revisa → tú apruebas → vuelta al jefe. Los hooks vigilan todo el recorrido.
+
+**Lo que hay que recordar:**
+- **Nunca llamas a un agente directamente.** Escribas el skill que escribas, el que elige al agente es siempre el jefe, según la etapa.
+- **Los atajos no se saltan al jefe:** solo le dan una orden más concreta. `/aidlc-requirements-analysis` le dice "haz solo la etapa 2.3".
+- **Los agentes no "tienen skills".** Lo que los hace especialistas es su archivo en `agents/`, sus guías en `knowledge/` y las herramientas que tienen permitidas.
+
+**Cómo se activa un agente**, de dos formas:
+1. **Ponerse el sombrero** (la mayoría de las etapas): la misma conversación carga el archivo del agente y trabaja como ese rol. No arranca otra IA.
+2. **Lanzar un subagente** (4 etapas, las revisiones y el `composer`): el jefe abre una IA aparte, con su propio contexto. El hook `deliver-stage-rules` le entrega las reglas de la etapa y el hook `log-subagent` registra cuando termina.
 
 ---
 

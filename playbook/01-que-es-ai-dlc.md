@@ -61,9 +61,9 @@ Por qué hay dos ceros en la tabla:
 
 ## 4. Las piezas, en una línea cada una
 
-| Pieza | Qué es | Ejemplo en el piloto |
+| Pieza | Qué es | Ejemplo |
 |---|---|---|
-| **Intent** | Una pieza de trabajo, de principio a fin | "Construir el primer corte del panel" |
+| **Intent** | Una pieza de trabajo, de principio a fin | "Crear un sistema para pedir vacaciones" |
 | **Fase** | Un bloque grande del recorrido (hay 5) | Concepción |
 | **Etapa** | Un paso concreto dentro de una fase (hay 33) | 2.3 Requirements Analysis |
 | **Scope** | El tamaño de recorrido que eliges. Decide qué etapas se ejecutan (hay 11) | `poc` ejecuta 8 etapas y `feature`, las 33 |
@@ -75,13 +75,13 @@ Las piezas internas (hooks, sensores, herramientas, memoria) se explican en los 
 
 ## 5. Cinco cosas que no hay que confundir
 
-| Concepto | Qué es | En nuestro piloto |
+| Concepto | Qué es | Ejemplo |
 |---|---|---|
 | **Método** | La forma de trabajar: fases, etapas y aprobaciones | AI-DLC |
 | **Framework** | El software que implementa el método y se instala en un proyecto | AI-DLC 2.11.0, del repositorio oficial [awslabs/aidlc-workflows](https://github.com/awslabs/aidlc-workflows) |
 | **Harness** | La herramienta de IA donde corre el framework | Claude Code dentro de VS Code. Otras opciones: Kiro, Codex, Cursor, Copilot |
 | **Modelo** | La IA que piensa y escribe | El que elegimos en Claude Code (ver capítulo 04) |
-| **Producto** | Lo que construimos con todo lo anterior | El panel, en nuestro repositorio `agentile1sp/panel` |
+| **Producto** | Lo que construimos con todo lo anterior | El sistema para pedir vacaciones |
 
 "El repositorio de AI-DLC" puede significar dos cosas:
 - **El repositorio oficial de AWS** (`awslabs/aidlc-workflows`): de donde viene el framework.

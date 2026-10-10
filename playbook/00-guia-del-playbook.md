@@ -95,7 +95,7 @@ playbook/
 
 La idea es que el lector baje un nivel cada vez, con un mapa mental por nivel:
 
-- **Nivel 0, la raíz.** Las carpetas principales y para qué existe cada una: el engine del harness (`.claude/` y `.kiro/`), el workspace `aidlc/`, `AGENTS.md`, `docs/` y `playbook/`.
+- **Nivel 0, la raíz.** Las carpetas principales y para qué existe cada una: el engine del harness (`.claude/`; con otros harness sería `.kiro/`, `.codex/`, etc.), el workspace `aidlc/`, `AGENTS.md`, `docs/` y `playbook/`.
 - **Nivel 1, el engine.** Qué contiene: `agents`, `skills`, `hooks`, `sensors`, `tools`, `scopes`, `knowledge`, `aidlc-common` (protocolos y etapas). Una frase por carpeta.
 - **Nivel 1, el workspace `aidlc/`.** `spaces`, `memory` (org, team, project y fases), `intents`, `knowledge` y `codekb`. Una frase por carpeta.
 - **Nivel 2, el detalle.** Dentro de cada carpeta, cada elemento con una frase: los 14 agentes, cada hook, cada sensor, cada scope, etc.
@@ -164,11 +164,11 @@ Cada página de la bitácora sigue la misma plantilla:
 ## 11. Decisiones tomadas
 
 - 10/10/2026: el caso del piloto es el **panel** (`docs/vision-panel.md`), no el gestor de solicitudes. El primer recorrido construye solo un corte mínimo, que se define en Ideación.
-- 10/10/2026: en Mac se usa **VS Code con Claude Code** en lugar de Kiro.
+- 10/10/2026: en Mac se usa **VS Code con Claude Code** en lugar de Kiro. Se instala AI-DLC para el harness `claude` y se elimina la instalación de Kiro.
 - 10/10/2026: el playbook se escribe en Markdown en `playbook/` y se lee con Obsidian.
 
 ## 12. Pendientes
 
-- Instalar AI-DLC para el harness de Claude Code antes de empezar el piloto.
+- Verificar la instalación para Claude Code con `/aidlc --doctor` en una sesión nueva.
 - Elegir el scope del primer recorrido (por ejemplo `poc`, `mvp` o `express`) y registrarlo en el capítulo 05.
 - Definir el corte mínimo del panel en Ideación.

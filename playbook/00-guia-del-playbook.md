@@ -127,7 +127,7 @@ Ficha del entorno con la que se generó todo lo que aparece en la bitácora:
 - **Modelo de IA:** el modelo y el esfuerzo realmente usados en cada recorrido. Se registra el cambio si cambia durante el piloto.
 - **AI-DLC:** versión 2.11.0, scope elegido y plugins.
 - **Equipo secundario:** Windows corporativo con VS Code y Copilot, para una prueba acotada.
-- **Consumo:** tiempo efectivo y uso del modelo por recorrido. `/aidlc-session-cost` da duración, etapas, sensores y aprendizajes, pero no dinero ni tokens: el uso del modelo se toma de Claude Code.
+- **Consumo:** tiempo efectivo, tokens y costo estimado por recorrido. `/aidlc-session-cost` da duración, etapas, sensores y aprendizajes. Los tokens y el costo estimado (a precio de lista, no es una factura) los registra AI-DLC con el hook `fold-usage` y los muestra en la barra de estado.
 - **Pasos de instalación y configuración**, reproducibles.
 
 ## 8. Plantilla de cada etapa (capítulo 07)

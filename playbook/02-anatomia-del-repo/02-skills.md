@@ -85,7 +85,7 @@ Ninguno cambia el trabajo ni avanza etapas: solo leen el registro.
 
 | Skill | Qué muestra | ¿Crea archivo? |
 |---|---|---|
-| `/aidlc-session-cost` | Números del trabajo: duración, etapas completadas, revisiones de sensores y aprendizajes. **No muestra dinero ni tokens** | No, solo en pantalla |
+| `/aidlc-session-cost` | Números del trabajo: duración, etapas completadas, revisiones de sensores y aprendizajes. No muestra dinero: los tokens y el costo estimado aparecen en la barra de estado | No, solo en pantalla |
 | `/aidlc-replay` | Un **relato de lo que pasó**, pensado para quien no estuvo presente | No, solo en pantalla |
 | `/aidlc-outcomes-pack` | Un **documento de traspaso** al cerrar el trabajo, para que otro equipo pueda mantener y continuar el sistema | Sí, `OUTCOMES.md` |
 

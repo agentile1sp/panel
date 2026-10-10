@@ -61,6 +61,29 @@ Texto: 11 agentes producen (producto y negocio, arquitectura, construcción, seg
 - **`devsecops` y `compliance` nunca lideran:** solo aportan su especialidad en las etapas de otros. Por eso, fuera de `enterprise`, no intervienen si no se activan los agentes de apoyo.
 - **Las 3 etapas de Inicialización (0.1 a 0.3) no tienen agente.** Las ejecuta directamente el director (`skills/aidlc`).
 
+## Un agente por dentro
+
+Un agente es **una persona descrita en texto**. Ejemplo real: `.claude/agents/aidlc-product-agent.md`, de unas 70 líneas.
+
+**Parte 1, la ficha.** La lee Claude Code.
+
+| Campo | Valor | Qué significa |
+|---|---|---|
+| `name` | `aidlc-product-agent` | Su identificador |
+| `description` | "Product manager and business analyst responsible for requirements…" | Quién es y qué etapas lidera |
+| `disallowedTools` | `Task` | No puede lanzar otros agentes: solo el jefe lo hace |
+| `model` | `inherit` | Usa el mismo modelo que la conversación |
+
+**Parte 2, la persona.** La lee la IA. Empieza con *"You are a senior product manager and business analyst…"* y tiene estas secciones:
+
+| Sección | Qué dice | Ejemplo |
+|---|---|---|
+| Antes de empezar | Qué guías leer obligatoriamente | Las de `knowledge/aidlc-shared/`, las suyas propias y las del equipo |
+| Responsabilidades | Qué sabe hacer | Sacar requisitos, investigar el mercado, priorizar, escribir historias de usuario, trazabilidad |
+| Colaboración | De quién recibe, con quién trabaja y a quién entrega | Recibe del usuario y de Ideación; entrega al arquitecto, al desarrollador y a calidad |
+| Memoria | Qué reglas del equipo debe consultar | `org.md`, `team.md` y `project.md` |
+| Principios | Su forma de pensar | *"Testable or it does not exist"*: si un requisito no se puede probar, es un deseo, no un requisito |
+
 ## Los 2 que revisan
 
 No escriben nada. Leen el resultado de una etapa y señalan problemas **antes** de que tú apruebes.

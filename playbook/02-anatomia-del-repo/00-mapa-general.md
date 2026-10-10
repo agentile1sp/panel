@@ -6,7 +6,15 @@ Este capítulo baja por niveles. Cada nivel se puede leer solo:
 
 - **Nivel 0:** qué hay en la raíz del repositorio.
 - **Nivel 1:** qué hay dentro de `.claude/` y de `aidlc/`.
-- **Nivel 2:** cada elemento, en una frase. Va en archivos aparte, uno por carpeta.
+- **Nivel 2:** cada elemento, en una frase. Va en archivos aparte.
+
+**Orden de lectura:**
+1. **Este archivo:** mapa general (niveles 0 y 1).
+2. [Los agentes](01-agentes.md): los 14 roles.
+3. [Los skills](02-skills.md): los comandos con `/`, y cómo se relacionan skill, jefe, etapa, agente y hook.
+4. [Etapas y scopes](03-etapas-y-scopes.md): una etapa por dentro y los 11 scopes.
+5. [Hooks, sensores y tools](04-hooks-sensores-tools.md): lo que trabaja en segundo plano.
+6. [Knowledge y configuración](05-knowledge-y-configuracion.md): la biblioteca de los agentes y los ajustes.
 
 ## Nivel 0 · La raíz
 

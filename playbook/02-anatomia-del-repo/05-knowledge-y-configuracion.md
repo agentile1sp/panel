@@ -32,7 +32,7 @@ Son guías, patrones y plantillas que cada agente consulta para trabajar como un
 | Quién la escribe | AWS, con la instalación | Nosotros |
 | ¿Se edita? | No | Sí (se explica en el capítulo 03) |
 
-## 2 · La configuración: cuatro archivos
+## 2 · La configuración
 
 ### `settings.json`: los ajustes de Claude Code para este proyecto
 
@@ -52,6 +52,12 @@ Además incluye un **mensaje de bienvenida** con el resumen de fases, etapas y s
 Es una plantilla. Si se copia como `settings.local.json`, sirve para cambiar ajustes **solo en tu máquina**: ese archivo no se sube a Git. Ejemplos de la plantilla:
 - Cambiar el scope por defecto.
 - Ocultar el costo estimado de la barra de estado. Es útil al presentar en pantalla compartida. La plantilla aclara que **es una estimación a precio de lista, no una factura**.
+
+### `.mcp.json`: conexiones con servicios externos (no instalado)
+
+AI-DLC puede conectar a la IA con 5 servicios externos (servidores MCP): uno de documentación de librerías (`context7`) y 4 de AWS (servicios, precios, infraestructura como código y serverless). Iría en un archivo `.mcp.json` en la raíz del proyecto.
+
+**En nuestra instalación no hay ninguno:** al instalar no dimos consentimiento para activarlos. AI-DLC funciona igual sin ellos. Los de AWS necesitan una cuenta de AWS con credenciales. Si en algún momento hacen falta, se activan con `aidlc config project`.
 
 ### `CLAUDE.md`: las instrucciones de arranque
 

@@ -134,19 +134,21 @@ La memoria y el registro se explican a fondo en el capítulo 03.
 
 ## Cómo encajan las piezas
 
+Leyenda: ⚙️ **tools** llevan la cuenta · 🛡️ **hooks** vigilan y registran · 🔍 **sensores** revisan documentos
+
 ```mermaid
 flowchart TD
-    A["1 · Tú escribes /aidlc<br/>y describes el trabajo"]
-    B["2 · El director elige las etapas<br/>según el scope"]
-    C["3 · Lee el manual de la etapa"]
-    D["4 · Un agente hace el trabajo"]
-    E["5 · Se guardan los documentos"]
-    F{"6 · ¿Apruebas?"}
+    A["1 · Tú escribes /aidlc y describes el trabajo<br/>🛡️ registra que escribió una persona"]
+    B["2 · El director elige las etapas según el scope<br/>⚙️ deciden qué etapas tocan y en qué orden"]
+    C["3 · Lee el manual de la etapa<br/>⚙️ entregan la definición y las reglas de la etapa"]
+    D["4 · Un agente hace el trabajo<br/>🛡️ le pasan las reglas y bloquean pasos fuera de orden"]
+    E["5 · Se guardan los documentos<br/>🛡️ anotan cada archivo en la auditoría<br/>🔍 revisan cada documento al escribirlo"]
+    F(["6 · Tú apruebas o pides cambios<br/>🔍 revisión final: un fallo grave bloquea la aprobación<br/>🛡️ comprueban que aprueba una persona<br/>⚙️ registran la decisión y eligen la siguiente etapa"])
     G["Siguiente etapa<br/>vuelve al paso 3"]
 
     A --> B --> C --> D --> E --> F
-    F -- Sí --> G
-    F -- Pido cambios --> D
+    F -- Apruebas --> G
+    F -- Pides cambios --> D
 
     classDef persona fill:#fde68a,stroke:#b45309,color:#1f2937
     classDef motor fill:#dbeafe,stroke:#1d4ed8,color:#1f2937
@@ -154,21 +156,16 @@ flowchart TD
     class B,C,D,E,G motor
 ```
 
-En amarillo, lo que haces tú. En azul, lo que hace AI-DLC.
+En amarillo, lo que haces tú. En azul, lo que hace AI-DLC. Los íconos muestran qué pieza de segundo plano actúa en cada paso.
 
-| Paso | Qué pasa | Dónde está |
-|---|---|---|
-| 1 | Escribes `/aidlc` y describes lo que quieres construir | `skills/aidlc` |
-| 2 | El director decide qué etapas tocan según el scope | `scopes/` |
-| 3 | Lee la definición de la etapa: qué hacer, qué entra y qué sale | `aidlc-common/stages/` |
-| 4 | El agente que lidera la etapa hace preguntas y genera el trabajo | `agents/` |
-| 5 | Los documentos quedan guardados en la carpeta del trabajo | `aidlc/spaces/default/intents/` |
-| 6 | AI-DLC se detiene. Si apruebas, pasa a la siguiente etapa. Si pides cambios, el agente corrige | Gate |
-
-**En segundo plano, durante todos los pasos:**
-- Las **tools** (`tools/`) llevan la cuenta: en qué etapa vamos y cuál sigue.
-- Los **hooks** (`hooks/`) vigilan cada acción y la registran en la auditoría.
-- Los **sensores** (`sensors/`) revisan cada documento que se genera.
+| Paso | Qué pasa | ⚙️ Tools | 🛡️ Hooks | 🔍 Sensores |
+|---|---|---|---|---|
+| 1 · Tú escribes | Pides el trabajo con `/aidlc` | — | `record-human-turn`: deja constancia de que escribió una persona | — |
+| 2 · Elegir etapas | El director (`skills/aidlc`) consulta el scope (`scopes/`) | `aidlc-orchestrate`: decide qué etapas tocan | — | — |
+| 3 · Leer la etapa | Lee qué hacer, qué entra y qué sale (`aidlc-common/stages/`) | Entregan la definición y las reglas de la etapa | — | — |
+| 4 · El agente trabaja | El agente (`agents/`) pregunta y genera | — | `deliver-stage-rules`: le pasa las reglas al agente · `plan-approval-guard` y `state-transition-guard`: bloquean pasos fuera de orden | — |
+| 5 · Se guardan documentos | Quedan en `aidlc/spaces/default/intents/` | — | `write-audit-log`: anota cada archivo creado o modificado | Revisan el documento al escribirlo (solo avisan) |
+| 6 · Tú apruebas | Gate: apruebas o pides cambios | Registran la decisión y eligen la siguiente etapa | `record-human-turn`: sin una persona, no hay aprobación | Revisión final: un fallo grave bloquea la aprobación |
 
 ---
 

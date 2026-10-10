@@ -50,10 +50,10 @@ Ejemplos de etapas condicionales:
 
 | Etapa | Se ejecuta si… | Se salta si… |
 |---|---|---|
-| 1.2 Investigación de mercado | Hay que posicionarse en el mercado o decidir entre comprar y construir | Es una herramienta interna, un bug o un refactor |
-| 1.6 Bocetos de pantallas | El trabajo tiene interfaz de usuario | Es solo una API o infraestructura |
-| 2.1 Ingeniería inversa | Ya existe código que hay que entender | Se parte de cero |
-| 3.4 Diseño de infraestructura | Hay que definir servidores o recursos en la nube | No hay cambios de infraestructura |
+| 1.2 Market Research | Hay que posicionarse en el mercado o decidir entre comprar y construir | Es una herramienta interna, un bug o un refactor |
+| 1.6 Rough Mockups | El trabajo tiene interfaz de usuario | Es solo una API o infraestructura |
+| 2.1 Reverse Engineering | Ya existe código que hay que entender | Se parte de cero |
+| 3.4 Infrastructure Design | Hay que definir servidores o recursos en la nube | No hay cambios de infraestructura |
 
 Por qué hay dos ceros en la tabla:
 - **Inicialización tiene 0 condicionales** porque sus 3 etapas (crear las carpetas, detectar el proyecto e iniciar el registro) siempre hacen falta. Ningún trabajo empieza sin ellas.

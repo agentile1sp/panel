@@ -33,6 +33,7 @@ Lectores: compañeros del equipo que no conocen AI-DLC. No hace falta que sepan 
   - `mindmap` para los mapas mentales de la estructura.
   - `flowchart` para los recorridos. Lo que no usamos en el piloto se pinta en gris claro.
   - Cada diagrama lleva debajo una versión en texto, por si no se renderiza.
+- **Nombres de las etapas en inglés**, con su número, tal como aparecen en AI-DLC (por ejemplo, `2.3 Requirements Analysis`). Así coinciden con lo que muestra la herramienta. Las fases van en español.
 - **Capturas** en `playbook/assets/`, con el nombre `cap<capítulo>-<etapa>-<nn>.png`. Por ejemplo: `cap07-2.3-requirements-01.png`.
 - **Presentaciones.** Si hace falta presentar, se generan slides o una página web a partir de los capítulos. El Markdown sigue siendo la fuente.
 
@@ -126,7 +127,7 @@ Ficha del entorno con la que se generó todo lo que aparece en la bitácora:
 - **Modelo de IA:** el modelo y el esfuerzo realmente usados en cada recorrido. Se registra el cambio si cambia durante el piloto.
 - **AI-DLC:** versión 2.11.0, scope elegido y plugins.
 - **Equipo secundario:** Windows corporativo con VS Code y Copilot, para una prueba acotada.
-- **Consumo:** tiempo efectivo y costo del modelo por recorrido, este último con `aidlc-session-cost`.
+- **Consumo:** tiempo efectivo, tokens y costo estimado por recorrido. `/aidlc-session-cost` da duración, etapas, sensores y aprendizajes. Los tokens y el costo estimado (a precio de lista, no es una factura) los registra AI-DLC con el hook `fold-usage` y los muestra en la barra de estado.
 - **Pasos de instalación y configuración**, reproducibles.
 
 ## 8. Plantilla de cada etapa (capítulo 07)
@@ -166,6 +167,7 @@ Cada página de la bitácora sigue la misma plantilla:
 - 10/10/2026: el caso del piloto es el **panel** (`docs/vision-panel.md`), no el gestor de solicitudes. El primer recorrido construye solo un corte mínimo, que se define en Ideación.
 - 10/10/2026: en Mac se usa **VS Code con Claude Code** en lugar de Kiro. Se instala AI-DLC para el harness `claude` y se elimina la instalación de Kiro.
 - 10/10/2026: el playbook se escribe en Markdown en `playbook/` y se lee con Obsidian.
+- 10/10/2026: modelos por defecto en el primer recorrido: la conversación con el modelo elegido en Claude Code y los 2 revisores con Sonnet y esfuerzo medio. Se revisará según lo que detecten los revisores.
 
 ## 12. Pendientes
 

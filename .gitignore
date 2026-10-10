@@ -25,3 +25,9 @@ aidlc/diagnostics/
 aidlc/.aidlc-turn-counter
 aidlc/.aidlc-readonly-latch
 # END AI-DLC:gitignore
+
+# Obsidian: configuración personal del visor
+.obsidian/
+
+# macOS
+.DS_Store

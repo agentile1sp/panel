@@ -1,6 +1,8 @@
 # Capítulo 05 · Mapa del piloto (lo esperado)
 
-> **En una frase:** el primer recorrido del piloto ejecuta **12 de las 33 etapas**: las 11 ALWAYS más `2.6 Domain Design`, que es imprescindible. Este capítulo es **la predicción**; el capítulo 07 cuenta lo que realmente pasó.
+> **En una frase:** esperamos que el primer recorrido del piloto ejecute **12 de las 33 etapas**: las 11 ALWAYS más `2.6 Domain Design`, que es imprescindible.
+
+> ⚠️ **Este capítulo es una predicción, no el resultado.** Lo escribimos antes de ejecutar, a partir de la documentación instalada. Al arrancar, el agente `composer` hará su propia propuesta de etapas y puede añadir o quitar alguna con su justificación. **El plan final se aprueba en el gate de `/aidlc compose`**, y también se puede ajustar a mitad del recorrido. Lo que realmente pase, y en qué se diferencie de esta predicción, se cuenta en el capítulo 07.
 
 ## 1 · Qué construimos y con qué scope
 

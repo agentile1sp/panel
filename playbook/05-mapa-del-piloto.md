@@ -112,23 +112,19 @@ Cada etapa produce también un archivo `<etapa>-questions` con las preguntas que
 | **En 3.5 Code Generation** | El developer se lanza como subagente · `plan-approval-guard` impide escribir código antes de aprobar el plan |
 | **Si pides cambios en un documento ya revisado** | `review-freeze`: la revisión anterior deja de valer |
 
-## 6 · Configuración esperada y dos decisiones para el gate
+## 6 · Configuración del recorrido
 
-En un plan a medida, AI-DLC parte de la configuración de `classic`. El `composer` puede proponer otra con su justificación, y **la decisión final es nuestra en el gate**.
+Un plan a medida parte de la configuración del scope `classic`. Para el piloto se ajustan dos valores, para que se vean todos los controles y todas las interacciones.
 
-| Ajuste | Punto de partida | Qué significa |
+| Ajuste | En el piloto | Qué significa |
 |---|---|---|
 | Sensores | Encendidos | Revisiones automáticas de documentos y código |
 | Aprendizajes | Encendidos | Proponer reglas a partir de nuestras correcciones |
 | Aprobar plan de código | Encendido | En 3.5, el código se escribe solo después de aprobar el plan |
 | Agentes de apoyo | Apagados | Cada etapa la hace solo el líder |
 | Revisiones | Consultivas | También en 3.5, que normalmente es adversarial |
-| **Confirmar resumen** | **Apagado** | No te muestra un resumen de lo que entendió antes de escribir cada documento |
-| **Guard Policy** | **`off`** | Si cambia algo ya aprobado, avisa y sigue. Además, los controles de aprobación del plan, documento congelado, transiciones de estado y alcance del revisor **se apartan** en el trabajo que nadie pidió explícitamente; cada vez que se apartan, queda registrado |
-
-**Decisión 1 · Guard Policy.** Con `off`, varios de los hooks que bloquean (capítulo 02) se apartan y no los veríamos en acción. **Propuesta:** subirla a **`strict`** en el gate, para que el piloto muestre todos los controles. `strict` no baja ninguno y, si cambia algo ya aprobado, vuelve a pedir aprobación.
-
-**Decisión 2 · Confirmar resumen.** Con el ajuste apagado, AI-DLC no lee en voz alta lo que entendió antes de escribir. **Propuesta:** **encenderlo**. Es como se detecta un malentendido antes de que se convierta en documento, y deja otra interacción visible para el playbook. A cambio, añade un paso por etapa y consume algo más del límite de Claude Pro.
+| **Confirmar resumen** | **Encendido** (por defecto, apagado) | Antes de escribir cada documento, AI-DLC muestra un resumen de lo que entendió para que lo confirmes |
+| **Guard Policy** | **`strict`** (por defecto, `off`) | Ningún control se aparta. Si cambia algo ya aprobado, vuelve a pedir aprobación |
 
 ## 7 · El recorrido detallado
 
@@ -157,7 +153,7 @@ Texto: `compose` y aprobación del plan → Inicialización automática → 1.1 
 ## 9 · Qué vamos a comparar en el capítulo 07
 
 - ¿Propuso el `composer` estas mismas 12 etapas? ¿Añadió o quitó alguna? ¿Con qué justificación?
-- ¿Qué configuración propuso y qué decidimos en el gate?
+- ¿Qué configuración propuso el `composer` y cuál quedó aprobada?
 - ¿Coincidieron los agentes, documentos, sensores y hooks con las tablas de este capítulo?
 - ¿Cuántos gates hubo, cuántas veces pedimos cambios y qué encontraron los revisores?
 - ¿Cuánto tiempo y cuánto uso del modelo consumió cada etapa?

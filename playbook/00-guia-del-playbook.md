@@ -174,6 +174,7 @@ Cada página de la bitácora sigue la misma plantilla:
 
 ## 12. Pendientes
 
+- Añadir a la referencia de etapas un ejemplo real por etapa ejecutada (enlace al documento y extracto corto): las 12 del primer recorrido durante el piloto y el resto en el recorrido completo. No se inventan ejemplos.
 - Verificar la instalación para Claude Code con `/aidlc --doctor` en una sesión nueva.
 - Elegir el scope del primer recorrido (por ejemplo `poc`, `mvp` o `express`) y registrarlo en el capítulo 05.
 - Definir el corte mínimo del panel en Ideación.

@@ -4,6 +4,8 @@
 
 > ⚠️ Como el capítulo 05, este capítulo es **una predicción** basada en la documentación instalada. El capítulo 07 muestra cómo fue en la realidad.
 
+> Este capítulo cubre las 12 etapas del piloto. Las 33, incluidas las que el piloto no usa, están en la [Referencia de etapas](referencia-etapas/00-indice.md).
+
 ## 1 · El ciclo de una etapa
 
 Es igual en todas las etapas que tienen aprobación. Lo que cambia es qué entra, qué se pregunta y qué sale.

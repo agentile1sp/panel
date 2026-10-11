@@ -53,6 +53,7 @@ Lectores: compañeros del equipo que no conocen AI-DLC. No hace falta que sepan 
 | 09 | Harness | Cómo funciona por dentro: conductor, motor, hooks, herramientas, estado, permisos y personalización | Durante A6 | A6 |
 | 10 | Integraciones | Las dos conexiones de referencia (repositorio/CI y gestor de trabajo) | Durante A7 | A7 |
 | 11 | Conclusiones y propuesta para Qik | Lecciones aprendidas, decisiones defendidas y propuesta de adopción | Durante A8 | A8 |
+| — | Referencia de etapas | Las 33 etapas con su ficha, qué entra, qué sale, qué pregunta y todos sus pasos, una página por fase. Para consultar, no para leer de corrido | Antes del piloto | — |
 | — | Anexos | Glosario, plantilla de etapa, decisiones y desvíos, FAQ y "cómo lo hago yo" | Siempre | — |
 
 ```mermaid
@@ -84,6 +85,7 @@ playbook/
 ├── 09-harness/
 ├── 10-integraciones/
 ├── 11-conclusiones-qik.md
+├── referencia-etapas/           las 33 etapas: ficha, entra, sale, preguntas y pasos
 ├── anexos/
 │   ├── glosario.md
 │   ├── plantilla-etapa.md
@@ -172,6 +174,7 @@ Cada página de la bitácora sigue la misma plantilla:
 
 ## 12. Pendientes
 
+- Añadir a la referencia de etapas un ejemplo real por etapa ejecutada (enlace al documento y extracto corto): las 12 del primer recorrido durante el piloto y el resto en el recorrido completo. No se inventan ejemplos.
 - Verificar la instalación para Claude Code con `/aidlc --doctor` en una sesión nueva.
 - Elegir el scope del primer recorrido (por ejemplo `poc`, `mvp` o `express`) y registrarlo en el capítulo 05.
 - Definir el corte mínimo del panel en Ideación.

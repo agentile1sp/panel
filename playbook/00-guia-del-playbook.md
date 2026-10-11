@@ -167,6 +167,7 @@ Cada página de la bitácora sigue la misma plantilla:
 - 10/10/2026: el caso del piloto es el **panel** (`docs/vision-panel.md`), no el gestor de solicitudes. El primer recorrido construye solo un corte mínimo, que se define en Ideación.
 - 10/10/2026: en Mac se usa **VS Code con Claude Code** en lugar de Kiro. Se instala AI-DLC para el harness `claude` y se elimina la instalación de Kiro.
 - 10/10/2026: el playbook se escribe en Markdown en `playbook/` y se lee con Obsidian.
+- 10/10/2026: primer recorrido con un plan a medida (`/aidlc compose`): las 11 etapas ALWAYS más `2.6 Domain Design`, con Guard Policy `strict` y confirmación de resumen encendida.
 - 10/10/2026: modelos por defecto en el primer recorrido: la conversación con el modelo elegido en Claude Code y los 2 revisores con Sonnet y esfuerzo medio. Se revisará según lo que detecten los revisores.
 
 ## 12. Pendientes

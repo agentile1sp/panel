@@ -77,7 +77,7 @@
 **Pasos:**
 1. Comprueba las condiciones.
 2. El líder (pipeline-deploy) escribe un borrador.
-3. Revisión independiente: quality, developer y devsecops revisan cada uno por su lado.
+3. Si están activos los agentes de apoyo, quality, developer y devsecops revisan el borrador cada uno por su lado, sin ver lo que dicen los demás.
 4. Entrevista contigo sobre las cinco áreas.
 5. El líder integra todo.
 6. Ritual de aprendizajes y **gate de confirmación** de las prácticas.
@@ -156,11 +156,11 @@
 5. Recoge las respuestas.
 6. Las analiza.
 7. Presenta el plan y genera.
-8. Parte 2: el líder escribe un borrador y **varios agentes lo trabajan juntos** (developer, quality, design); el líder integra.
+8. Parte 2: el líder escribe un borrador. Si están activos los agentes de apoyo, **varios agentes lo trabajan juntos** (developer, quality, design) y el líder integra sus aportes; si no, el líder lo completa solo.
 9. Abre el gate.
 10. Presenta el resultado y pide aprobación.
 
-> Es una etapa en grupo (mob): varios agentes aportan a la vez.
+> Está pensada como etapa en grupo (mob): con los agentes de apoyo activos, varios agentes aportan a la vez.
 
 ---
 

@@ -1,4 +1,4 @@
-# Capítulo 04 · Entorno y setup
+# Capítulo 05 · Entorno y setup
 
 > **En una frase:** el piloto se ejecuta en un Mac con **VS Code + Claude Code**, el modelo **Claude Opus 5.5** y **AI-DLC 2.11.0**. Todo lo que aparece en la bitácora del piloto se generó con este entorno.
 
@@ -14,7 +14,7 @@
 | Modelo de la conversación | Claude Opus 5.5 | Hace el trabajo de casi todas las etapas |
 | Modelo de los revisores | Claude Sonnet, esfuerzo medio | Valor por defecto de AI-DLC |
 | AI-DLC | 2.11.0 | Última versión disponible al 10/10/2026 |
-| Scope por defecto | `classic` | Solo se usa si no se elige otro; en el piloto lo elegiremos (capítulo 05) |
+| Scope por defecto | `classic` | Solo se usa si no se elige otro; en el piloto lo elegiremos (capítulo 06) |
 | Servidores MCP | Ninguno | No se activaron al instalar |
 | Control de versiones | Git 2.54 y GitHub CLI 2.74 | Repositorio privado en GitHub |
 | Equipo secundario | Windows con VS Code + Copilot | **Pendiente**: se documentará en una prueba acotada |
@@ -75,9 +75,9 @@ AI-DLC clasifica a los agentes en tres grupos según el tipo de trabajo:
 
 - **Con Claude Pro no se paga por token.** El costo que muestra AI-DLC en la barra de estado es una **estimación a precio de lista**: cuánto costaría si se pagara por API. Sirve como referencia, no es un gasto real.
 - **Claude Pro tiene límites de uso por período**, y Opus los consume más rápido que otros modelos. Un recorrido de AI-DLC tiene muchas etapas, preguntas y revisiones.
-- **Riesgo:** llegar al límite a mitad de una etapa. Si pasa, el estado queda guardado y el trabajo se retoma cuando el límite se renueva (capítulo 03).
+- **Riesgo:** llegar al límite a mitad de una etapa. Si pasa, el estado queda guardado y el trabajo se retoma cuando el límite se renueva (capítulo 04).
 - **Mitigaciones:**
-  1. Elegir un scope acotado para el primer recorrido (capítulo 05).
+  1. Elegir un scope acotado para el primer recorrido (capítulo 06).
   2. Anotar en la bitácora el uso de cada etapa, para saber cuánto consume un recorrido.
   3. Los revisores ya usan Sonnet, que consume menos.
 - **Al presentar en pantalla compartida**, el costo estimado se puede ocultar en los ajustes personales (`settings.local.json`).
@@ -117,7 +117,7 @@ Framework integrity
 ## 7 · Pendientes
 
 - **Equipo Windows** con VS Code + Copilot: instalación y una prueba acotada, para comparar un comportamiento concreto con Claude Code.
-- **Uso real por etapa:** se medirá durante el piloto (capítulo 07).
+- **Uso real por etapa:** se medirá durante el piloto (capítulo 08).
 
 ---
 

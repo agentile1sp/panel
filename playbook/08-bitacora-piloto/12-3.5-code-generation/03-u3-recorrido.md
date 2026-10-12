@@ -1,4 +1,4 @@
-# Capítulo 07 · 3.5 Code Generation · U3 Recorrido
+# Capítulo 08 · 3.5 Code Generation · U3 Recorrido
 
 > **En una frase:** la unidad más grande construyó el corazón de la herramienta: los 10 pasos de cada producto con sus estados, la habilitación en cadena, el paso actual, el contenido, los adjuntos, los registros y tres pantallas. Cubre 23 de los 40 requisitos.
 

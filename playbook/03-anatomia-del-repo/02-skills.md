@@ -1,4 +1,4 @@
-# Capítulo 02 · Nivel 2 · Los skills (`.claude/skills/`)
+# Capítulo 03 · Nivel 2 · Los skills (`.claude/skills/`)
 
 > **En una frase:** los skills son **los comandos que escribes en el chat con `/`**. Hay 42, pero en el día a día se usa uno: **`/aidlc`**.
 
@@ -93,7 +93,7 @@ Ninguno cambia el trabajo ni avanza etapas: solo leen el registro.
 
 ## 5 · Documentos: 1 skill
 
-**`/aidlc-knowledge`** registra **documentos propios del equipo** (PDF, Word, Markdown, texto) en un catálogo para que los agentes los consulten y los citen. Por ejemplo, un manual interno de arquitectura o una normativa. Nunca avanza etapas ni aprueba nada. Se explica en el capítulo 03.
+**`/aidlc-knowledge`** registra **documentos propios del equipo** (PDF, Word, Markdown, texto) en un catálogo para que los agentes los consulten y los citen. Por ejemplo, un manual interno de arquitectura o una normativa. Nunca avanza etapas ni aprueba nada. Se explica en el capítulo 04.
 
 ## Skill, jefe, etapa, agente y hook: cómo se relacionan
 

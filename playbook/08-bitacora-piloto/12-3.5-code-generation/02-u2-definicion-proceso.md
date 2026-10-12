@@ -1,4 +1,4 @@
-# Capítulo 07 · 3.5 Code Generation · U2 Definición del proceso
+# Capítulo 08 · 3.5 Code Generation · U2 Definición del proceso
 
 > **En una frase:** la unidad más pequeña escribió a mano el archivo con los 10 pasos y los 2 registros del proceso de producto, y el código que lo valida al arrancar. Si el archivo está mal, la herramienta no arranca y dice por qué.
 

@@ -1,10 +1,10 @@
-# Capítulo 07 · Esperado contra real
+# Capítulo 08 · Esperado contra real
 
-> **En una frase:** la predicción de los capítulos 05 y 06 acertó en lo grande (las mismas 12 etapas, los mismos agentes y documentos), pero se quedó corta en la interacción: hubo bastantes más decisiones nuestras de las previstas. La sorpresa que más costó no vino de AI-DLC, sino de tener el playbook abierto en Obsidian dentro del mismo repositorio.
+> **En una frase:** la predicción de los capítulos 06 y 07 acertó en lo grande (las mismas 12 etapas, los mismos agentes y documentos), pero se quedó corta en la interacción: hubo bastantes más decisiones nuestras de las previstas. La sorpresa que más costó no vino de AI-DLC, sino de tener el playbook abierto en Obsidian dentro del mismo repositorio.
 
 [← 3.6 Build and Test](13-3.6-build-and-test.md) · [Resumen](00-resumen.md)
 
-Esta página responde una por una las preguntas del [capítulo 05, §9](../06-mapa-del-piloto/00-mapa-del-piloto.md) y compara los números del [capítulo 06, §7](../07-flujo-conceptual/00-flujo-conceptual.md).
+Esta página responde una por una las preguntas del [capítulo 06, §9](../06-mapa-del-piloto/00-mapa-del-piloto.md) y compara los números del [capítulo 07, §7](../07-flujo-conceptual/00-flujo-conceptual.md).
 
 ## 1 · ¿Propuso el `composer` las mismas 12 etapas?
 
@@ -14,7 +14,7 @@ Esta página responde una por una las preguntas del [capítulo 05, §9](../06-ma
 
 Quedó la que propuso, sin cambios.
 
-| Ajuste | Esperado (cap. 05) | Real |
+| Ajuste | Esperado (cap. 06) | Real |
 |---|---|---|
 | Scope de partida | `classic` | `express` |
 | Guard Policy | `strict` | `strict` y, al final, `relaxed` por decisión nuestra para cerrar 3.5 |
@@ -25,7 +25,7 @@ Quedó la que propuso, sin cambios.
 
 ## 3 · ¿Coincidieron agentes, documentos, sensores y hooks?
 
-**Agentes:** sí. Todos los líderes y revisores fueron los de la tabla del capítulo 05. Los agentes de apoyo no participaron en ninguna etapa, como se esperaba con `collaborators` apagado. El `composer` (en el arranque) y el `developer` (en 3.5) fueron los únicos que trabajaron como subagentes además de los revisores.
+**Agentes:** sí. Todos los líderes y revisores fueron los de la tabla del capítulo 06. Los agentes de apoyo no participaron en ninguna etapa, como se esperaba con `collaborators` apagado. El `composer` (en el arranque) y el `developer` (en 3.5) fueron los únicos que trabajaron como subagentes además de los revisores.
 
 **Documentos:** sí, y algunos más de los que listaba la tabla:
 - `reviews/review-01.md` en cada etapa con revisor;
@@ -92,7 +92,7 @@ Quedó la que propuso, sin cambios.
 - **Modelos:** Opus para el conductor, el `composer` y el `developer`; Sonnet para los dos revisores.
 - **Fuente de las cifras:** las llamadas se contaron en los registros de las conversaciones de Claude Code, un mensaje del modelo por llamada. AI-DLC no guarda el uso por etapa, y los recuentos de tokens de esos registros no son fiables para los subagentes, así que no se dan aquí.
 
-## 6 · Cuántas veces intervinimos (capítulo 06, §7)
+## 6 · Cuántas veces intervinimos (capítulo 07, §7)
 
 | Momento | Esperado | Real |
 |---|---|---|
@@ -116,7 +116,7 @@ Quedó la que propuso, sin cambios.
 
 | La documentación dice | Lo que vimos |
 |---|---|
-| Un plan a medida parte de `classic` (cap. 05) | Partió de `express` |
+| Un plan a medida parte de `classic` (cap. 06) | Partió de `express` |
 | El plan guardado es el plan aprobado | El guardado tiene 13 etapas: conserva `reverse-engineering` de `express` |
 | `plan-approval-guard` solo frena el código antes de aprobar el plan | También frenó un registro que no era código, por tratar el trabajo como si no tuviera unidades |
 | Las casillas del plan se marcan al avanzar | En U1 quedaron sin marcar; en U2 a U4, todas marcadas |
@@ -124,7 +124,7 @@ Quedó la que propuso, sin cambios.
 
 ## 8 · Las lecciones del recorrido
 
-1. **La predicción hecha leyendo la documentación funcionó.** El plan, los agentes y los documentos coincidieron con los capítulos 05 y 06.
+1. **La predicción hecha leyendo la documentación funcionó.** El plan, los agentes y los documentos coincidieron con los capítulos 06 y 07.
 2. **AI-DLC no inventa:** pregunta, resume, marca los supuestos y pide confirmarlos. El precio son unos 7 mensajes nuestros por etapa.
 3. **Cambiar de opinión entre etapas no rompe nada.** Se convierte en un cambio de alcance explícito, y el documento posterior manda sobre el anterior.
 4. **Lo que un revisor deja abierto lo recoge la etapa siguiente.** Conviene saber dónde se va a resolver antes de aprobar.
@@ -144,4 +144,4 @@ Quedó la que propuso, sin cambios.
 
 ---
 
-**Fuentes:** auditoría del trabajo (786 eventos); conversaciones de Claude Code del 12/10/2026; artefactos de `aidlc/spaces/default/intents/261012-herramienta-producto/`; capítulos 05 y 06.
+**Fuentes:** auditoría del trabajo (786 eventos); conversaciones de Claude Code del 12/10/2026; artefactos de `aidlc/spaces/default/intents/261012-herramienta-producto/`; capítulos 06 y 07.

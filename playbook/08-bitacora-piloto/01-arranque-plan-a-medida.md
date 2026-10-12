@@ -1,6 +1,6 @@
-# Capítulo 07 · Arranque: el plan a medida (`/aidlc compose`)
+# Capítulo 08 · Arranque: el plan a medida (`/aidlc compose`)
 
-> **En una frase:** antes de la primera etapa, el agente `composer` leyó la descripción del piloto, puntuó cuánto faltaba por definir y propuso un plan de **12 etapas**: las mismas que predijo el capítulo 05. Lo aprobamos y lo guardamos como plan reutilizable.
+> **En una frase:** antes de la primera etapa, el agente `composer` leyó la descripción del piloto, puntuó cuánto faltaba por definir y propuso un plan de **12 etapas**: las mismas que predijo el capítulo 06. Lo aprobamos y lo guardamos como plan reutilizable.
 
 [← Resumen](00-resumen.md) · [Siguiente: 0.1 Workspace Scaffold →](02-0.1-workspace-scaffold.md)
 
@@ -61,8 +61,8 @@
 ## 6 · Sorpresas
 
 - **El plan guardado no es idéntico al aprobado.** El aprobado tenía 12 etapas. El guardado tiene 13, porque conserva `reverse-engineering` del scope base `express`. En este recorrido no importó, porque el proyecto era nuevo y esa etapa se salta igualmente. Si se reutiliza el plan sobre código existente, sí se ejecutaría.
-- **La revisión no fue "consultiva".** El capítulo 05 esperaba revisiones consultivas en todas las etapas. El `composer` subió el máximo a `adversarial`. En la práctica, las etapas de Ideación y Concepción hicieron una sola pasada de revisión, y Code Generation sí funcionó en modo adversarial.
-- **No partió de `classic`.** El capítulo 05 decía que un plan a medida parte de `classic`. Este partió de `express`.
+- **La revisión no fue "consultiva".** El capítulo 06 esperaba revisiones consultivas en todas las etapas. El `composer` subió el máximo a `adversarial`. En la práctica, las etapas de Ideación y Concepción hicieron una sola pasada de revisión, y Code Generation sí funcionó en modo adversarial.
+- **No partió de `classic`.** El capítulo 06 decía que un plan a medida parte de `classic`. Este partió de `express`.
 
 ## 7 · Tiempo y costo
 

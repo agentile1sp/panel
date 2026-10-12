@@ -1,4 +1,4 @@
-# Capítulo 07 · 3.5 Code Generation · Cierre de la etapa
+# Capítulo 08 · 3.5 Code Generation · Cierre de la etapa
 
 > **En una frase:** con las cuatro unidades terminadas y aprobadas, AI-DLC **se negó a cerrar la etapa** porque dos archivos del playbook habían cambiado mientras se construía y no pertenecían a ninguna unidad. Tras 35 minutos de intentos, lo resolvimos cambiando la Guard Policy de `strict` a `relaxed`.
 
@@ -14,7 +14,7 @@ Habían cambiado dos archivos que no eran de la herramienta:
 
 | Archivo | Por qué cambió |
 |---|---|
-| `playbook/referencia-etapas/2-concepcion.md` | Una edición nuestra en el playbook, durante la etapa. Solo alineaba una tabla |
+| `playbook/referencia-etapas/2-concepcion.md` (hoy `playbook/02-etapas/2-concepcion.md`) | Una edición nuestra en el playbook, durante la etapa. Solo alineaba una tabla |
 | `playbook/.obsidian/workspace.json` | Obsidian lo reescribe solo cada vez que abres o mueves una nota. Teníamos el playbook abierto |
 
 El playbook vive en el mismo repositorio que el piloto, y AI-DLC no puede saber que esos archivos no son parte del producto.

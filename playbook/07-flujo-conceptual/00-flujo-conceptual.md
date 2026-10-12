@@ -1,10 +1,10 @@
-# Capítulo 06 · Flujo conceptual (lo esperado)
+# Capítulo 07 · Flujo conceptual (lo esperado)
 
 > **En una frase:** todas las etapas siguen el mismo ciclo: **entra** algo, la IA **pregunta**, **confirma** lo que entendió, **genera** documentos que se **revisan**, y **tú apruebas** antes de que la salida pase a la siguiente etapa.
 
-> ⚠️ Como el capítulo 05, este capítulo es **una predicción** basada en la documentación instalada. El capítulo 07 muestra cómo fue en la realidad.
+> ⚠️ Como el capítulo 06, este capítulo es **una predicción** basada en la documentación instalada. El capítulo 08 muestra cómo fue en la realidad.
 
-> Este capítulo cubre las 12 etapas del piloto. Las 33, incluidas las que el piloto no usa, están en la [Referencia de etapas](../02-etapas/00-indice.md).
+> Este capítulo cubre las 12 etapas del piloto. Las 33, incluidas las que el piloto no usa, están en el [capítulo 02, Etapas](../02-etapas/00-indice.md).
 
 ## 1 · El ciclo de una etapa
 
@@ -143,7 +143,7 @@ Una estimación para el primer recorrido, si no pedimos cambios:
 | Aprobar el plan de código | 1 (en 3.5) |
 | Gates de etapa | 9 (de 1.1 a 3.6) |
 
-Cada "Request Changes" añade una vuelta más en esa etapa. Al final del capítulo 07 comparamos estos números con los reales.
+Cada "Request Changes" añade una vuelta más en esa etapa. Al final del capítulo 08 comparamos estos números con los reales.
 
 ---
 

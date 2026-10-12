@@ -1,4 +1,4 @@
-# Capítulo 07 · 3.5 Code Generation · Visión general
+# Capítulo 08 · 3.5 Code Generation · Visión general
 
 > **En una frase:** la etapa se repitió **una vez por unidad**. Para cada una, primero aprobamos su plan de código; después un subagente `developer` escribió el código y las pruebas, y un revisor y un comando de comprobación lo validaron antes de pasar a la siguiente. Salieron **110 pruebas en verde**, pero cerrar la etapa costó más que construirla.
 

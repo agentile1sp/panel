@@ -1,4 +1,4 @@
-# Capítulo 02 · Nivel 2 · Etapas y scopes (`aidlc-common/` y `scopes/`)
+# Capítulo 03 · Nivel 2 · Etapas y scopes (`aidlc-common/` y `scopes/`)
 
 > **En una frase:** cada **etapa** es una receta escrita (qué hacer, quién, qué entra y qué sale), y cada **scope** es un menú: elige qué recetas se preparan y con cuánto rigor.
 
@@ -10,7 +10,7 @@
 | `protocols/` | Las reglas comunes que se aplican a todas las etapas | 9 |
 | `conductor.md` | Las instrucciones del jefe: cómo pedir al motor el siguiente paso, ejecutarlo e informar | 1 |
 
-> Las 33 etapas, cada una con su ficha, qué entra, qué sale, qué pregunta y todos sus pasos, están en la [Referencia de etapas](../02-etapas/00-indice.md).
+> Las 33 etapas, cada una con su ficha, qué entra, qué sale, qué pregunta y todos sus pasos, están en el [capítulo 02, Etapas](../02-etapas/00-indice.md).
 
 ### Una etapa por dentro
 
@@ -56,7 +56,7 @@ Cada archivo de etapa tiene dos partes. Ejemplo real: `stages/inception/requirem
 | `stage-protocol-ensemble.md` | Cuando participan varios agentes | Cómo colaboran el líder y los agentes de apoyo |
 | `stage-protocol-construction.md` | En Construcción | Puntos de control por unidad de código |
 | `stage-protocol-swarm.md` | En Construcción en paralelo | Cómo trabajar varias unidades a la vez sin pisarse |
-| `stage-protocol-learnings.md` | Antes de cada aprobación, si está activo | Cómo convertir tus correcciones en reglas permanentes (capítulo 03) |
+| `stage-protocol-learnings.md` | Antes de cada aprobación, si está activo | Cómo convertir tus correcciones en reglas permanentes (capítulo 04) |
 | `stage-protocol-governance.md` | Al cambiar de fase | Comprobaciones al cerrar Ideación, Concepción y Construcción |
 | `stage-protocol-recovery.md` | Al retomar una sesión | Cómo reconstruir dónde se quedó el trabajo |
 

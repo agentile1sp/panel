@@ -1,4 +1,4 @@
-# Capítulo 02 · Nivel 2 · Los agentes (`.claude/agents/`)
+# Capítulo 03 · Nivel 2 · Los agentes (`.claude/agents/`)
 
 > **En una frase:** los agentes son **14 roles expertos**, como en un equipo de software real. Cada etapa tiene un rol que la **lidera**, otros que **apoyan** y, en algunas, uno que **revisa**.
 
@@ -111,7 +111,7 @@ En la mayoría de las etapas **no** se lanza una IA aparte por cada agente: la m
 
 ## ¿Qué modelo de IA usa cada agente?
 
-Por defecto, **todos usan el mismo modelo que la conversación**, el que elegimos en Claude Code. La excepción son **los 2 revisores, que usan Sonnet con esfuerzo medio**. Se puede cambiar por agente; ver el capítulo 04.
+Por defecto, **todos usan el mismo modelo que la conversación**, el que elegimos en Claude Code. La excepción son **los 2 revisores, que usan Sonnet con esfuerzo medio**. Se puede cambiar por agente; ver el capítulo 05.
 
 ---
 

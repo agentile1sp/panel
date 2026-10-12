@@ -1,4 +1,4 @@
-# Capítulo 02 · Nivel 2 · Hooks, sensores y tools
+# Capítulo 03 · Nivel 2 · Hooks, sensores y tools
 
 > **En una frase:** son las tres piezas que trabajan **en segundo plano**. Los **hooks** vigilan cada acción de la IA, los **sensores** revisan lo que se produce y las **tools** llevan la cuenta del recorrido.
 

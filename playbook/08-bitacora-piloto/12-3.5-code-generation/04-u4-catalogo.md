@@ -1,4 +1,4 @@
-# Capítulo 07 · 3.5 Code Generation · U4 Catálogo
+# Capítulo 08 · 3.5 Code Generation · U4 Catálogo
 
 > **En una frase:** la última unidad completó la herramienta: el catálogo de productos, crear, renombrar y borrar con deshacer si algo falla a medias, y los tres productos de ejemplo de la primera apertura. A mitad de su construcción se agotó el uso del plan Pro, y se terminó casi 7 horas después.
 

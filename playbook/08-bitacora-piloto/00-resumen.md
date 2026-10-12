@@ -1,4 +1,4 @@
-# Capítulo 07 · Bitácora del piloto (lo real)
+# Capítulo 08 · Bitácora del piloto (lo real)
 
 > **En una frase:** el 12 de octubre de 2026 recorrimos con AI-DLC las 12 etapas previstas y construimos una **herramienta local de seguimiento de productos**: 4 unidades, 110 pruebas en verde y 9 revisiones superadas. Fueron unas 4 h 26 min de trabajo y 82 mensajes nuestros.
 
@@ -52,7 +52,7 @@ Texto: compose → Inicialización (0.1–0.3) → **Ideación**: 1.1, 1.4 y 1.7
 | 2.9 | [Delivery Planning](11-2.9-delivery-planning.md) | `delivery` | — | 4 bolts, uno por unidad | 11 min |
 | 3.5 | [Code Generation](12-3.5-code-generation/00-vision-general.md) | `developer` | `architecture-reviewer` | La herramienta, con 110 pruebas | 2 h 23 min |
 | 3.6 | [Build and Test](13-3.6-build-and-test.md) | `quality` | — | 110 de 110 y 96,6 % de cobertura | 3 min |
-| — | [Esperado contra real](14-esperado-vs-real.md) | | | La comparación con los capítulos 05 y 06 | |
+| — | [Esperado contra real](14-esperado-vs-real.md) | | | La comparación con los capítulos 06 y 07 | |
 
 Code Generation tiene su propia subcarpeta: [visión general](12-3.5-code-generation/00-vision-general.md), una página por unidad ([U1](12-3.5-code-generation/01-u1-base.md), [U2](12-3.5-code-generation/02-u2-definicion-proceso.md), [U3](12-3.5-code-generation/03-u3-recorrido.md) y [U4](12-3.5-code-generation/04-u4-catalogo.md)) y el [cierre de la etapa](12-3.5-code-generation/05-cierre-de-la-etapa.md).
 

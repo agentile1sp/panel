@@ -1,4 +1,4 @@
-# Referencia de etapas · 1 · Ideación
+# Capítulo 02 · Etapas · 1 · Ideación
 
 > ¿Qué queremos y por qué? Define la intención, el alcance y, si aplica, el mercado, la viabilidad, el equipo y los primeros bocetos.
 

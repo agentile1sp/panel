@@ -1,4 +1,4 @@
-# Capítulo 03 · Memoria, estado y registros
+# Capítulo 04 · Memoria, estado y registros
 
 > **En una frase:** AI-DLC no depende de que la IA "se acuerde". Todo lo importante queda escrito en archivos: **cómo trabajamos** (reglas), **qué sabemos** (conocimiento), **dónde vamos** (estado) y **qué pasó** (registro).
 
@@ -57,7 +57,7 @@ Cada archivo tiene las mismas secciones: forma de trabajar, esqueleto, pruebas, 
 
 **Cómo se combinan:** se **suman**. Todas las capas aplican a la vez. Una capa más específica puede **añadir o precisar**, pero **no contradecir** a una más general. Si un aprendizaje nuevo contradice una regla superior, AI-DLC lo rechaza antes de guardarlo.
 
-**Cómo llegan a la IA:** por tres caminos. Al abrir la conversación, a través de `rules/aidlc.md` (capítulo 02). Al empezar cada etapa, porque el motor le entrega las que aplican. Y cuando se lanza un subagente, porque el hook `deliver-stage-rules` se las pasa.
+**Cómo llegan a la IA:** por tres caminos. Al abrir la conversación, a través de `rules/aidlc.md` (capítulo 03). Al empezar cada etapa, porque el motor le entrega las que aplican. Y cuando se lanza un subagente, porque el hook `deliver-stage-rules` se las pasa.
 
 ## 2 · Aprendizajes: cómo una corrección se convierte en regla
 
@@ -190,6 +190,6 @@ Claude Code tiene **su propia memoria**: instrucciones y notas que guarda en tu 
 
 ---
 
-**Ejemplos reales:** este capítulo describe lo que dice la documentación instalada. Al ejecutar el piloto, en el capítulo 07 se añadirán un `aidlc-state.md`, un `memory.md` y un extracto de la auditoría reales.
+**Ejemplos reales:** este capítulo describe lo que dice la documentación instalada. Al ejecutar el piloto, en el capítulo 08 se añadirán un `aidlc-state.md`, un `memory.md` y un extracto de la auditoría reales.
 
 **Fuentes:** `.claude/knowledge/aidlc-shared/` (`state-template.md`, `memory-template.md`, `audit-format.md`, `verification.md`); `.claude/aidlc-common/protocols/stage-protocol.md` (reglas de auditoría y carga de conocimiento); `stage-protocol-learnings.md`; `.claude/CLAUDE.md` (capas, knowledge, DocumentKB y Git); `aidlc/spaces/default/memory/`; `.gitignore`. Versión 2.11.0.

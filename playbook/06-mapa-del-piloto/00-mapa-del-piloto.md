@@ -1,8 +1,8 @@
-# Capítulo 05 · Mapa del piloto (lo esperado)
+# Capítulo 06 · Mapa del piloto (lo esperado)
 
 > **En una frase:** esperamos que el primer recorrido del piloto ejecute **12 de las 33 etapas**: las 11 ALWAYS más `2.6 Domain Design`, que es imprescindible.
 
-> ⚠️ **Este capítulo es una predicción, no el resultado.** Lo escribimos antes de ejecutar, a partir de la documentación instalada. Al arrancar, el agente `composer` hará su propia propuesta de etapas y puede añadir o quitar alguna con su justificación. **El plan final se aprueba en el gate de `/aidlc compose`**, y también se puede ajustar a mitad del recorrido. Lo que realmente pase, y en qué se diferencie de esta predicción, se cuenta en el capítulo 07.
+> ⚠️ **Este capítulo es una predicción, no el resultado.** Lo escribimos antes de ejecutar, a partir de la documentación instalada. Al arrancar, el agente `composer` hará su propia propuesta de etapas y puede añadir o quitar alguna con su justificación. **El plan final se aprueba en el gate de `/aidlc compose`**, y también se puede ajustar a mitad del recorrido. Lo que realmente pase, y en qué se diferencie de esta predicción, se cuenta en el capítulo 08.
 
 ## 1 · Qué construimos y con qué scope
 
@@ -81,7 +81,7 @@ flowchart TB
     class s12,s13,s15,s16,s21,s22,s24,s25,s28,s31,s32,s33,s34,s37,s41,s42,s43,s44,s45,s46,s47 nousada
 ```
 
-El detalle de cualquiera de las 33 etapas está en la [Referencia de etapas](../02-etapas/00-indice.md).
+El detalle de cualquiera de las 33 etapas está en el [capítulo 02, Etapas](../02-etapas/00-indice.md).
 
 En **verde**, las 11 ALWAYS. En **amarillo**, `2.6 Domain Design`, añadida porque otras etapas la necesitan. En **gris**, las 21 que no se ejecutan en este recorrido.
 
@@ -151,10 +151,10 @@ Texto: `compose` y aprobación del plan → Inicialización automática → 1.1 
 
 ## 8 · Qué queda fuera y por qué
 
-- **Operación completa** (las 7 etapas): este recorrido termina con la aplicación **construida y probada**, no desplegada. Operación se practica en el recorrido completo (capítulo 08).
-- **Las 14 condicionales restantes** de Ideación, Concepción y Construcción: investigación de mercado, viabilidad, bocetos, historias de usuario, contratos, diseño no funcional, infraestructura, CI… También se practican en el capítulo 08.
+- **Operación completa** (las 7 etapas): este recorrido termina con la aplicación **construida y probada**, no desplegada. Operación se practica en el recorrido completo (capítulo 09).
+- **Las 14 condicionales restantes** de Ideación, Concepción y Construcción: investigación de mercado, viabilidad, bocetos, historias de usuario, contratos, diseño no funcional, infraestructura, CI… También se practican en el capítulo 09.
 
-## 9 · Qué vamos a comparar en el capítulo 07
+## 9 · Qué vamos a comparar en el capítulo 08
 
 - ¿Propuso el `composer` estas mismas 12 etapas? ¿Añadió o quitó alguna? ¿Con qué justificación?
 - ¿Qué configuración propuso el `composer` y cuál quedó aprobada?

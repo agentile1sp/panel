@@ -1,6 +1,6 @@
-# Referencia de etapas
+# Capítulo 02 · Etapas
 
-> **Para consultar, no para leer de corrido.** Las 33 etapas de AI-DLC, con su ficha, qué entra, qué sale, qué pregunta y todos sus pasos. Los capítulos del piloto cuentan solo las etapas que usamos; aquí están todas.
+> **La base para entender AI-DLC.** Todo el trabajo avanza de etapa en etapa, así que este capítulo las presenta todas: las 33 etapas, cada una con su ficha, qué entra, qué sale, qué pregunta y todos sus pasos. Los capítulos del piloto cuentan solo las etapas que usamos; aquí están todas.
 
 ## Cómo leer cada etapa
 

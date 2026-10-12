@@ -1,4 +1,4 @@
-# Capítulo 02 · Nivel 2 · Knowledge y configuración
+# Capítulo 03 · Nivel 2 · Knowledge y configuración
 
 > **En una frase:** `knowledge/` es **la biblioteca** de cada agente, y los archivos de configuración son **los ajustes** que conectan AI-DLC con Claude Code.
 
@@ -30,7 +30,7 @@ Son guías, patrones y plantillas que cada agente consulta para trabajar como un
 |---|---|---|
 | Qué es | La biblioteca **del framework** | Los documentos **de nuestro equipo** |
 | Quién la escribe | AWS, con la instalación | Nosotros |
-| ¿Se edita? | No | Sí (se explica en el capítulo 03) |
+| ¿Se edita? | No | Sí (se explica en el capítulo 04) |
 
 ## 2 · La configuración
 
@@ -65,7 +65,7 @@ Claude Code lo lee al abrir el proyecto. Explica a la IA qué es AI-DLC, dónde 
 
 ### `rules/aidlc.md`: el puente hacia las reglas del equipo
 
-Es un archivo corto con 7 importaciones que hacen que Claude Code cargue siempre las reglas guardadas en `aidlc/spaces/default/memory/`: `org.md`, `team.md`, `project.md` y las 4 fases. Gracias a este puente, la IA tiene presentes las reglas del equipo en toda la conversación, no solo dentro de una etapa. Las reglas en sí se explican en el capítulo 03.
+Es un archivo corto con 7 importaciones que hacen que Claude Code cargue siempre las reglas guardadas en `aidlc/spaces/default/memory/`: `org.md`, `team.md`, `project.md` y las 4 fases. Gracias a este puente, la IA tiene presentes las reglas del equipo en toda la conversación, no solo dentro de una etapa. Las reglas en sí se explican en el capítulo 04.
 
 ```mermaid
 flowchart LR

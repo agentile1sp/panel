@@ -1,4 +1,4 @@
-# Referencia de etapas · 0 · Inicialización
+# Capítulo 02 · Etapas · 0 · Inicialización
 
 > Prepara el espacio de trabajo. Sus 3 etapas son automáticas: no hacen preguntas ni piden aprobación.
 

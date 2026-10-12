@@ -1,4 +1,4 @@
-# Capítulo 07 · 3.5 Code Generation · U1 Base común
+# Capítulo 08 · 3.5 Code Generation · U1 Base común
 
 > **En una frase:** la primera unidad levantó el servidor local y el guardado en archivos. Aquí se eligió la tecnología (Node.js sin dependencias) y el comando que comprueba cada unidad. Fue también la única en la que el plan tuvo que aprobarse dos veces.
 

@@ -1,4 +1,4 @@
-# Capítulo 02 · Anatomía del repositorio
+# Capítulo 03 · Anatomía del repositorio
 
 > **En una frase:** un proyecto con AI-DLC tiene dos carpetas clave: `.claude/`, que es **el motor** (igual en cualquier proyecto), y `aidlc/`, que es **el cuaderno** (lo que se decide y produce en este proyecto).
 
@@ -138,7 +138,7 @@ Texto: `aidlc/` tiene `active-space` (qué espacio está activo) y `spaces/defau
 
 Hay además archivos ocultos de cada máquina (`.aidlc-sessions/`, `.aidlc-clone-id`). No se suben a Git.
 
-La memoria y el registro se explican a fondo en el capítulo 03.
+La memoria y el registro se explican a fondo en el capítulo 04.
 
 ## Cómo encajan las piezas
 

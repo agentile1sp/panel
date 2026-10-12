@@ -1,4 +1,4 @@
-# Referencia de etapas · 2 · Concepción
+# Capítulo 02 · Etapas · 2 · Concepción
 
 > ¿Qué exactamente, en qué partes y en qué orden? Convierte lo acordado en requisitos, diseño, unidades y un plan de construcción.
 

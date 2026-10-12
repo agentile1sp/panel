@@ -1,4 +1,4 @@
-# Referencia de etapas · 4 · Operación
+# Capítulo 02 · Etapas · 4 · Operación
 
 > ¿Corre bien en un entorno real? Despliega, observa, responde a incidentes y mejora. Todas sus etapas son condicionales.
 

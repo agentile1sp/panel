@@ -1,4 +1,4 @@
-# Referencia de etapas · 3 · Construcción
+# Capítulo 02 · Etapas · 3 · Construcción
 
 > ¿Funciona? Diseña cada unidad en detalle, genera el código y lo prueba. Las etapas 3.1 a 3.5 se repiten por cada unidad.
 

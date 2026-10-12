@@ -71,7 +71,7 @@ Por qué hay dos ceros en la tabla:
 | **Gate** | El punto donde AI-DLC se detiene a pedir aprobación | "¿Apruebas los requisitos?" |
 | **Artefacto** | Un documento que produce una etapa | `requirements.md` |
 
-Las piezas internas (hooks, sensores, herramientas, memoria) se explican en los capítulos 02 y 03.
+Las piezas internas (hooks, sensores, herramientas, memoria) se explican en los capítulos 03 y 04.
 
 ## 5. Cinco cosas que no hay que confundir
 
@@ -80,12 +80,12 @@ Las piezas internas (hooks, sensores, herramientas, memoria) se explican en los 
 | **Método** | La forma de trabajar: fases, etapas y aprobaciones | AI-DLC |
 | **Framework** | El software que implementa el método y se instala en un proyecto | AI-DLC 2.11.0, del repositorio oficial [awslabs/aidlc-workflows](https://github.com/awslabs/aidlc-workflows) |
 | **Harness** | La herramienta de IA donde corre el framework | Claude Code dentro de VS Code. Otras opciones: Kiro, Codex, Cursor, Copilot |
-| **Modelo** | La IA que piensa y escribe | El que elegimos en Claude Code (ver capítulo 04) |
+| **Modelo** | La IA que piensa y escribe | El que elegimos en Claude Code (ver capítulo 05) |
 | **Producto** | Lo que construimos con todo lo anterior | El sistema para pedir vacaciones |
 
 "El repositorio de AI-DLC" puede significar dos cosas:
 - **El repositorio oficial de AWS** (`awslabs/aidlc-workflows`): de donde viene el framework.
-- **Nuestro repositorio**, donde el framework está instalado: la carpeta `.claude/` es el framework y la carpeta `aidlc/` guarda nuestro trabajo. Es lo que se recorre en el capítulo 02.
+- **Nuestro repositorio**, donde el framework está instalado: la carpeta `.claude/` es el framework y la carpeta `aidlc/` guarda nuestro trabajo. Es lo que se recorre en el capítulo 03.
 
 ## 6. Cómo se ve en la práctica
 
@@ -98,7 +98,7 @@ Según la documentación, sin ejecutarlo todavía:
 5. AI-DLC se detiene: **apruebas, pides cambios o rechazas.**
 6. Pasa a la siguiente etapa.
 
-En el capítulo 07 este ejemplo se sustituye por capturas reales del piloto.
+En el capítulo 08 este ejemplo se sustituye por capturas reales del piloto.
 
 ## 7. Qué NO es
 

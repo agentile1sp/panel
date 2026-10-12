@@ -12,7 +12,7 @@
 | 04 | [Entorno y setup](04-entorno-y-setup.md) | Con qué se hizo el piloto: equipo, editor, modelo, versiones e instalación paso a paso | ✅ |
 | 05 | [Mapa del piloto](05-mapa-del-piloto.md) | La predicción: qué etapas, agentes, documentos y controles esperamos usar | ✅ |
 | 06 | [Flujo conceptual](06-flujo-conceptual.md) | Cómo funciona cada etapa del piloto: qué entra, qué se hace, qué sale y cómo intervienes | ✅ |
-| 07 | Bitácora del piloto | Lo que realmente pasó, etapa por etapa, con capturas | ⏳ En construcción |
+| 07 | [Bitácora del piloto](07-bitacora-piloto/00-resumen.md) | Lo que realmente pasó, etapa por etapa, con capturas, y la comparación con lo esperado | ✅ |
 | 08 | Recorrido completo | Las etapas condicionales y la fase de Operación | Pendiente |
 | 09 | Harness | Cómo funciona AI-DLC por dentro | Pendiente |
 | 10 | Integraciones | Conexión con el repositorio, CI y el gestor de trabajo | Pendiente |
@@ -23,6 +23,8 @@
 | Sección | Para qué |
 |---|---|
 | [Referencia de etapas](referencia-etapas/00-indice.md) | Las **33 etapas** con su ficha, qué entra, qué sale, qué pregunta y todos sus pasos. Una página por fase |
+| [Decisiones y desvíos](anexos/decisiones-y-desvios.md) | Lo que decidimos durante el piloto y dónde nos apartamos de lo previsto |
+| [Glosario](anexos/glosario.md) | Los términos de AI-DLC que aparecen en el playbook, en una línea cada uno |
 
 ## Para los autores
 

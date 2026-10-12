@@ -34,7 +34,7 @@ Lectores: compañeros del equipo que no conocen AI-DLC. No hace falta que sepan 
   - `flowchart` para los recorridos. Lo que no usamos en el piloto se pinta en gris claro.
   - Cada diagrama lleva debajo una versión en texto, por si no se renderiza.
 - **Nombres de las etapas en inglés**, con su número, tal como aparecen en AI-DLC (por ejemplo, `2.3 Requirements Analysis`). Así coinciden con lo que muestra la herramienta. Las fases van en español.
-- **Capturas** en `playbook/assets/`, con el nombre `cap<capítulo>-<etapa>-<nn>.png`. Por ejemplo: `cap07-2.3-requirements-01.png`.
+- **Capturas** en `playbook/assets/`, con el nombre `cap<capítulo>-<etapa>-<nn>.png`. Por ejemplo: `cap08-2.3-requirements-01.png`.
 - **Presentaciones.** Si hace falta presentar, se generan slides o una página web a partir de los capítulos. El Markdown sigue siendo la fuente.
 
 ## 4. Estructura por capítulos
@@ -43,49 +43,49 @@ Lectores: compañeros del equipo que no conocen AI-DLC. No hace falta que sepan 
 |---|---|---|---|---|
 | 00 | Índice | Cómo leer el playbook y el estado de cada capítulo | Ahora | — |
 | 01 | Qué es AI-DLC | Una página: el problema que resuelve, la idea central, las 5 fases y el repositorio de AI-DLC | Antes del piloto | A1 |
-| 02 | Anatomía del repositorio | Mapa mental por niveles (ver §5) | Antes del piloto | A1 |
-| 03 | Memoria, estado y registros | Cómo AI-DLC recuerda y deja constancia (ver §6) | Antes del piloto; se completa con evidencia | A1 / A6 |
-| 04 | Entorno y setup | Modelo de IA, editor, harness, versiones y costos (ver §7) | Antes del piloto | A1 |
-| 05 | Mapa del piloto (lo esperado) | Fases y etapas que vamos a usar y las que no. Por cada etapa usada: agentes, artefactos, hooks, sensores y gates. Mapa del recorrido detallado | Antes de ejecutar | A2 |
-| 06 | Flujo conceptual | Input → proceso → output de cada fase y etapa, dónde interactuamos y hasta qué profundidad llegamos | Antes de ejecutar | A2 |
-| 07 | Bitácora del piloto (lo real) | Una página por etapa ejecutada, con la plantilla del §8. Al final, la comparación esperado contra real | Durante el piloto | A2–A3 |
-| 08 | Recorrido completo | Etapas condicionales y fase de Operación, sobre el mismo panel | Durante A4–A5 | A4–A5 |
-| 09 | Harness | Cómo funciona por dentro: conductor, motor, hooks, herramientas, estado, permisos y personalización | Durante A6 | A6 |
-| 10 | Integraciones | Las dos conexiones de referencia (repositorio/CI y gestor de trabajo) | Durante A7 | A7 |
-| 11 | Conclusiones y propuesta para Qik | Lecciones aprendidas, decisiones defendidas y propuesta de adopción | Durante A8 | A8 |
-| — | Referencia de etapas | Las 33 etapas con su ficha, qué entra, qué sale, qué pregunta y todos sus pasos, una página por fase. Para consultar, no para leer de corrido | Antes del piloto | — |
+| 02 | Etapas | Las 33 etapas con su ficha, qué entra, qué sale, qué pregunta y todos sus pasos, una página por fase. Es la base para entender el resto | Antes del piloto | A1 |
+| 03 | Anatomía del repositorio | Mapa mental por niveles (ver §5) | Antes del piloto | A1 |
+| 04 | Memoria, estado y registros | Cómo AI-DLC recuerda y deja constancia (ver §6) | Antes del piloto; se completa con evidencia | A1 / A6 |
+| 05 | Entorno y setup | Modelo de IA, editor, harness, versiones y costos (ver §7) | Antes del piloto | A1 |
+| 06 | Mapa del piloto (lo esperado) | Fases y etapas que vamos a usar y las que no. Por cada etapa usada: agentes, artefactos, hooks, sensores y gates. Mapa del recorrido detallado | Antes de ejecutar | A2 |
+| 07 | Flujo conceptual | Input → proceso → output de cada fase y etapa, dónde interactuamos y hasta qué profundidad llegamos | Antes de ejecutar | A2 |
+| 08 | Bitácora del piloto (lo real) | Una página por etapa ejecutada, con la plantilla del §8. Al final, la comparación esperado contra real | Durante el piloto | A2–A3 |
+| 09 | Recorrido completo | Etapas condicionales y fase de Operación, sobre el mismo panel | Durante A4–A5 | A4–A5 |
+| 10 | Harness | Cómo funciona por dentro: conductor, motor, hooks, herramientas, estado, permisos y personalización | Durante A6 | A6 |
+| 11 | Integraciones | Las dos conexiones de referencia (repositorio/CI y gestor de trabajo) | Durante A7 | A7 |
+| 12 | Conclusiones y propuesta para Qik | Lecciones aprendidas, decisiones defendidas y propuesta de adopción | Durante A8 | A8 |
 | — | Anexos | Glosario, plantilla de etapa, decisiones y desvíos, FAQ y "cómo lo hago yo" | Siempre | — |
 
 ```mermaid
 flowchart LR
-    A["01-04<br/>Entender AI-DLC"] --> B["05-06<br/>Plan del piloto<br/>(esperado)"]
-    B --> C["07<br/>Bitácora<br/>(real)"]
-    C --> D["08<br/>Recorrido<br/>completo"]
-    D --> E["09<br/>Harness"]
-    E --> F["10<br/>Integraciones"]
-    F --> G["11<br/>Propuesta Qik"]
+    A["01-05<br/>Entender AI-DLC"] --> B["06-07<br/>Plan del piloto<br/>(esperado)"]
+    B --> C["08<br/>Bitácora<br/>(real)"]
+    C --> D["09<br/>Recorrido<br/>completo"]
+    D --> E["10<br/>Harness"]
+    E --> F["11<br/>Integraciones"]
+    F --> G["12<br/>Propuesta Qik"]
 ```
 
-Texto: entender AI-DLC (01–04) → plan del piloto, lo esperado (05–06) → bitácora, lo real (07) → recorrido completo (08) → harness (09) → integraciones (10) → propuesta para Qik (11).
+Texto: entender AI-DLC (01–05) → plan del piloto, lo esperado (06–07) → bitácora, lo real (08) → recorrido completo (09) → harness (10) → integraciones (11) → propuesta para Qik (12).
 
-Estructura de carpetas:
+Estructura de carpetas: cada capítulo es una carpeta con su número, y su página de entrada empieza por `00-`.
 
 ```
 playbook/
 ├── 00-guia-del-playbook.md      este documento
 ├── 00-indice.md
-├── 01-que-es-ai-dlc.md
-├── 02-anatomia-del-repo/
-├── 03-memoria-estado-registros.md
-├── 04-entorno-y-setup.md
-├── 05-mapa-del-piloto.md
-├── 06-flujo-conceptual.md
-├── 07-bitacora-piloto/          una página por etapa ejecutada
-├── 08-recorrido-completo/
-├── 09-harness/
-├── 10-integraciones/
-├── 11-conclusiones-qik.md
-├── referencia-etapas/           las 33 etapas: ficha, entra, sale, preguntas y pasos
+├── 01-que-es-ai-dlc/
+├── 02-etapas/                   las 33 etapas: ficha, entra, sale, preguntas y pasos
+├── 03-anatomia-del-repo/
+├── 04-memoria-estado-registros/
+├── 05-entorno-y-setup/
+├── 06-mapa-del-piloto/
+├── 07-flujo-conceptual/
+├── 08-bitacora-piloto/          una página por etapa ejecutada
+├── 09-recorrido-completo/
+├── 10-harness/
+├── 11-integraciones/
+├── 12-conclusiones-qik/
 ├── anexos/
 │   ├── glosario.md
 │   ├── plantilla-etapa.md
@@ -94,7 +94,7 @@ playbook/
 └── assets/
 ```
 
-## 5. Capítulo 02: anatomía por niveles
+## 5. Capítulo 03: anatomía por niveles
 
 La idea es que el lector baje un nivel cada vez, con un mapa mental por nivel:
 
@@ -104,7 +104,7 @@ La idea es que el lector baje un nivel cada vez, con un mapa mental por nivel:
 - **Nivel 2, el detalle.** Dentro de cada carpeta, cada elemento con una frase: los 14 agentes, cada hook, cada sensor, cada scope, etc.
 - **Nivel 3, solo donde aporte.** Abrir un archivo real (un agente o una etapa) y explicar sus partes.
 
-## 6. Capítulo 03: memoria, estado y registros
+## 6. Capítulo 04: memoria, estado y registros
 
 Explica cómo AI-DLC recuerda lo decidido y cómo deja constancia de lo que pasó. Hay que verificar cada punto con el piloto. Temas previstos:
 
@@ -120,7 +120,7 @@ Explica cómo AI-DLC recuerda lo decidido y cómo deja constancia de lo que pas�
 
 Cada tema lleva un ejemplo real tomado del piloto.
 
-## 7. Capítulo 04: entorno y setup
+## 7. Capítulo 05: entorno y setup
 
 Ficha del entorno con la que se generó todo lo que aparece en la bitácora:
 
@@ -132,7 +132,7 @@ Ficha del entorno con la que se generó todo lo que aparece en la bitácora:
 - **Consumo:** tiempo efectivo, tokens y costo estimado por recorrido. `/aidlc-session-cost` da duración, etapas, sensores y aprendizajes. Los tokens y el costo estimado (a precio de lista, no es una factura) los registra AI-DLC con el hook `fold-usage` y los muestra en la barra de estado.
 - **Pasos de instalación y configuración**, reproducibles.
 
-## 8. Plantilla de cada etapa (capítulo 07)
+## 8. Plantilla de cada etapa (capítulo 08)
 
 Cada página de la bitácora sigue la misma plantilla:
 
@@ -151,7 +151,7 @@ Cada página de la bitácora sigue la misma plantilla:
 
 ## 9. Cómo trabajamos
 
-- **Antes de cada fase:** completamos lo esperado en los capítulos 05 y 06.
+- **Antes de cada fase:** completamos lo esperado en los capítulos 06 y 07.
 - **En cada aprobación de etapa:** Claude redacta la página de la bitácora a partir de los registros que deja AI-DLC (`memory.md`, `aidlc-state.md`, auditoría y artefactos). Andrés añade capturas, revisa y aprueba.
 - **Al cerrar cada fase:** se actualiza la comparación esperado contra real, el glosario y `decisiones-y-desvios.md`.
 - **Cada capítulo se cierra con un commit** para poder volver a cualquier punto.
@@ -160,9 +160,9 @@ Cada página de la bitácora sigue la misma plantilla:
 
 | Fecha | Hito |
 |---|---|
-| Lunes 12 de octubre de 2026 | Presentación inicial: guía, capítulos 01 a 06 y bitácora marcada "en construcción" |
-| Durante A2–A3 | Capítulo 07 completo para el recorrido con etapas ALWAYS |
-| Durante A4–A8 | Capítulos 08 a 11 |
+| Lunes 12 de octubre de 2026 | Presentación inicial: guía, capítulos 01 a 07 y bitácora marcada "en construcción" |
+| Durante A2–A3 | Capítulo 08 completo para el recorrido con etapas ALWAYS |
+| Durante A4–A8 | Capítulos 09 a 12 |
 
 ## 11. Decisiones tomadas
 
@@ -171,10 +171,11 @@ Cada página de la bitácora sigue la misma plantilla:
 - 10/10/2026: el playbook se escribe en Markdown en `playbook/` y se lee con Obsidian.
 - 10/10/2026: primer recorrido con un plan a medida (`/aidlc compose`): las 11 etapas ALWAYS más `2.6 Domain Design`, con Guard Policy `strict` y confirmación de resumen encendida.
 - 10/10/2026: modelos por defecto en el primer recorrido: la conversación con el modelo elegido en Claude Code y los 2 revisores con Sonnet y esfuerzo medio. Se revisará según lo que detecten los revisores.
+- 12/10/2026: cada capítulo vive en su propia carpeta numerada. La referencia de etapas pasa a ser el **capítulo 02, Etapas**, porque es la base para que el equipo entienda el resto; los capítulos siguientes se corren un número.
 
 ## 12. Pendientes
 
-- Añadir a la referencia de etapas un ejemplo real por etapa ejecutada (enlace al documento y extracto corto): las 12 del primer recorrido durante el piloto y el resto en el recorrido completo. No se inventan ejemplos.
+- Añadir al capítulo 02 (Etapas) un ejemplo real por etapa ejecutada (enlace al documento y extracto corto): las 12 del primer recorrido durante el piloto y el resto en el recorrido completo. No se inventan ejemplos.
 - Verificar la instalación para Claude Code con `/aidlc --doctor` en una sesión nueva.
-- Elegir el scope del primer recorrido (por ejemplo `poc`, `mvp` o `express`) y registrarlo en el capítulo 05.
+- Elegir el scope del primer recorrido (por ejemplo `poc`, `mvp` o `express`) y registrarlo en el capítulo 06.
 - Definir el corte mínimo del panel en Ideación.

@@ -47,11 +47,11 @@ todos los controles e interacciones durante el aprendizaje.
 ## 2. En el gate del plan de `compose`
 
 - **Comprobar la configuración:** Guard Policy `strict` y confirmación de resumen encendida. Si el `composer` no las propone, pedirlas en el gate.
-- **Comparar con la predicción** del capítulo 05 del playbook: 11 etapas ALWAYS más `2.6 Domain Design`, porque `2.7` y `2.9` necesitan sus `components`.
+- **Comparar con la predicción** del capítulo 06 del playbook: 11 etapas ALWAYS más `2.6 Domain Design`, porque `2.7` y `2.9` necesitan sus `components`.
 - **Si propone etapas extra**, leer su justificación. Lo importante es que el producto salga bien: si una etapa condicional es necesaria, se acepta.
 
 ## 3. Durante el recorrido
 
-- **Capturas** de cada gate y de cada pregunta importante en `playbook/assets/`, con el nombre `cap07-<etapa>-<nn>.png`.
-- La bitácora del capítulo 07 se escribe a partir de los registros de AI-DLC (`aidlc-state.md`, `memory.md` de cada etapa, auditoría) y de las capturas.
-- Por cada etapa ejecutada, añadir a la referencia de etapas un enlace al documento real y un extracto corto (sin inventar ejemplos).
+- **Capturas** de cada gate y de cada pregunta importante en `playbook/assets/`, con el nombre `cap08-<etapa>-<nn>.png`.
+- La bitácora del capítulo 08 se escribe a partir de los registros de AI-DLC (`aidlc-state.md`, `memory.md` de cada etapa, auditoría) y de las capturas.
+- Por cada etapa ejecutada, añadir al capítulo 02 (Etapas) del playbook un enlace al documento real y un extracto corto (sin inventar ejemplos).

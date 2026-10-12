@@ -4,17 +4,17 @@
 
 **9 etapas:** 3 ALWAYS y 6 condicionales. [Volver al índice](00-indice.md)
 
-| Etapa | Tipo | Lidera | En una frase |
-|---|---|---|---|
-| 2.1 Reverse Engineering | Condicional | developer | Analiza **el código existente** para entender qué hace, cómo está organizado y en qué estado está. |
-| 2.2 Practices Discovery | Condicional | pipeline-deploy | Descubre **cómo trabaja el equipo**: ramas, pruebas, despliegue y estilo de código. Al aprobarlo, se guarda en `team.md`. |
-| 2.3 Requirements Analysis | ALWAYS | product | Convierte lo acordado en **requisitos que se puedan probar**. |
-| 2.4 User Stories | Condicional | product | Escribe **personas e historias de usuario** con sus criterios de aceptación y prioridad. |
-| 2.5 Refined Mockups | Condicional | design | Pasa de los bocetos a **pantallas detalladas**: interacción, estados, sistema de diseño y accesibilidad. |
-| 2.6 Domain Design | Condicional | architect | Define **los componentes del sistema**, qué datos posee cada uno y las **decisiones de arquitectura**. |
-| 2.7 Units Generation | ALWAYS | architect | Divide el sistema en **unidades construibles** y define en qué orden dependen unas de otras. |
-| 2.8 Contract Design | Condicional | architect | Fija **los contratos entre unidades y las APIs públicas**: qué se envía, qué se recibe y quién es dueño de cada uno. |
-| 2.9 Delivery Planning | ALWAYS | delivery | Ordena la construcción en ***bolts***, que son ciclos cortos de construcción, cada uno con su definición de terminado, y señala los riesgos. |
+| Etapa                     | Tipo        | Lidera          | En una frase                                                                                                                                 |
+| ------------------------- | ----------- | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| 2.1 Reverse Engineering   | Condicional | developer       | Analiza **el código existente** para entender qué hace, cómo está organizado y en qué estado está.                                           |
+| 2.2 Practices Discovery   | Condicional | pipeline-deploy | Descubre **cómo trabaja el equipo**: ramas, pruebas, despliegue y estilo de código. Al aprobarlo, se guarda en `team.md`.                    |
+| 2.3 Requirements Analysis | ALWAYS      | product         | Convierte lo acordado en **requisitos que se puedan probar**.                                                                                |
+| 2.4 User Stories          | Condicional | product         | Escribe **personas e historias de usuario** con sus criterios de aceptación y prioridad.                                                     |
+| 2.5 Refined Mockups       | Condicional | design          | Pasa de los bocetos a **pantallas detalladas**: interacción, estados, sistema de diseño y accesibilidad.                                     |
+| 2.6 Domain Design         | Condicional | architect       | Define **los componentes del sistema**, qué datos posee cada uno y las **decisiones de arquitectura**.                                       |
+| 2.7 Units Generation      | ALWAYS      | architect       | Divide el sistema en **unidades construibles** y define en qué orden dependen unas de otras.                                                 |
+| 2.8 Contract Design       | Condicional | architect       | Fija **los contratos entre unidades y las APIs públicas**: qué se envía, qué se recibe y quién es dueño de cada uno.                         |
+| 2.9 Delivery Planning     | ALWAYS      | delivery        | Ordena la construcción en ***bolts***, que son ciclos cortos de construcción, cada uno con su definición de terminado, y señala los riesgos. |
 
 ---
 

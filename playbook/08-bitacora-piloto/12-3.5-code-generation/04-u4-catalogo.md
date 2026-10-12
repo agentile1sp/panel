@@ -98,22 +98,22 @@ Documentos: [plan](../../../aidlc/spaces/default/intents/261012-herramienta-prod
 
 ## 12 · Capturas
 
-![Catálogo](../../assets/cap07-3.5-catalogo-01.png)
+![Catálogo](../../assets/cap08-3.5-catalogo-01.png)
 *El catálogo con los tres ejemplos en distintos puntos del recorrido.*
 
-![Nombre vacío](../../assets/cap07-3.5-catalogo-nombre-vacio-09.png)
+![Nombre vacío](../../assets/cap08-3.5-catalogo-nombre-vacio-09.png)
 *Crear un producto sin nombre muestra "El nombre es obligatorio."*
 
-![Diálogo de borrado](../../assets/cap07-3.5-catalogo-dialogo-borrar-10.png)
+![Diálogo de borrado](../../assets/cap08-3.5-catalogo-dialogo-borrar-10.png)
 *Borrar abre un diálogo que nombra el producto y permite cancelar.*
 
-![Plan de U4](../../assets/cap07-3.5-u4-catalogo-01.png)
+![Plan de U4](../../assets/cap08-3.5-u4-catalogo-01.png)
 *El plan de código de U4.*
 
-![Resumen de U4](../../assets/cap07-3.5-u4-catalogo-02.png)
+![Resumen de U4](../../assets/cap08-3.5-u4-catalogo-02.png)
 *El resumen del código de U4.*
 
-![Revisión de U4](../../assets/cap07-3.5-u4-catalogo-03.png)
+![Revisión de U4](../../assets/cap08-3.5-u4-catalogo-03.png)
 *La primera revisión de U4.*
 
 ---

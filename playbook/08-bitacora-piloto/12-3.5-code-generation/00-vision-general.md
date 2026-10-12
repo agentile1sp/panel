@@ -153,10 +153,10 @@ Las llamadas incluyen al conductor y a los subagentes. Por agente: 178 del condu
 
 ## 12 · Capturas
 
-![Catálogo](../../assets/cap07-3.5-catalogo-01.png)
+![Catálogo](../../assets/cap08-3.5-catalogo-01.png)
 *La herramienta terminada: el catálogo con los tres productos de ejemplo.*
 
-![Comprobaciones](../../assets/cap07-3.5-checkpoints-07.png)
+![Comprobaciones](../../assets/cap08-3.5-checkpoints-07.png)
 *La auditoría del modo automático, el comando de comprobación y la verificación de cada unidad.*
 
 ---

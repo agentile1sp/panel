@@ -77,13 +77,13 @@ Que el proceso sea un archivo de datos validado al arrancar hace que cambiarlo e
 
 ## 12 · Capturas
 
-![Plan de U2](../../assets/cap07-3.5-u2-definicion-proceso-01.png)
+![Plan de U2](../../assets/cap08-3.5-u2-definicion-proceso-01.png)
 *El plan de código de U2.*
 
-![Resumen de U2](../../assets/cap07-3.5-u2-definicion-proceso-02.png)
+![Resumen de U2](../../assets/cap08-3.5-u2-definicion-proceso-02.png)
 *El resumen del código.*
 
-![Revisión de U2](../../assets/cap07-3.5-u2-definicion-proceso-03.png)
+![Revisión de U2](../../assets/cap08-3.5-u2-definicion-proceso-03.png)
 *La revisión: READY con 3 observaciones menores.*
 
 ---

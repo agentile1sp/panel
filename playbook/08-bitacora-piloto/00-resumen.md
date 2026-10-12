@@ -13,7 +13,7 @@ Una herramienta web que se ejecuta en el propio equipo para seguir productos por
 
 Todo se introduce a mano, se guarda en archivos legibles y arranca con tres productos de ejemplo.
 
-![La herramienta terminada](../assets/cap07-3.5-catalogo-01.png)
+![La herramienta terminada](../assets/cap08-3.5-catalogo-01.png)
 *El catálogo de la herramienta, con los tres productos de ejemplo.*
 
 ## 2 · El recorrido real

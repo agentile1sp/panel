@@ -63,7 +63,7 @@ Dijimos con claridad que no íbamos a repetir U1 a U4 de ninguna manera. La IA e
 
 ## 7 · Capturas
 
-![Bloqueo en la auditoría](../../assets/cap07-3.5-bloqueo-08.png)
+![Bloqueo en la auditoría](../../assets/cap08-3.5-bloqueo-08.png)
 *Los rechazos al cerrar la etapa, el cambio de Guard Policy y la aceptación del archivo, tal como quedaron en la auditoría.*
 
 ---

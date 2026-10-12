@@ -77,10 +77,10 @@
 
 ## 9 · Capturas
 
-![Propuesta del composer](../assets/cap07-arranque-propuesta-composer-01.png)
+![Propuesta del composer](../assets/cap08-arranque-propuesta-composer-01.png)
 *La propuesta del `composer`, tal como quedó en `composer-proposal.json`.*
 
-![Plan guardado](../assets/cap07-arranque-plan-guardado-02.png)
+![Plan guardado](../assets/cap08-arranque-plan-guardado-02.png)
 *El plan guardado como `piloto-flujo-basico`, con la configuración en la cabecera.*
 
 ---

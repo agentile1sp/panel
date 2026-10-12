@@ -88,13 +88,13 @@ Documentos: [plan](../../../aidlc/spaces/default/intents/261012-herramienta-prod
 
 ## 12 · Capturas
 
-![Plan de U1](../../assets/cap07-3.5-u1-base-01.png)
+![Plan de U1](../../assets/cap08-3.5-u1-base-01.png)
 *El plan de código de U1.*
 
-![Resumen de U1](../../assets/cap07-3.5-u1-base-02.png)
+![Resumen de U1](../../assets/cap08-3.5-u1-base-02.png)
 *El resumen del código de U1.*
 
-![Revisión de U1](../../assets/cap07-3.5-u1-base-03.png)
+![Revisión de U1](../../assets/cap08-3.5-u1-base-03.png)
 *La revisión: READY con una observación importante.*
 
 ---

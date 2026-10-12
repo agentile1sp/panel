@@ -52,6 +52,6 @@ todos los controles e interacciones durante el aprendizaje.
 
 ## 3. Durante el recorrido
 
-- **Capturas** de cada gate y de cada pregunta importante en `playbook/assets/`, con el nombre `cap07-<etapa>-<nn>.png`.
+- **Capturas** de cada gate y de cada pregunta importante en `playbook/assets/`, con el nombre `cap08-<etapa>-<nn>.png`.
 - La bitácora del capítulo 08 se escribe a partir de los registros de AI-DLC (`aidlc-state.md`, `memory.md` de cada etapa, auditoría) y de las capturas.
 - Por cada etapa ejecutada, añadir al capítulo 02 (Etapas) del playbook un enlace al documento real y un extracto corto (sin inventar ejemplos).

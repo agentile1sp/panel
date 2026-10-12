@@ -82,28 +82,28 @@ Documentos: [plan](../../../aidlc/spaces/default/intents/261012-herramienta-prod
 
 ## 12 · Capturas
 
-![Recorrido de un producto](../../assets/cap07-3.5-recorrido-02.png)
+![Recorrido de un producto](../../assets/cap08-3.5-recorrido-02.png)
 *El recorrido de un producto a medias: 3 pasos completos, 1 en curso y el resto bloqueados, con lo que falta.*
 
-![Recorrido completo](../../assets/cap07-3.5-recorrido-completo-06.png)
+![Recorrido completo](../../assets/cap08-3.5-recorrido-completo-06.png)
 *El recorrido de un producto con los 10 pasos completos.*
 
-![Un paso en curso](../../assets/cap07-3.5-paso-03.png)
+![Un paso en curso](../../assets/cap08-3.5-paso-03.png)
 *El paso 4 (Mapa de piezas) en curso, con su estado y su contenido.*
 
-![Un paso estructurado](../../assets/cap07-3.5-paso-04.png)
+![Un paso estructurado](../../assets/cap08-3.5-paso-04.png)
 *El paso 5 (Fichas) de un producto completo, con sus campos.*
 
-![Registro de acuerdos](../../assets/cap07-3.5-registros-05.png)
+![Registro de acuerdos](../../assets/cap08-3.5-registros-05.png)
 *El registro de acuerdos, disponible en cualquier paso.*
 
-![Plan de U3](../../assets/cap07-3.5-u3-recorrido-01.png)
+![Plan de U3](../../assets/cap08-3.5-u3-recorrido-01.png)
 *El plan de código de U3.*
 
-![Resumen de U3](../../assets/cap07-3.5-u3-recorrido-02.png)
+![Resumen de U3](../../assets/cap08-3.5-u3-recorrido-02.png)
 *El resumen del código de U3.*
 
-![Revisión de U3](../../assets/cap07-3.5-u3-recorrido-03.png)
+![Revisión de U3](../../assets/cap08-3.5-u3-recorrido-03.png)
 *La revisión: READY con 3 observaciones menores.*
 
 ---

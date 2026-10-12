@@ -1,12 +1,12 @@
 # Mapa de piezas — [Producto]
 
-*Producto · Paso 4 · Toma de: la idea escogida, Rebanada del core · Pasada: [1 = borrador / 2 = ajustada tras las fichas]*
+*Producto · Paso 4 · Toma de: la idea escogida, Walking skeleton · Pasada: [1 = borrador / 2 = ajustada tras las fichas]*
 
 > Vista de producto: piezas y dependencias, no pantallas. Es un borrador barato que se corrige cuando las fichas revelan conexiones nuevas.
 
 ## Piezas
 
-| Pieza | Tipo | Qué hace, en una frase | Núcleo | Entra en la rebanada |
+| Pieza | Tipo | Qué hace, en una frase | Núcleo | Entra en el walking skeleton |
 |---|---|---|---|---|
 | [nombre] | Capacidad / Catálogo de instancias / Vista | [frase] | Sí / No | Sí / No |
 

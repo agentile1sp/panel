@@ -1,6 +1,6 @@
 # Ficha — Capacidad: [Nombre]
 
-*Producto · Paso 5 · Toma de: Mapa de piezas, Rebanada del core*
+*Producto · Paso 5 · Toma de: Mapa de piezas, Walking skeleton*
 
 ### 1. Nombre
 [Nombre de la pieza]

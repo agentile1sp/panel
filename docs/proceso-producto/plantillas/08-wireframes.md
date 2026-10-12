@@ -1,8 +1,8 @@
 # Wireframes — [Producto]
 
-*Producto · Paso 8 · Toma de: User flow, Story map (lo que entra en la rebanada)*
+*Producto · Paso 8 · Toma de: User flow, Story map (lo que entra en el walking skeleton)*
 
-> Pantallas en bruto, sin diseño visual. Solo las que entran en la rebanada.
+> Pantallas en bruto, sin diseño visual. Solo las que entran en el walking skeleton.
 
 ## Pantallas
 
@@ -12,7 +12,7 @@
 
 ## Comprobación
 
-- [ ] Cada pantalla del user flow que entra en la rebanada tiene wireframe.
+- [ ] Cada pantalla del user flow que entra en el walking skeleton tiene wireframe.
 - [ ] Cada pantalla tiene sus estados: ideal, vacía, con error y sin permiso (o "N/A" con motivo).
 - [ ] Un error de validación nunca borra lo que la persona ya escribió.
 

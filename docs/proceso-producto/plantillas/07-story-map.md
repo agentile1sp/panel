@@ -2,7 +2,7 @@
 
 *Producto · Paso 7 · Toma de: Fichas, User flow, Mapa de piezas (objetos)*
 
-> **Columna vertebral** = lo que hace la persona, en orden. Debajo, los pasos y las historias. La **línea de corte** separa lo que entra en la rebanada de lo que queda para después.
+> **Columna vertebral** = lo que hace la persona, en orden. Debajo, los pasos y las historias. La **línea de corte** separa lo que entra en el walking skeleton de lo que queda para después.
 
 **Leyenda de códigos:** [letra] = [actividad] · el número identifica la historia dentro de su actividad.
 
@@ -12,7 +12,7 @@
 **Paso: [nombre]**
 - [C1] · [Persona / Sistema] — [historia]
 
-**Después de la rebanada**
+**Después del walking skeleton**
 - [historia que queda fuera]
 
 ## Tabla CRUD por objeto

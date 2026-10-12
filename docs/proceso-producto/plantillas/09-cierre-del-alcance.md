@@ -26,7 +26,7 @@ Por cada ítem a construir, como guía, no como compuerta:
 |---|---|---|
 | Hipótesis | [ruta] | [listo / pendiente] |
 | Línea base | [ruta] | |
-| Rebanada del core | [ruta] | |
+| Walking skeleton | [ruta] | |
 | Mapa de piezas | [ruta] | |
 | Fichas | [ruta] | |
 | User flow | [ruta] | |

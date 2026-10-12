@@ -1,0 +1,26 @@
+{
+  "stage": "code-generation",
+  "unit": "u1-base",
+  "version": 1,
+  "writes": [
+    { "path": "herramienta/package.json" },
+    { "path": "herramienta/README.md" },
+    { "path": "herramienta/docs/formato-datos.md" },
+    { "path": "herramienta/public/index.html" },
+    { "path": "herramienta/src/main.js" },
+    { "path": "herramienta/src/base/config.js" },
+    { "path": "herramienta/src/base/errores.js" },
+    { "path": "herramienta/src/base/almacen.js" },
+    { "path": "herramienta/src/base/adjuntos.js" },
+    { "path": "herramienta/src/base/servidor.js" },
+    { "path": "herramienta/tests/ayudas/carpeta-temporal.js" },
+    { "path": "herramienta/tests/ayudas/http.js" },
+    { "path": "herramienta/tests/ayudas/registro.js" },
+    { "path": "herramienta/tests/u1-base/humo.test.js" },
+    { "path": "herramienta/tests/u1-base/almacen.test.js" },
+    { "path": "herramienta/tests/u1-base/adjuntos.test.js" },
+    { "path": "herramienta/tests/u1-base/servidor.test.js" },
+    { "path": "herramienta/tests/u1-base/arranque.test.js" },
+    { "path": ".gitignore" }
+  ]
+}

@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Registro del producto</title>
+    <link rel="stylesheet" href="/css/estilos.css" />
+    <script type="module" src="/js/registros.js"></script>
+  </head>
+  <body>
+    <a class="saltar" href="#principal" data-testid="registros-saltar">Saltar al contenido</a>
+    <header>
+      <nav aria-label="Navegación">
+        <a id="volver-recorrido" href="recorrido.html" data-testid="registros-volver-recorrido">Volver al recorrido</a>
+        ·
+        <a href="/" data-testid="registros-volver-catalogo">Catálogo</a>
+      </nav>
+    </header>
+    <main id="principal">
+      <p id="producto" class="producto" data-testid="registros-producto"></p>
+      <h1 id="titulo" data-testid="registros-titulo">Registro</h1>
+      <p class="ayuda">Este registro se puede usar siempre, aunque ningún paso esté en Completo.</p>
+      <div id="mensaje" class="mensaje" role="status" aria-live="polite" hidden data-testid="registros-mensaje"></div>
+      <div id="tipos" data-testid="registros-tipos"></div>
+    </main>
+  </body>
+</html>

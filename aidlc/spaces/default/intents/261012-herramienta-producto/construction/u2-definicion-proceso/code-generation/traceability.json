@@ -1,0 +1,10 @@
+{
+  "stage": "code-generation",
+  "unit": "u2-definicion-proceso",
+  "upstream_ids": ["FR5", "FR5.1", "FR5.2"],
+  "coverage": [
+    { "id": "FR5", "status": "OK", "target": "herramienta/proceso/definicion-proceso.json" },
+    { "id": "FR5.1", "status": "OK", "target": "herramienta/src/definicion/cargar.js" },
+    { "id": "FR5.2", "status": "OK", "target": "herramienta/src/definicion/definicion.js" }
+  ]
+}

@@ -66,3 +66,7 @@
 
 <!-- Project-specific corrections from human feedback. -->
 <!-- Format: NEVER/ALWAYS [behavior] (learned [date]) -->
+- Si la persona responde "Not applicable" a si un requisito de la descripción es criterio de éxito, se interpreta como que no es criterio de éxito de esa versión (el requisito sigue en pie) y se deja como supuesto para que lo confirme. (learned 2026-10-12) <!-- cid:261012-herramienta-producto:intent-capture:4ec73b4d78cda9451c350fcae92f9667f879b78284b1c70a8c95f4ad31da6b3f -->
+- El equipo al que se explica el piloto de AI-DLC figura en el mapa de interesados como interesado en el piloto, no como usuario de la herramienta. (learned 2026-10-12) <!-- cid:261012-herramienta-producto:intent-capture:79b6df1b18ec693af89b168a4c3bae141aebbf31f9adccc829c5f9cd31e8f017 -->
+- Cuando una respuesta contradice algo ya aprobado en una etapa anterior, se trata como cambio de alcance: se confirma con una pregunta de seguimiento y el cambio se deja explícito en el documento de la etapa. (learned 2026-10-12) <!-- cid:261012-herramienta-producto:scope-definition:e4782cf3df499cc421d999ef0dbc4b4bc5891f891e0a258d13dfdc5e1753f646 -->
+- Cuando la persona pide un cambio al resumen que expresa un principio (por ejemplo, "que todo se meta de forma manual para hacerlo más sencillo"), se registra como criterio rector explícito de la versión en el brief y en el registro de decisiones. (learned 2026-10-12) <!-- cid:261012-herramienta-producto:approval-handoff:73342456d9a8a1e8a5252efbc0e8afdc96144aecd65760ab73f8c5b1a6c3abe7 -->

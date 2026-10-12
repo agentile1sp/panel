@@ -1,0 +1,15 @@
+{
+  "name": "herramienta-producto",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Herramienta local para seguir productos a lo largo del proceso de producto de 10 pasos.",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node src/main.js",
+    "test": "node --test tests/*/*.test.js"
+  },
+  "license": "UNLICENSED"
+}

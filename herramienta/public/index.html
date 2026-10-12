@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Catálogo de productos</title>
+    <link rel="stylesheet" href="/css/estilos.css" />
+    <script type="module" src="/js/catalogo.js"></script>
+  </head>
+  <body>
+    <a class="saltar" href="#principal" data-testid="catalogo-saltar">Saltar al contenido</a>
+    <main id="principal">
+      <h1>Catálogo de productos</h1>
+      <p class="ayuda" data-testid="catalogo-presentacion">La herramienta está en marcha en este equipo. Elige un producto para abrir su recorrido por los 10 pasos del proceso.</p>
+      <div id="mensaje" class="mensaje" role="status" aria-live="polite" hidden data-testid="catalogo-mensaje"></div>
+
+      <section aria-labelledby="titulo-productos">
+        <h2 id="titulo-productos">Productos</h2>
+        <div id="vacio" class="aviso" hidden data-testid="catalogo-vacio">
+          <p id="vacio-texto" data-testid="catalogo-vacio-texto"></p>
+          <button type="button" id="vacio-crear" data-testid="catalogo-vacio-crear">Crear un producto</button>
+        </div>
+        <ul id="lista-productos" class="lista-productos" data-testid="catalogo-lista"></ul>
+      </section>
+
+      <section aria-labelledby="titulo-nuevo">
+        <h2 id="titulo-nuevo">Nuevo producto</h2>
+        <form id="form-nuevo" novalidate data-testid="catalogo-form-nuevo">
+          <div class="campo">
+            <label for="nuevo-nombre">Nombre del producto</label>
+            <p id="nuevo-nombre-ayuda" class="ayuda">Obligatorio, de hasta 100 caracteres. Solo hace falta el nombre.</p>
+            <input type="text" id="nuevo-nombre" name="nombre" autocomplete="off" aria-describedby="nuevo-nombre-ayuda nuevo-nombre-error" data-testid="catalogo-nuevo-nombre" />
+            <p id="nuevo-nombre-error" class="error-campo" hidden data-testid="catalogo-nuevo-nombre-error"></p>
+          </div>
+          <button type="submit" id="crear" class="principal" data-testid="catalogo-crear">Crear producto</button>
+        </form>
+      </section>
+    </main>
+
+    <dialog id="dialogo-renombrar" aria-labelledby="titulo-renombrar" data-testid="catalogo-dialogo-renombrar">
+      <form id="form-renombrar" novalidate data-testid="catalogo-form-renombrar">
+        <h2 id="titulo-renombrar">Cambiar el nombre</h2>
+        <div class="campo">
+          <label for="renombrar-nombre">Nuevo nombre</label>
+          <input type="text" id="renombrar-nombre" name="nombre" autocomplete="off" aria-describedby="renombrar-nombre-error" data-testid="catalogo-renombrar-nombre" />
+          <p id="renombrar-nombre-error" class="error-campo" hidden data-testid="catalogo-renombrar-nombre-error"></p>
+        </div>
+        <div class="acciones">
+          <button type="submit" id="renombrar-guardar" class="principal" data-testid="catalogo-renombrar-guardar">Guardar nombre</button>
+          <button type="button" id="renombrar-cancelar" data-testid="catalogo-renombrar-cancelar">Cancelar</button>
+        </div>
+      </form>
+    </dialog>
+
+    <dialog id="dialogo-borrar" aria-labelledby="titulo-borrar" aria-describedby="texto-borrar" data-testid="catalogo-dialogo-borrar">
+      <h2 id="titulo-borrar">Borrar producto</h2>
+      <p id="texto-borrar" data-testid="catalogo-borrar-texto"></p>
+      <div class="acciones">
+        <button type="button" id="borrar-confirmar" class="peligro" data-testid="catalogo-borrar-confirmar">Borrar</button>
+        <button type="button" id="borrar-cancelar" autofocus data-testid="catalogo-borrar-cancelar">Cancelar</button>
+      </div>
+    </dialog>
+  </body>
+</html>

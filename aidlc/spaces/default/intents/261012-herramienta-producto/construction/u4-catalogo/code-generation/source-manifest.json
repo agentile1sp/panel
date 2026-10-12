@@ -1,0 +1,30 @@
+{
+  "stage": "code-generation",
+  "unit": "u4-catalogo",
+  "version": 1,
+  "writes": [
+    { "path": "herramienta/src/base/errores.js" },
+    { "path": "herramienta/src/catalogo/nombre.js" },
+    { "path": "herramienta/src/catalogo/modelo.js" },
+    { "path": "herramienta/src/catalogo/servicio.js" },
+    { "path": "herramienta/src/catalogo/ejemplos.js" },
+    { "path": "herramienta/src/catalogo/rutas.js" },
+    { "path": "herramienta/src/catalogo/index.js" },
+    { "path": "herramienta/src/main.js" },
+    { "path": "herramienta/proceso/ejemplos.json" },
+    { "path": "herramienta/public/index.html" },
+    { "path": "herramienta/public/js/catalogo.js" },
+    { "path": "herramienta/public/js/logica-catalogo.js" },
+    { "path": "herramienta/public/css/estilos.css" },
+    { "path": "herramienta/docs/formato-datos.md" },
+    { "path": "herramienta/README.md" },
+    { "path": "herramienta/tests/ayudas/catalogo.js" },
+    { "path": "herramienta/tests/u4-catalogo/humo.test.js" },
+    { "path": "herramienta/tests/u4-catalogo/nombre.test.js" },
+    { "path": "herramienta/tests/u4-catalogo/servicio.test.js" },
+    { "path": "herramienta/tests/u4-catalogo/ejemplos.test.js" },
+    { "path": "herramienta/tests/u4-catalogo/rutas.test.js" },
+    { "path": "herramienta/tests/u4-catalogo/pantalla.test.js" },
+    { "path": "herramienta/tests/u4-catalogo/integracion.test.js" }
+  ]
+}

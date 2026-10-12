@@ -1,0 +1,17 @@
+{
+  "stage": "code-generation",
+  "unit": "u4-catalogo",
+  "upstream_ids": ["FR1", "FR1.1", "FR1.3", "FR1.4", "FR1.5", "FR1.6", "FR1.7", "FR6.2", "FR6.3", "NFR3"],
+  "coverage": [
+    { "id": "FR1", "status": "OK", "target": "herramienta/src/catalogo/servicio.js" },
+    { "id": "FR1.1", "status": "OK", "target": "herramienta/src/catalogo/servicio.js" },
+    { "id": "FR1.3", "status": "OK", "target": "herramienta/src/catalogo/nombre.js" },
+    { "id": "FR1.4", "status": "OK", "target": "herramienta/src/catalogo/servicio.js" },
+    { "id": "FR1.5", "status": "OK", "target": "herramienta/public/js/catalogo.js" },
+    { "id": "FR1.6", "status": "OK", "target": "herramienta/public/js/logica-catalogo.js" },
+    { "id": "FR1.7", "status": "OK", "target": "herramienta/public/js/logica-catalogo.js" },
+    { "id": "FR6.2", "status": "OK", "target": "herramienta/src/catalogo/ejemplos.js" },
+    { "id": "FR6.3", "status": "OK", "target": "herramienta/tests/u4-catalogo/ejemplos.test.js" },
+    { "id": "NFR3", "status": "OK", "target": "herramienta/tests/u4-catalogo/integracion.test.js" }
+  ]
+}

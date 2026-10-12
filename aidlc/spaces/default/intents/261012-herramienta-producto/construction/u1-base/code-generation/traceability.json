@@ -1,0 +1,10 @@
+{
+  "stage": "code-generation",
+  "unit": "u1-base",
+  "upstream_ids": ["FR6", "FR6.1", "NFR1"],
+  "coverage": [
+    { "id": "FR6", "status": "OK", "target": "herramienta/src/main.js" },
+    { "id": "FR6.1", "status": "OK", "target": "herramienta/src/base/almacen.js" },
+    { "id": "NFR1", "status": "OK", "target": "herramienta/tests/u1-base/almacen.test.js" }
+  ]
+}

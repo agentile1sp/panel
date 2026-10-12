@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Proceso de producto — etapa 3</title>
+<title>Proceso de producto</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;500;600&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -84,14 +84,22 @@
   body.cajas .io { flex:0 0 130px; width:130px; min-height:108px; padding:12px; font-size:11.5px; border-radius:12px; margin-left:0; }
   body.cajas .io.sale { margin-left:30px; position:relative; }
   body.cajas .io.sale::before { content:"→"; position:absolute; left:-26px; top:50%; margin-top:-12px; font-size:18px; color:#4a4a4a; }
+  /* añadidos: de dónde toma datos cada paso, paquete y glosario */
+  .usa { font-size:10.5px; line-height:1.4; color:#0f4a44; background:var(--agua-suave); border-radius:7px; padding:6px 8px; margin:0 0 10px; }
+  .usa b { display:block; font-size:9px; text-transform:uppercase; letter-spacing:.04em; margin-bottom:2px; }
+  body.cajas .usa { display:none; }
+  .cols { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:14px; }
+  .cols div { border:1px solid var(--borde); border-radius:12px; padding:12px 14px; font-size:12.5px; line-height:1.5; background:var(--crema); }
+  .cols b { display:block; font-family:'Fraunces',serif; font-weight:500; font-size:14px; margin-bottom:4px; }
+  .cols code { font-size:11.5px; }
 </style>
 </head>
 <body>
 <div class="wrap">
   <div class="top">
     <div>
-      <h1>Proceso de producto — etapa 3 · Producto</h1>
-      <p class="subtitle">Extracto del proceso de desarrollo de producto: solo la etapa 3, Producto, que es la que se usa en el piloto. Entra la idea escogida (las etapas 1 · Problema y 2 · Solución quedan fuera por ahora) y sale el paquete de producto para Arquitectura técnica.</p>
+      <h1>Proceso de producto</h1>
+      <p class="subtitle">Cómo la idea escogida se convierte en algo acotado y listo para construir. Es el mismo proceso para cualquier producto. Cada paso dice de qué pasos anteriores toma datos: la información se completa y se transforma de un paso al siguiente. Las plantillas de cada artefacto están en la carpeta <code>plantillas/</code>.</p>
     </div>
     <div class="toggle" role="group" aria-label="Vista">
       <button id="bDetalle" class="on" type="button">Con detalle</button>
@@ -99,33 +107,35 @@
     </div>
   </div>
 
-  <!-- 3 PRODUCTO -->
   <div class="panel">
     <h2>3 · Producto</h2>
-    <p class="h2sub">Cómo la idea escogida se convierte en algo acotado y listo para construir.</p>
+    <p class="h2sub">Entra la idea escogida (de las etapas 1 · Problema y 2 · Solución). Sale el paquete de producto para 4 · Arquitectura técnica.</p>
     <div class="row">
       <div class="io entra">ENTRA<br>La idea escogida</div>
       <div class="sep">→</div>
 
       <div class="step">
-        <span class="num">1</span><span class="est ok">✓ hecho</span>
-        <span class="jerga">Hypothesis-driven development</span>
+        <span class="num">1</span>
+        <span class="jerga">Hypothesis-driven development · Appetite</span>
         <h3>Hipótesis</h3>
-        <p class="frase">Qué apuesto que va a pasar y cómo sabré si acerté.</p>
+        <p class="frase">Qué apuesto que va a pasar, cómo sabré si acerté y cuánto tiempo le doy.</p>
+        <div class="usa"><b>Toma de</b>La idea escogida</div>
         <div class="lbl">Entregable</div>
         <ul>
           <li>La hipótesis escrita, con umbral de éxito y criterio de corte</li>
           <li>Supuestos y riesgos (pre-mortem)</li>
+          <li>Apetito: el tiempo máximo de construcción</li>
         </ul>
-        <div class="ojo"><b>Ojo</b>Sin umbral escrito antes de probar, el resultado es "sí" por defecto.</div>
+        <div class="ojo"><b>Ojo</b>Sin umbral escrito antes de probar, el resultado es &quot;sí&quot; por defecto.</div>
       </div>
       <div class="sep">→</div>
 
       <div class="step">
-        <span class="num">2</span><span class="est ok">✓ hecho</span>
+        <span class="num">2</span>
         <span class="jerga">Baseline</span>
         <h3>Línea base</h3>
         <p class="frase">Cómo estoy hoy, antes de usar lo que voy a construir.</p>
+        <div class="usa"><b>Toma de</b>La idea escogida · Hipótesis</div>
         <div class="lbl">Entregable</div>
         <ul>
           <li>Cómo se resuelve hoy el problema</li>
@@ -136,54 +146,63 @@
       <div class="sep">→</div>
 
       <div class="step">
-        <span class="num">3</span><span class="est ok">✓ hecho</span>
-        <span class="jerga">Proof of concept</span>
-        <h3>PoC</h3>
-        <p class="frase">Lo más chico que puedo construir para probar la hipótesis.</p>
+        <span class="num">3</span>
+        <span class="jerga">Walking skeleton</span>
+        <h3>Rebanada del core</h3>
+        <p class="frase">La versión más pequeña que recorre el producto de punta a punta y alcanza para probar la hipótesis.</p>
+        <div class="usa"><b>Toma de</b>Hipótesis · Línea base</div>
         <div class="lbl">Entregable</div>
         <ul>
-          <li>Qué es la PoC y qué pregunta responde</li>
+          <li>Qué hipótesis prueba y qué pregunta responde</li>
           <li>Qué incluye, a grandes rasgos</li>
+          <li>Primeros non-goals: lo que ya se sabe que queda fuera</li>
         </ul>
-        <div class="ojo"><b>Ojo</b>Si no sabés qué hipótesis prueba, todavía no está definida.</div>
+        <div class="ojo"><b>Ojo</b>Si no alcanza para probar la hipótesis, es solo un esqueleto; si incluye más de lo que la hipótesis necesita, ya no es la rebanada.</div>
       </div>
       <div class="sep">→</div>
 
       <div class="step">
-        <span class="num">4</span><span class="est ok">✓ hecho</span>
-        <span class="jerga">Épica · Given / When / Then</span>
-        <h3>Fichas</h3>
-        <p class="frase">Qué es cada capacidad y cómo se comporta.</p>
+        <span class="num">4</span>
+        <span class="jerga">Capability map · primera pasada</span>
+        <h3>Mapa de piezas</h3>
+        <p class="frase">De qué piezas está hecha la idea, a grandes rasgos.</p>
+        <div class="usa"><b>Toma de</b>La idea escogida · Rebanada del core</div>
         <div class="lbl">Entregable</div>
         <ul>
-          <li>Una ficha por capacidad</li>
+          <li>Piezas y núcleo: lo que todo lo demás necesita</li>
+          <li>Dependencias entre piezas</li>
+          <li>Objetos del negocio en tres niveles: capacidad → instancia → registro de uso</li>
+          <li>Qué piezas entran en la rebanada</li>
+        </ul>
+        <div class="ojo"><b>Ojo</b>Es un borrador barato: se corrige cuando las fichas revelan conexiones nuevas.</div>
+      </div>
+      <div class="sep">→</div>
+
+      <div class="step">
+        <span class="num">5</span>
+        <span class="jerga">Épica · Job story · Given / When / Then</span>
+        <h3>Fichas</h3>
+        <p class="frase">Qué es cada pieza y cómo se comporta.</p>
+        <div class="usa"><b>Toma de</b>Mapa de piezas · Rebanada del core</div>
+        <div class="lbl">Entregable</div>
+        <ul>
+          <li>Una ficha por pieza: de capacidad o de instancia</li>
+          <li>Momentos, con disparador, entrada y salida</li>
           <li>Actores: persona y sistema</li>
-          <li>Criterios de aceptación</li>
-          <li>Fuera de alcance y casos borde</li>
+          <li>Criterios de aceptación, con al menos un flujo de excepción</li>
+          <li>Fuera de alcance, supuestos y casos borde</li>
+          <li>Ajuste del mapa de piezas (segunda pasada)</li>
         </ul>
         <div class="ojo"><b>Ojo</b>Describir solo el camino feliz deja huecos: sumá al menos un flujo de excepción.</div>
       </div>
       <div class="sep">→</div>
 
       <div class="step">
-        <span class="num">5</span><span class="est ok">✓ hecho</span>
-        <span class="jerga">Capability map · Walking skeleton</span>
-        <h3>Arquitectura de producto</h3>
-        <p class="frase">De qué piezas está hecha la idea.</p>
-        <div class="lbl">Entregable</div>
-        <ul>
-          <li>Mapa de capacidades y núcleo</li>
-          <li>Ajuste del corte de la PoC según las piezas</li>
-        </ul>
-        <div class="ojo"><b>Ojo</b>Si aparece una conexión que no se había visto, se corrigen las fichas.</div>
-      </div>
-      <div class="sep">→</div>
-
-      <div class="step">
-        <span class="num">6</span><span class="est ok">✓ hecho</span>
+        <span class="num">6</span>
         <span class="jerga">User flow · Happy / alternate / exception path</span>
         <h3>User flow</h3>
         <p class="frase">El recorrido de la persona, paso a paso.</p>
+        <div class="usa"><b>Toma de</b>Fichas: momentos, entradas, salidas y actores</div>
         <div class="lbl">Entregable</div>
         <ul>
           <li>Diagrama con camino feliz, alternos y de excepción</li>
@@ -195,28 +214,31 @@
       <div class="sep">→</div>
 
       <div class="step">
-        <span class="num">7</span><span class="est ok">✓ hecho</span>
+        <span class="num">7</span>
         <span class="jerga">User story mapping · CRUD matrix · State table</span>
         <h3>Story map</h3>
         <p class="frase">Recorrer todo de punta a punta y ver qué falta.</p>
+        <div class="usa"><b>Toma de</b>Fichas · User flow · Mapa de piezas: objetos</div>
         <div class="lbl">Entregable</div>
         <ul>
-          <li>Actividades de la persona con sus historias debajo</li>
-          <li>Tablas CRUD, de estados y de navegación completas</li>
-          <li>Línea de corte: entra en la PoC / después</li>
+          <li>Actividades de la persona (columna vertebral) con sus historias debajo, cada una con código y actor</li>
+          <li>Tablas CRUD por objeto, de estados y de navegación completas</li>
+          <li>Línea de corte: entra en la rebanada / después</li>
+          <li>Correcciones a las fichas si aparecen huecos</li>
         </ul>
         <div class="ojo"><b>Ojo</b>No se cierra hasta que las tres tablas estén completas.</div>
       </div>
       <div class="sep">→</div>
 
       <div class="step">
-        <span class="num">8</span><span class="est ok">✓ hecho</span>
+        <span class="num">8</span>
         <span class="jerga">Wireframe · UI stack</span>
         <h3>Wireframes</h3>
         <p class="frase">Las pantallas en bruto, sin diseño visual.</p>
+        <div class="usa"><b>Toma de</b>User flow · Story map: lo que entra en la rebanada</div>
         <div class="lbl">Entregable</div>
         <ul>
-          <li>Solo las pantallas que entraron en la PoC</li>
+          <li>Solo las pantallas que entran en la rebanada</li>
           <li>Estados de cada pantalla: ideal, vacía, con error, sin permiso</li>
         </ul>
         <div class="ojo"><b>Ojo</b>Un error de validación nunca debe borrar lo que la persona ya escribió.</div>
@@ -224,34 +246,73 @@
       <div class="sep">→</div>
 
       <div class="step">
-        <span class="num">9</span><span class="est ok">✓ hecho</span>
-        <span class="jerga">Mockup · High-fidelity design</span>
-        <h3>Mockups</h3>
-        <p class="frase">El diseño visual sobre los wireframes.</p>
-        <div class="lbl">Entregable</div>
-        <ul>
-          <li>Pantallas con la identidad de marca aplicada</li>
-          <li>Contraste y tamaños de texto revisados</li>
-        </ul>
-        <div class="ojo"><b>Ojo</b>Revisá contraste y tipografía ahora: rehacerlos después sale caro.</div>
-      </div>
-      <div class="sep">→</div>
-
-      <div class="step">
-        <span class="num">10</span><span class="est pr">▸ en curso</span>
-        <span class="jerga">Non-goals · Appetite · Definition of Ready</span>
+        <span class="num">9</span>
+        <span class="jerga">Non-goals · Definition of Ready</span>
         <h3>Cierre del alcance</h3>
         <p class="frase">Dejar por escrito qué se construye y qué no.</p>
+        <div class="usa"><b>Toma de</b>Todos los pasos anteriores</div>
         <div class="lbl">Entregable</div>
         <ul>
           <li>Lista final de lo que queda fuera</li>
-          <li>Tiempo máximo de construcción</li>
-          <li>Checklist de "listo para construir"</li>
+          <li>Apetito confirmado, o alcance recortado</li>
+          <li>Checklist de &quot;listo para construir&quot;</li>
+          <li>Paquete de producto armado</li>
         </ul>
         <div class="ojo"><b>Ojo</b>Si se acaba el tiempo, se recorta alcance; no se extiende el plazo.</div>
       </div>
       <div class="sep">→</div>
+
+      <div class="step">
+        <span class="num">10</span>
+        <span class="jerga">Mockup · High-fidelity design</span>
+        <h3>Mockups</h3>
+        <p class="frase">El diseño visual, solo de lo que quedó dentro del alcance.</p>
+        <div class="usa"><b>Toma de</b>Wireframes · Cierre del alcance</div>
+        <div class="lbl">Entregable</div>
+        <ul>
+          <li>Solo las pantallas que quedaron dentro del alcance</li>
+          <li>Identidad de marca aplicada</li>
+          <li>Contraste y tamaños de texto revisados</li>
+        </ul>
+        <div class="ojo"><b>Ojo</b>Va después del cierre porque es lo más caro de rehacer. Revisá contraste y tipografía ahora.</div>
+      </div>
+      <div class="sep">→</div>
+
       <div class="io sale">SALE<br>Paquete de producto → Arquitectura técnica</div>
+    </div>
+
+    <div class="banda">
+      <div class="banda-t">Corren durante todo el proceso, sin turno fijo</div>
+      <div class="banda-items">
+        <span>Acuerdos<i>Cada decisión con su motivo. Se añade, no se reescribe</i></span>
+        <span>Gaps y supuestos<i>Se revisan en cada paso, no se cierran</i></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <h2>Paquete de producto</h2>
+    <p class="h2sub">Lo que sale de esta etapa y recibe Arquitectura técnica.</p>
+    <div class="cols">
+      <div><b>Qué y por qué</b>Hipótesis con umbral, criterio de corte y apetito · Línea base · Rebanada del core</div>
+      <div><b>De qué está hecho</b>Mapa de piezas con sus objetos · Fichas de capacidad y de instancia</div>
+      <div><b>Cómo se usa</b>User flow · Story map con tablas CRUD, de estados y de navegación · Wireframes · Mockups</div>
+      <div><b>Qué se construye</b>Cierre del alcance: non-goals, apetito confirmado y checklist de "listo para construir" · Acuerdos · Gaps y supuestos abiertos</div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <h2>Glosario</h2>
+    <p class="h2sub">Los términos propios de este proceso.</p>
+    <div class="cols">
+      <div><b>Rebanada del core (walking skeleton)</b>La versión más pequeña del producto que (1) recorre el producto de punta a punta conectando sus piezas principales y (2) alcanza para probar la hipótesis en una autoprueba. No es descartable: es la base del producto.</div>
+      <div><b>Tres niveles de objetos</b>Capacidad (la pieza, por ejemplo un motor de recordatorios) → instancia (el contenido que define el autor, por ejemplo "Estar presente") → registro de uso (lo que genera la persona al usarla). Mezclar los dos últimos es el error típico.</div>
+      <div><b>Ficha de capacidad</b>Describe una pieza: para qué sirve, job story, momentos con disparador, entrada y salida, conexiones, actores, medición, criterios de aceptación, fuera de alcance, supuestos, casos borde y preguntas abiertas.</div>
+      <div><b>Ficha de instancia</b>Describe un elemento del catálogo de una capacidad: para qué sirve, pasos, qué registra, cómo se cuenta y prerrequisitos.</div>
+      <div><b>Apetito</b>El tiempo máximo que se le da a la construcción. Se fija al principio y no se extiende: si no alcanza, se recorta alcance.</div>
+      <div><b>Línea de corte</b>La línea del story map que separa lo que entra en la rebanada de lo que queda para después.</div>
+      <div><b>Definition of Ready</b>El checklist que dice si algo está listo para construirse. Es una guía, no una compuerta.</div>
+      <div><b>Paquete de producto</b>El conjunto de artefactos que sale de esta etapa y entra en Arquitectura técnica.</div>
     </div>
   </div>
 </div>

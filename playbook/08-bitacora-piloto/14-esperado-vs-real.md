@@ -4,7 +4,7 @@
 
 [← 3.6 Build and Test](13-3.6-build-and-test.md) · [Resumen](00-resumen.md)
 
-Esta página responde una por una las preguntas del [capítulo 05, §9](../05-mapa-del-piloto.md) y compara los números del [capítulo 06, §7](../06-flujo-conceptual.md).
+Esta página responde una por una las preguntas del [capítulo 05, §9](../06-mapa-del-piloto/00-mapa-del-piloto.md) y compara los números del [capítulo 06, §7](../07-flujo-conceptual/00-flujo-conceptual.md).
 
 ## 1 · ¿Propuso el `composer` las mismas 12 etapas?
 

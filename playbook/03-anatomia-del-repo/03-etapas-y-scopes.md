@@ -10,7 +10,7 @@
 | `protocols/` | Las reglas comunes que se aplican a todas las etapas | 9 |
 | `conductor.md` | Las instrucciones del jefe: cómo pedir al motor el siguiente paso, ejecutarlo e informar | 1 |
 
-> Las 33 etapas, cada una con su ficha, qué entra, qué sale, qué pregunta y todos sus pasos, están en la [Referencia de etapas](../referencia-etapas/00-indice.md).
+> Las 33 etapas, cada una con su ficha, qué entra, qué sale, qué pregunta y todos sus pasos, están en la [Referencia de etapas](../02-etapas/00-indice.md).
 
 ### Una etapa por dentro
 

@@ -2,7 +2,7 @@
 
 > **En una frase:** el 12 de octubre de 2026 recorrimos con AI-DLC las 12 etapas previstas y construimos una **herramienta local de seguimiento de productos**: 4 unidades, 110 pruebas en verde y 9 revisiones superadas. Fueron unas 4 h 26 min de trabajo y 82 mensajes nuestros.
 
-> Este capítulo cuenta **lo que pasó de verdad**. Los capítulos [05](../05-mapa-del-piloto.md) y [06](../06-flujo-conceptual.md) contaban lo que esperábamos, y la última página compara las dos cosas.
+> Este capítulo cuenta **lo que pasó de verdad**. Los capítulos [05](../06-mapa-del-piloto/00-mapa-del-piloto.md) y [06](../07-flujo-conceptual/00-flujo-conceptual.md) contaban lo que esperábamos, y la última página compara las dos cosas.
 
 ## 1 · Qué construimos
 

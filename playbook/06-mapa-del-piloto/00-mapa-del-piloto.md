@@ -81,7 +81,7 @@ flowchart TB
     class s12,s13,s15,s16,s21,s22,s24,s25,s28,s31,s32,s33,s34,s37,s41,s42,s43,s44,s45,s46,s47 nousada
 ```
 
-El detalle de cualquiera de las 33 etapas está en la [Referencia de etapas](referencia-etapas/00-indice.md).
+El detalle de cualquiera de las 33 etapas está en la [Referencia de etapas](../02-etapas/00-indice.md).
 
 En **verde**, las 11 ALWAYS. En **amarillo**, `2.6 Domain Design`, añadida porque otras etapas la necesitan. En **gris**, las 21 que no se ejecutan en este recorrido.
 

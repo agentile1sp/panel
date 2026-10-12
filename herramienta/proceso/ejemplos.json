@@ -1,0 +1,565 @@
+{
+  "version": 1,
+  "nota": "Productos ficticios que la herramienta carga solo la primera vez que se abre (FR6.2, ADR-006). Cada recorrido sigue el formato de siembra de U3 y respeta la habilitación en cadena. Se edita a mano; los ids de pasos, campos y elementos son los de definicion-proceso.json.",
+  "productos": [
+    {
+      "nombre": "Ejemplo: Agenda del huerto",
+      "recorrido": {
+        "pasos": {},
+        "registros": {}
+      }
+    },
+    {
+      "nombre": "Ejemplo: Recordatorio de agua",
+      "recorrido": {
+        "pasos": {
+          "hipotesis": {
+            "estado": "completo",
+            "contenido": {
+              "campos": {
+                "fecha": "2026-09-01",
+                "creo-que": "Si una persona que trabaja sentada recibe un aviso discreto cada dos horas, registrará cuánta agua bebe durante al menos tres semanas.",
+                "resultara-en": "Beberá más agua a lo largo de la jornada sin tener que acordarse por su cuenta.",
+                "tendre-razon-si": "Al menos el 60 % de los avisos de la tercera semana terminan con un registro de vaso, con un mínimo de 10 personas activas.",
+                "criterios-de-corte": [
+                  "Menos del 30 % de los avisos respondidos en la primera semana.",
+                  "Más de la mitad de las personas desactiva los avisos antes del día 7."
+                ],
+                "senal-elegida": "Avisos respondidos con un registro de vaso, divididos entre avisos emitidos.",
+                "duracion": "3 semanas",
+                "umbral": "60 % en la tercera semana",
+                "donde-se-lee": "Pantalla de resumen semanal del producto.",
+                "apetito": "2 semanas",
+                "riesgos": "Avisos molestos: doy por hecho que un aviso cada dos horas no molesta; lo noto si desactivan los avisos el primer día; respondo dejando elegir el intervalo.",
+                "advertencias": [
+                  "No mide el agua que se bebe sin registrarla."
+                ]
+              }
+            }
+          },
+          "linea-base": {
+            "estado": "completo",
+            "contenido": {
+              "campos": {
+                "fecha": "2026-09-02",
+                "como-lo-resuelvo-hoy": [
+                  "Dejo una botella en la mesa, pero me olvido de rellenarla.",
+                  "Probé una alarma del móvil; la apagaba sin beber."
+                ],
+                "implicacion-para-el-producto": "El aviso tiene que ser fácil de responder en un solo toque, o se ignora como la alarma.",
+                "creencias": [
+                  "Bebo menos de un litro al día entre semana.",
+                  "Los fines de semana bebo más sin pensarlo."
+                ],
+                "comparacion-final": "Al terminar, cada creencia se marca como confirmada, desmentida o algo nuevo.",
+                "advertencias": [
+                  "El producto no registra lo que se bebe fuera del horario de trabajo."
+                ]
+              }
+            }
+          },
+          "walking-skeleton": {
+            "estado": "completo",
+            "contenido": {
+              "campos": {
+                "fecha": "2026-09-04",
+                "que-prueba": "Prueba la hipótesis del 2026-09-01: si un aviso fácil de responder hace que se registre el agua durante tres semanas.",
+                "que-incluye": [
+                  "Aviso cada dos horas: la hipótesis lo necesita.",
+                  "Registro de un vaso con un toque: la hipótesis lo necesita.",
+                  "Resumen semanal: elección explícita para leer la señal."
+                ],
+                "primeros-non-goals": [
+                  "Objetivos personalizados de agua.",
+                  "Integración con relojes."
+                ],
+                "notas": [
+                  "Acuerdo A1: solo versión web en esta prueba."
+                ]
+              }
+            }
+          },
+          "mapa-de-piezas": {
+            "estado": "en-curso",
+            "contenido": {
+              "campos": {
+                "pasada": "1",
+                "cambios-pasada-anterior": []
+              },
+              "elementos": {
+                "pieza": [
+                  {
+                    "campos": {
+                      "pieza": "Avisos",
+                      "tipo": "Capacidad",
+                      "que-hace": "Avisa a la persona cada cierto tiempo para que registre lo que bebe.",
+                      "nucleo": "Sí",
+                      "entra-en-walking-skeleton": "Sí"
+                    }
+                  },
+                  {
+                    "campos": {
+                      "pieza": "Resumen semanal",
+                      "tipo": "Vista",
+                      "que-hace": "Muestra cuántos avisos se respondieron cada semana.",
+                      "nucleo": "No",
+                      "entra-en-walking-skeleton": "Sí"
+                    }
+                  }
+                ],
+                "dependencia": [
+                  {
+                    "campos": {
+                      "pieza": "Resumen semanal",
+                      "depende-de": "Avisos",
+                      "para-que": "Necesita los avisos emitidos y respondidos."
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "registros": {
+          "acuerdos": {
+            "acuerdo": [
+              {
+                "campos": {
+                  "codigo": "A1",
+                  "tema": "Plataforma",
+                  "decision": "Solo versión web en esta prueba.",
+                  "detalle": "La primera prueba se hace en el navegador del ordenador de trabajo.",
+                  "motivo": "Es donde la persona pasa la jornada y no hace falta publicar una app.",
+                  "paso-del-proceso": "Walking skeleton"
+                }
+              }
+            ]
+          },
+          "gaps-y-supuestos": {
+            "supuesto": [
+              {
+                "campos": {
+                  "codigo": "S1",
+                  "supuesto": "La persona tiene agua a mano cuando llega el aviso.",
+                  "tipo": "Factibilidad",
+                  "riesgo-si-es-falso": "Los avisos se ignoran aunque la persona quiera beber.",
+                  "como-se-verifica": "Preguntar en la entrevista de la primera semana.",
+                  "estado": "Abierto"
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "nombre": "Ejemplo: Club de lectura",
+      "recorrido": {
+        "pasos": {
+          "hipotesis": {
+            "estado": "completo",
+            "contenido": {
+              "campos": {
+                "fecha": "2026-06-01",
+                "creo-que": "Si un club de lectura de barrio recibe cada semana una pregunta sobre el capítulo, la mitad de sus miembros responderá durante un mes.",
+                "resultara-en": "Más conversación entre reuniones y menos abandonos del libro a mitad.",
+                "tendre-razon-si": "El 50 % de los miembros responde al menos tres de las cuatro preguntas, en clubes de 8 personas o más.",
+                "criterios-de-corte": [
+                  "Menos del 20 % de respuestas en las dos primeras semanas."
+                ],
+                "senal-elegida": "Miembros que responden al menos tres preguntas, divididos entre miembros del club.",
+                "duracion": "4 semanas",
+                "umbral": "50 %",
+                "donde-se-lee": "Pantalla de participación del club.",
+                "apetito": "3 semanas",
+                "riesgos": "Preguntas aburridas: doy por hecho que una pregunta abierta anima a responder; lo noto si las respuestas son de una palabra; respondo probando preguntas con opciones.",
+                "advertencias": [
+                  "No mide si se lee más, solo si se conversa más."
+                ]
+              }
+            }
+          },
+          "linea-base": {
+            "estado": "completo",
+            "contenido": {
+              "campos": {
+                "fecha": "2026-06-02",
+                "como-lo-resuelvo-hoy": [
+                  "Un grupo de mensajería donde casi nadie escribe entre reuniones."
+                ],
+                "implicacion-para-el-producto": "Tiene que haber un motivo concreto para escribir, no solo un sitio donde hacerlo.",
+                "creencias": [
+                  "La mitad del club no termina el libro.",
+                  "Quien responde una vez vuelve a responder."
+                ],
+                "comparacion-final": "Cada creencia se marcó como confirmada o desmentida al terminar.",
+                "advertencias": [
+                  "Las conversaciones fuera del producto no se cuentan."
+                ]
+              }
+            }
+          },
+          "walking-skeleton": {
+            "estado": "completo",
+            "contenido": {
+              "campos": {
+                "fecha": "2026-06-05",
+                "que-prueba": "Si una pregunta semanal sobre el capítulo hace que el club converse entre reuniones.",
+                "que-incluye": [
+                  "Pregunta semanal: la hipótesis la necesita.",
+                  "Respuestas visibles para el club: la hipótesis las necesita."
+                ],
+                "primeros-non-goals": [
+                  "Recomendaciones de libros."
+                ],
+                "notas": [
+                  "Se prueba con un solo club."
+                ]
+              }
+            }
+          },
+          "mapa-de-piezas": {
+            "estado": "completo",
+            "contenido": {
+              "campos": {
+                "pasada": "2",
+                "cambios-pasada-anterior": [
+                  "Se separó la pieza Respuestas de la pieza Preguntas, tras la ficha de Preguntas."
+                ]
+              },
+              "elementos": {
+                "pieza": [
+                  {
+                    "campos": {
+                      "pieza": "Preguntas",
+                      "tipo": "Capacidad",
+                      "que-hace": "Publica una pregunta por semana sobre el capítulo.",
+                      "nucleo": "Sí",
+                      "entra-en-walking-skeleton": "Sí"
+                    }
+                  },
+                  {
+                    "campos": {
+                      "pieza": "Respuestas",
+                      "tipo": "Capacidad",
+                      "que-hace": "Recoge y muestra lo que responde cada miembro.",
+                      "nucleo": "Sí",
+                      "entra-en-walking-skeleton": "Sí"
+                    }
+                  }
+                ],
+                "dependencia": [
+                  {
+                    "campos": {
+                      "pieza": "Respuestas",
+                      "depende-de": "Preguntas",
+                      "para-que": "Cada respuesta pertenece a una pregunta."
+                    }
+                  }
+                ],
+                "objeto-del-negocio": [
+                  {
+                    "campos": {
+                      "nivel": "Instancia",
+                      "objeto": "Pregunta de la semana",
+                      "quien-lo-crea": "Autor del producto",
+                      "ejemplo": "¿Qué habrías hecho tú en el lugar de la protagonista?"
+                    }
+                  },
+                  {
+                    "campos": {
+                      "nivel": "Registro de uso",
+                      "objeto": "Respuesta de un miembro",
+                      "quien-lo-crea": "Persona",
+                      "ejemplo": "Habría dejado el pueblo mucho antes."
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "fichas": {
+            "estado": "completo",
+            "contenido": {
+              "elementos": {
+                "ficha-capacidad": [
+                  {
+                    "campos": {
+                      "nombre": "Preguntas",
+                      "origen": "Core",
+                      "para-que-sirve": "Da un motivo concreto para conversar cada semana.",
+                      "job-story": "Cuando termino un capítulo, quiero una pregunta que me haga pensar, para comentarlo con el club sin esperar a la reunión.",
+                      "disparador": "Publicación semanal: el lunes a las 9:00.",
+                      "entrada": "El capítulo de la semana y la pregunta escrita por quien organiza.",
+                      "salida": "Una pregunta visible para el club, con estado publicada o retirada.",
+                      "se-alimenta-de": [
+                        "Calendario del club"
+                      ],
+                      "alimenta-a": [
+                        "Respuestas"
+                      ],
+                      "actores-persona": "Quien organiza escribe la pregunta.",
+                      "actores-sistema": "Publica la pregunta el lunes y avisa al club.",
+                      "medicion": "Preguntas publicadas por semana.",
+                      "criterios-de-aceptacion": [
+                        "Dado un lunes, cuando llegan las 9:00, entonces la pregunta de la semana se publica.",
+                        "Dado que no hay pregunta escrita, cuando llega el lunes, entonces se avisa a quien organiza."
+                      ],
+                      "fuera-de-alcance": [
+                        "Preguntas generadas automáticamente."
+                      ],
+                      "supuestos": [
+                        "Quien organiza escribe la pregunta antes del lunes."
+                      ],
+                      "casos-borde": [
+                        "Semana sin capítulo: no se publica pregunta."
+                      ],
+                      "preguntas-abiertas": []
+                    }
+                  }
+                ],
+                "ficha-instancia": [
+                  {
+                    "campos": {
+                      "nombre": "Pregunta de la semana 1",
+                      "capacidad": "Preguntas",
+                      "origen": "Core",
+                      "para-que-sirve": "Abre la conversación sobre el primer capítulo.",
+                      "pasos": [
+                        "Leer la pregunta.",
+                        "Escribir una respuesta.",
+                        "Ver las respuestas del club."
+                      ],
+                      "que-registra": "Respondida u omitida, y el texto de la respuesta.",
+                      "como-se-cuenta": "Una respuesta cuenta si tiene al menos una frase.",
+                      "prerrequisitos": "Ninguno",
+                      "fuente": "Quien organiza el club."
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "user-flow": {
+            "estado": "completo",
+            "contenido": {
+              "checklist": {
+                "pasos-terminan-en-pantalla": true,
+                "momentos-en-el-flujo": true,
+                "excepcion-por-momento": true
+              },
+              "evidencia": {
+                "tipo": "enlace",
+                "url": "https://www.example.com/club-de-lectura/user-flow"
+              }
+            }
+          },
+          "story-map": {
+            "estado": "completo",
+            "contenido": {
+              "campos": {
+                "leyenda-de-codigos": "P = Preguntar; R = Responder. El número identifica la historia dentro de su actividad.",
+                "decisiones-linea-de-corte": [
+                  "Las notificaciones por correo quedan debajo de la línea: el aviso dentro del producto basta para la prueba."
+                ],
+                "correcciones-a-las-fichas": [
+                  "Faltaba el caso de semana sin capítulo en la ficha de Preguntas; se añadió."
+                ]
+              },
+              "elementos": {
+                "actividad": [
+                  {
+                    "campos": {
+                      "letra": "P",
+                      "actividad": "Preguntar",
+                      "para-que-sirve": "Proponer la conversación de la semana."
+                    }
+                  },
+                  {
+                    "campos": {
+                      "letra": "R",
+                      "actividad": "Responder",
+                      "para-que-sirve": "Participar en la conversación."
+                    }
+                  }
+                ],
+                "historia": [
+                  {
+                    "campos": {
+                      "codigo": "P1",
+                      "actividad": "P",
+                      "paso": "Escribir la pregunta",
+                      "actor": "Persona",
+                      "historia": "Como organizadora, escribo la pregunta de la semana.",
+                      "entra-en-walking-skeleton": "Sí"
+                    }
+                  },
+                  {
+                    "campos": {
+                      "codigo": "R1",
+                      "actividad": "R",
+                      "paso": "Responder",
+                      "actor": "Persona",
+                      "historia": "Como miembro, respondo a la pregunta de la semana.",
+                      "entra-en-walking-skeleton": "Sí"
+                    }
+                  }
+                ],
+                "fila-crud": [
+                  {
+                    "campos": {
+                      "objeto": "Pregunta de la semana",
+                      "crear": "P1",
+                      "ver": "R1",
+                      "editar": "P1",
+                      "borrar": "✗",
+                      "fuera-a-proposito": "Borrar una pregunta: basta con retirarla."
+                    }
+                  }
+                ],
+                "fila-estados": [
+                  {
+                    "campos": {
+                      "objeto": "Pregunta de la semana",
+                      "estado": "Publicada",
+                      "evento": "Quien organiza la retira",
+                      "resultado": "Retirada"
+                    }
+                  }
+                ],
+                "fila-navegacion": [
+                  {
+                    "campos": {
+                      "pantalla": "Pregunta de la semana",
+                      "accion": "Enviar respuesta",
+                      "lleva-a": "Respuestas del club"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "wireframes": {
+            "estado": "completo",
+            "contenido": {
+              "campos": {
+                "pantallas": [
+                  "Pregunta de la semana: P1, R1; estados ideal, vacía y con error.",
+                  "Respuestas del club: R1; estados ideal y vacía."
+                ]
+              },
+              "checklist": {
+                "pantallas-con-wireframe": true,
+                "estados-de-cada-pantalla": true,
+                "error-no-borra": true
+              },
+              "evidencia": {
+                "tipo": "enlace",
+                "url": "https://www.example.com/club-de-lectura/wireframes"
+              }
+            }
+          },
+          "cierre-del-alcance": {
+            "estado": "completo",
+            "contenido": {
+              "campos": {
+                "fecha": "2026-06-20",
+                "apetito-fijado": "3 semanas",
+                "apetito-confirmado": "Confirmado: 3 semanas, sin recortes.",
+                "listo-para-construir": "Revisado el CRUD de la pregunta, toda acción termina en una pantalla, hay un criterio de excepción por momento y los estados están listados."
+              },
+              "elementos": {
+                "non-goal": [
+                  {
+                    "campos": {
+                      "item": "Notificaciones por correo",
+                      "motivo": "El aviso dentro del producto basta para probar la hipótesis."
+                    }
+                  }
+                ],
+                "artefacto-del-paquete": [
+                  {
+                    "campos": {
+                      "artefacto": "User flow",
+                      "archivo": "https://www.example.com/club-de-lectura/user-flow",
+                      "estado": "Listo"
+                    }
+                  },
+                  {
+                    "campos": {
+                      "artefacto": "Wireframes",
+                      "archivo": "https://www.example.com/club-de-lectura/wireframes",
+                      "estado": "Listo"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "mockups": {
+            "estado": "completo",
+            "contenido": {
+              "campos": {
+                "pantallas": [
+                  "Pregunta de la semana: del wireframe del mismo nombre; estados ideal, vacía y con error.",
+                  "Respuestas del club: del wireframe del mismo nombre; estados ideal y vacía."
+                ]
+              },
+              "checklist": {
+                "identidad-de-marca": true,
+                "contraste-y-tamanos": true,
+                "dentro-del-alcance": true
+              },
+              "evidencia": {
+                "tipo": "enlace",
+                "url": "https://www.example.com/club-de-lectura/mockups"
+              }
+            }
+          }
+        },
+        "registros": {
+          "acuerdos": {
+            "acuerdo": [
+              {
+                "campos": {
+                  "codigo": "A1",
+                  "tema": "Frecuencia",
+                  "decision": "Una pregunta por semana, el lunes.",
+                  "detalle": "La pregunta se publica el lunes a las 9:00.",
+                  "motivo": "El club se reúne los jueves y así hay tres días para responder.",
+                  "paso-del-proceso": "Fichas"
+                }
+              }
+            ]
+          },
+          "gaps-y-supuestos": {
+            "gap": [
+              {
+                "campos": {
+                  "codigo": "G1",
+                  "gap": "No estaba definido qué pasa en una semana sin capítulo.",
+                  "donde-aparecio": "Story map",
+                  "donde-se-debio-definir": "Fichas",
+                  "estado": "Resuelto",
+                  "resolucion": "Se añadió el caso borde a la ficha de Preguntas."
+                }
+              }
+            ],
+            "supuesto": [
+              {
+                "campos": {
+                  "codigo": "S1",
+                  "supuesto": "Los miembros leen el capítulo antes del lunes.",
+                  "tipo": "Deseabilidad",
+                  "riesgo-si-es-falso": "Las respuestas llegan tarde o no llegan.",
+                  "como-se-verifica": "Ver a qué hora llegan las respuestas la primera semana.",
+                  "estado": "Confirmado"
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,369 @@
+{
+  "version": 1,
+  "pasos": [
+    {
+      "id": "hipotesis",
+      "orden": 1,
+      "nombre": "Hipótesis",
+      "tipo": "texto",
+      "origenes": [],
+      "plantilla": "01-hipotesis.md",
+      "campos": [
+        { "id": "fecha", "nombre": "Fecha", "tipo": "texto", "ayuda": "AAAA-MM-DD. Se escribe y se congela antes de probar; si algo cambia después, se anota con fecha, no se reescribe." },
+        { "id": "creo-que", "nombre": "Creo que", "tipo": "texto-largo", "ayuda": "Qué hará la persona, y durante cuánto tiempo." },
+        { "id": "resultara-en", "nombre": "Resultará en", "tipo": "texto-largo", "ayuda": "Qué cambio espero." },
+        { "id": "tendre-razon-si", "nombre": "Tendré razón si", "tipo": "texto-largo", "ayuda": "Qué señal medible llega a qué umbral, y la condición mínima para que el dato valga." },
+        { "id": "criterios-de-corte", "nombre": "Paro o cambio de rumbo si", "tipo": "lista", "ayuda": "Un criterio de corte por línea." },
+        { "id": "senal-elegida", "nombre": "Señal elegida", "tipo": "texto", "ayuda": "Qué se mide y cómo se calcula." },
+        { "id": "duracion", "nombre": "Duración", "tipo": "texto", "ayuda": "Tiempo que dura el experimento." },
+        { "id": "umbral", "nombre": "Umbral", "tipo": "texto", "ayuda": "Valor, o cuándo y cómo se fija antes de ver el resultado." },
+        { "id": "donde-se-lee", "nombre": "Dónde se lee", "tipo": "texto", "ayuda": "En qué pantalla o dato del producto." },
+        { "id": "apetito", "nombre": "Apetito: tiempo máximo de construcción", "tipo": "texto", "ayuda": "Semanas o días. Si no alcanza, se recorta alcance; no se extiende el plazo." },
+        { "id": "riesgos", "nombre": "Supuestos y riesgos (pre-mortem)", "tipo": "texto-largo", "ayuda": "Imagina que la prueba ya fracasó. ¿Por qué fue? Por cada riesgo: nombre, supuesto (lo que doy por hecho), cómo lo noto (señal temprana) y qué hago (respuesta)." },
+        { "id": "advertencias", "nombre": "Advertencias conocidas", "tipo": "lista", "ayuda": "Límites de lo que esta prueba puede demostrar." }
+      ]
+    },
+    {
+      "id": "linea-base",
+      "orden": 2,
+      "nombre": "Línea base",
+      "tipo": "texto",
+      "origenes": ["hipotesis"],
+      "plantilla": "02-linea-base.md",
+      "campos": [
+        { "id": "fecha", "nombre": "Escrita el", "tipo": "texto", "ayuda": "AAAA-MM-DD, antes de usar el producto. Se escribe una sola vez, antes del día 1, y no se edita después." },
+        { "id": "como-lo-resuelvo-hoy", "nombre": "Cómo lo resuelvo hoy", "tipo": "lista", "ayuda": "Qué hago hoy para resolver el problema; qué probé antes, qué funcionó y por qué lo dejé." },
+        { "id": "implicacion-para-el-producto", "nombre": "Lo que esto implica para el producto", "tipo": "texto-largo", "ayuda": "Qué tiene que resolver sí o sí." },
+        { "id": "creencias", "nombre": "Lo que creo saber hoy", "tipo": "lista", "ayuda": "Una creencia por línea, escrita antes de ver ningún dato." },
+        { "id": "comparacion-final", "nombre": "Cómo se compara al final", "tipo": "texto-largo", "ayuda": "Al terminar la prueba, cada punto se marca como confirmado, desmentido o algo nuevo que no estaba en la lista." },
+        { "id": "advertencias", "nombre": "Advertencias", "tipo": "lista", "ayuda": "Qué no se podrá comparar con los datos que registra el producto." }
+      ]
+    },
+    {
+      "id": "walking-skeleton",
+      "orden": 3,
+      "nombre": "Walking skeleton",
+      "tipo": "texto",
+      "origenes": ["hipotesis", "linea-base"],
+      "plantilla": "03-walking-skeleton.md",
+      "campos": [
+        { "id": "fecha", "nombre": "Fecha", "tipo": "texto", "ayuda": "AAAA-MM-DD." },
+        { "id": "que-prueba", "nombre": "Qué prueba", "tipo": "texto-largo", "ayuda": "Qué hipótesis prueba y qué pregunta responde. Enlace a la hipótesis." },
+        { "id": "que-incluye", "nombre": "Qué incluye", "tipo": "lista", "ayuda": "Una pieza por línea: qué hace en el walking skeleton y por qué entra (la hipótesis la necesita o es una elección explícita)." },
+        { "id": "primeros-non-goals", "nombre": "Primeros non-goals", "tipo": "lista", "ayuda": "Lo que ya se sabe que queda fuera. Se completa en el Cierre del alcance." },
+        { "id": "notas", "nombre": "Notas", "tipo": "lista", "ayuda": "Decisiones o referencias a otros artefactos." }
+      ]
+    },
+    {
+      "id": "mapa-de-piezas",
+      "orden": 4,
+      "nombre": "Mapa de piezas",
+      "tipo": "estructurado",
+      "origenes": ["walking-skeleton"],
+      "plantilla": "04-mapa-de-piezas.md",
+      "campos": [
+        { "id": "pasada", "nombre": "Pasada", "tipo": "texto", "ayuda": "1 = borrador; 2 = ajustada tras las fichas." },
+        { "id": "cambios-pasada-anterior", "nombre": "Cambios respecto a la pasada anterior", "tipo": "lista", "ayuda": "Qué cambió y qué ficha lo reveló." }
+      ],
+      "elementos": [
+        {
+          "id": "pieza",
+          "nombre": "Pieza",
+          "plantilla": "04-mapa-de-piezas.md",
+          "campos": [
+            { "id": "pieza", "nombre": "Pieza", "tipo": "texto", "ayuda": "Nombre de la pieza." },
+            { "id": "tipo", "nombre": "Tipo", "tipo": "texto", "ayuda": "Capacidad, Catálogo de instancias o Vista." },
+            { "id": "que-hace", "nombre": "Qué hace, en una frase", "tipo": "texto" },
+            { "id": "nucleo", "nombre": "Núcleo", "tipo": "texto", "ayuda": "Sí o No." },
+            { "id": "entra-en-walking-skeleton", "nombre": "Entra en el walking skeleton", "tipo": "texto", "ayuda": "Sí o No." }
+          ]
+        },
+        {
+          "id": "dependencia",
+          "nombre": "Dependencia",
+          "plantilla": "04-mapa-de-piezas.md",
+          "campos": [
+            { "id": "pieza", "nombre": "Pieza", "tipo": "texto" },
+            { "id": "depende-de", "nombre": "Depende de", "tipo": "texto", "ayuda": "La pieza de la que depende." },
+            { "id": "para-que", "nombre": "Para qué", "tipo": "texto", "ayuda": "Qué necesita de ella." }
+          ]
+        },
+        {
+          "id": "objeto-del-negocio",
+          "nombre": "Objeto del negocio",
+          "plantilla": "04-mapa-de-piezas.md",
+          "campos": [
+            { "id": "nivel", "nombre": "Nivel", "tipo": "texto", "ayuda": "Capacidad, Instancia o Registro de uso. Mezclar instancia y registro de uso es el error típico." },
+            { "id": "objeto", "nombre": "Objeto", "tipo": "texto", "ayuda": "Por ejemplo, la configuración de un recordatorio o un elemento del catálogo." },
+            { "id": "quien-lo-crea", "nombre": "Quién lo crea", "tipo": "texto", "ayuda": "Persona, Autor del producto o Sistema." },
+            { "id": "ejemplo", "nombre": "Ejemplo", "tipo": "texto" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fichas",
+      "orden": 5,
+      "nombre": "Fichas",
+      "tipo": "estructurado",
+      "origenes": ["walking-skeleton", "mapa-de-piezas"],
+      "plantilla": "05a-ficha-capacidad.md",
+      "campos": [],
+      "elementos": [
+        {
+          "id": "ficha-capacidad",
+          "nombre": "Ficha de capacidad",
+          "plantilla": "05a-ficha-capacidad.md",
+          "campos": [
+            { "id": "nombre", "nombre": "Nombre", "tipo": "texto", "ayuda": "Nombre de la pieza." },
+            { "id": "origen", "nombre": "Origen", "tipo": "texto", "ayuda": "Core, Feature…" },
+            { "id": "para-que-sirve", "nombre": "Para qué sirve, en una frase", "tipo": "texto", "ayuda": "Qué hace la pieza." },
+            { "id": "job-story", "nombre": "Job story", "tipo": "texto-largo", "ayuda": "Cuando [situación], quiero [motivación], para [resultado esperado]." },
+            { "id": "disparador", "nombre": "Disparador", "tipo": "texto-largo", "ayuda": "Por momento: nombre del momento y qué lo inicia." },
+            { "id": "entrada", "nombre": "Entrada", "tipo": "texto-largo", "ayuda": "Por momento: qué datos entran." },
+            { "id": "salida", "nombre": "Salida", "tipo": "texto-largo", "ayuda": "Por momento: qué se produce. Si produce registros, lista sus estados (por ejemplo respondido, omitido o no emitido)." },
+            { "id": "se-alimenta-de", "nombre": "Conexiones: de qué se alimenta", "tipo": "lista", "ayuda": "Una pieza por línea." },
+            { "id": "alimenta-a", "nombre": "Conexiones: qué alimenta", "tipo": "lista", "ayuda": "Una pieza por línea." },
+            { "id": "actores-persona", "nombre": "Actores: persona", "tipo": "texto-largo", "ayuda": "Qué pasos hace la persona." },
+            { "id": "actores-sistema", "nombre": "Actores: sistema", "tipo": "texto-largo", "ayuda": "Qué acciones hace el sistema automáticamente." },
+            { "id": "medicion", "nombre": "Medición", "tipo": "texto-largo", "ayuda": "Qué se mide y cómo se calcula." },
+            { "id": "criterios-de-aceptacion", "nombre": "Criterios de aceptación", "tipo": "lista", "ayuda": "Dado [contexto], cuando [acción], entonces [resultado]. Al menos un flujo de excepción: cuando algo sale mal." },
+            { "id": "fuera-de-alcance", "nombre": "Fuera de alcance", "tipo": "lista" },
+            { "id": "supuestos", "nombre": "Supuestos", "tipo": "lista" },
+            { "id": "casos-borde", "nombre": "Casos borde", "tipo": "lista", "ayuda": "Un caso por línea: el caso y qué pasa." },
+            { "id": "preguntas-abiertas", "nombre": "Preguntas abiertas", "tipo": "lista" }
+          ]
+        },
+        {
+          "id": "ficha-instancia",
+          "nombre": "Ficha de instancia",
+          "plantilla": "05b-ficha-instancia.md",
+          "campos": [
+            { "id": "nombre", "nombre": "Nombre", "tipo": "texto", "ayuda": "Nombre de la instancia." },
+            { "id": "capacidad", "nombre": "Capacidad a la que pertenece", "tipo": "texto", "ayuda": "Nombre de la capacidad." },
+            { "id": "origen", "nombre": "Origen", "tipo": "texto", "ayuda": "Core, Feature…" },
+            { "id": "para-que-sirve", "nombre": "Para qué sirve, en una frase", "tipo": "texto", "ayuda": "Qué registra o qué hace esta instancia." },
+            { "id": "pasos", "nombre": "Pasos", "tipo": "lista", "ayuda": "Un paso por línea, en orden." },
+            { "id": "que-registra", "nombre": "Qué registra la persona al terminar", "tipo": "texto-largo", "ayuda": "Valores posibles y datos que se guardan. Excepciones, si las hay." },
+            { "id": "como-se-cuenta", "nombre": "Cómo se cuenta", "tipo": "texto-largo", "ayuda": "Cómo se interpretan los valores para medir." },
+            { "id": "prerrequisitos", "nombre": "Prerrequisitos", "tipo": "texto-largo", "ayuda": "Otras instancias o condiciones necesarias, o \"Ninguno\"." },
+            { "id": "fuente", "nombre": "Fuente", "tipo": "texto", "ayuda": "De dónde sale el contenido." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "user-flow",
+      "orden": 6,
+      "nombre": "User flow",
+      "tipo": "visual",
+      "origenes": ["fichas"],
+      "plantilla": "06-user-flow.md",
+      "campos": [],
+      "checklist": [
+        { "id": "pasos-terminan-en-pantalla", "texto": "Todo paso termina en una pantalla con nombre, no en un estado." },
+        { "id": "momentos-en-el-flujo", "texto": "Cada momento de cada ficha aparece en el flujo." },
+        { "id": "excepcion-por-momento", "texto": "Hay al menos un flujo de excepción por momento." }
+      ],
+      "evidencia": "enlace-o-adjunto"
+    },
+    {
+      "id": "story-map",
+      "orden": 7,
+      "nombre": "Story map",
+      "tipo": "estructurado",
+      "origenes": ["mapa-de-piezas", "fichas", "user-flow"],
+      "plantilla": "07-story-map.md",
+      "campos": [
+        { "id": "leyenda-de-codigos", "nombre": "Leyenda de códigos", "tipo": "texto-largo", "ayuda": "[letra] = [actividad]; el número identifica la historia dentro de su actividad." },
+        { "id": "decisiones-linea-de-corte", "nombre": "Decisiones de la línea de corte", "tipo": "lista", "ayuda": "Una decisión por línea, con su motivo." },
+        { "id": "correcciones-a-las-fichas", "nombre": "Correcciones a las fichas", "tipo": "lista", "ayuda": "Qué hueco apareció y en qué ficha se corrigió. El story map no se cierra hasta que las tres tablas estén completas." }
+      ],
+      "elementos": [
+        {
+          "id": "actividad",
+          "nombre": "Actividad",
+          "plantilla": "07-story-map.md",
+          "campos": [
+            { "id": "letra", "nombre": "Letra", "tipo": "texto", "ayuda": "Letra que identifica la actividad en los códigos de las historias." },
+            { "id": "actividad", "nombre": "Actividad", "tipo": "texto", "ayuda": "Lo que hace la persona, en el orden de la columna vertebral." },
+            { "id": "para-que-sirve", "nombre": "Para qué sirve, en una frase", "tipo": "texto" }
+          ]
+        },
+        {
+          "id": "historia",
+          "nombre": "Historia",
+          "plantilla": "07-story-map.md",
+          "campos": [
+            { "id": "codigo", "nombre": "Código", "tipo": "texto", "ayuda": "Letra de la actividad y número de la historia, por ejemplo C1." },
+            { "id": "actividad", "nombre": "Actividad", "tipo": "texto", "ayuda": "Letra o nombre de la actividad a la que pertenece." },
+            { "id": "paso", "nombre": "Paso", "tipo": "texto", "ayuda": "Paso de la actividad bajo el que va la historia." },
+            { "id": "actor", "nombre": "Actor", "tipo": "texto", "ayuda": "Persona o Sistema." },
+            { "id": "historia", "nombre": "Historia", "tipo": "texto-largo" },
+            { "id": "entra-en-walking-skeleton", "nombre": "Entra en el walking skeleton", "tipo": "texto", "ayuda": "Sí o No. Las que no entran quedan debajo de la línea de corte, para después del walking skeleton." }
+          ]
+        },
+        {
+          "id": "fila-crud",
+          "nombre": "Fila de la tabla CRUD",
+          "plantilla": "07-story-map.md",
+          "campos": [
+            { "id": "objeto", "nombre": "Objeto", "tipo": "texto" },
+            { "id": "crear", "nombre": "Crear", "tipo": "texto", "ayuda": "Código de la historia o ✗." },
+            { "id": "ver", "nombre": "Ver", "tipo": "texto", "ayuda": "Código de la historia o ✗." },
+            { "id": "editar", "nombre": "Editar", "tipo": "texto", "ayuda": "Código de la historia o ✗." },
+            { "id": "borrar", "nombre": "Borrar", "tipo": "texto", "ayuda": "Código de la historia o ✗." },
+            { "id": "fuera-a-proposito", "nombre": "Fuera a propósito (\"Don't care\")", "tipo": "texto-largo", "ayuda": "Qué queda fuera y por qué." }
+          ]
+        },
+        {
+          "id": "fila-estados",
+          "nombre": "Fila de la tabla de estados",
+          "plantilla": "07-story-map.md",
+          "campos": [
+            { "id": "objeto", "nombre": "Objeto", "tipo": "texto" },
+            { "id": "estado", "nombre": "Estado", "tipo": "texto" },
+            { "id": "evento", "nombre": "Evento", "tipo": "texto" },
+            { "id": "resultado", "nombre": "Resultado", "tipo": "texto", "ayuda": "Nuevo estado o acción." }
+          ]
+        },
+        {
+          "id": "fila-navegacion",
+          "nombre": "Fila de la tabla de navegación",
+          "plantilla": "07-story-map.md",
+          "campos": [
+            { "id": "pantalla", "nombre": "Pantalla", "tipo": "texto" },
+            { "id": "accion", "nombre": "Acción", "tipo": "texto" },
+            { "id": "lleva-a", "nombre": "Lleva a", "tipo": "texto", "ayuda": "Pantalla a la que lleva." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wireframes",
+      "orden": 8,
+      "nombre": "Wireframes",
+      "tipo": "visual",
+      "origenes": ["user-flow", "story-map"],
+      "plantilla": "08-wireframes.md",
+      "campos": [
+        { "id": "pantallas", "nombre": "Pantallas", "tipo": "lista", "ayuda": "Una pantalla por línea: nombre, códigos de las historias del story map que cubre y estados dibujados (ideal, vacía, con error, sin permiso). Solo las que entran en el walking skeleton." }
+      ],
+      "checklist": [
+        { "id": "pantallas-con-wireframe", "texto": "Cada pantalla del user flow que entra en el walking skeleton tiene wireframe." },
+        { "id": "estados-de-cada-pantalla", "texto": "Cada pantalla tiene sus estados: ideal, vacía, con error y sin permiso (o \"N/A\" con motivo)." },
+        { "id": "error-no-borra", "texto": "Un error de validación nunca borra lo que la persona ya escribió." }
+      ],
+      "evidencia": "enlace-o-adjunto"
+    },
+    {
+      "id": "cierre-del-alcance",
+      "orden": 9,
+      "nombre": "Cierre del alcance",
+      "tipo": "estructurado",
+      "origenes": ["hipotesis", "linea-base", "walking-skeleton", "mapa-de-piezas", "fichas", "user-flow", "story-map", "wireframes"],
+      "plantilla": "09-cierre-del-alcance.md",
+      "campos": [
+        { "id": "fecha", "nombre": "Fecha", "tipo": "texto", "ayuda": "AAAA-MM-DD." },
+        { "id": "apetito-fijado", "nombre": "Apetito fijado en la hipótesis", "tipo": "texto", "ayuda": "Tiempo." },
+        { "id": "apetito-confirmado", "nombre": "Apetito confirmado o recortado", "tipo": "texto-largo", "ayuda": "Decisión y qué se recortó." },
+        { "id": "listo-para-construir", "nombre": "Listo para construir (Definition of Ready)", "tipo": "texto-largo", "ayuda": "Por cada ítem a construir, como guía y no como compuerta: ¿revisé el CRUD de los objetos que toca? ¿Toda acción termina en una pantalla? ¿Hay al menos un criterio de excepción? ¿Los estados de la interfaz están listados o marcados \"N/A\"? ¿Queda alguna duda abierta que cambie el modelo de datos?" }
+      ],
+      "elementos": [
+        {
+          "id": "non-goal",
+          "nombre": "Lo que queda fuera (non-goal)",
+          "plantilla": "09-cierre-del-alcance.md",
+          "campos": [
+            { "id": "item", "nombre": "Ítem", "tipo": "texto" },
+            { "id": "motivo", "nombre": "Motivo", "tipo": "texto-largo" }
+          ]
+        },
+        {
+          "id": "artefacto-del-paquete",
+          "nombre": "Artefacto del paquete de producto",
+          "plantilla": "09-cierre-del-alcance.md",
+          "campos": [
+            { "id": "artefacto", "nombre": "Artefacto", "tipo": "texto", "ayuda": "Hipótesis, Línea base, Walking skeleton, Mapa de piezas, Fichas, User flow, Story map, Wireframes, Mockups, Acuerdos o Gaps y supuestos abiertos." },
+            { "id": "archivo", "nombre": "Archivo", "tipo": "texto", "ayuda": "Ruta o enlace." },
+            { "id": "estado", "nombre": "Estado", "tipo": "texto", "ayuda": "Listo o pendiente." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mockups",
+      "orden": 10,
+      "nombre": "Mockups",
+      "tipo": "visual",
+      "origenes": ["wireframes", "cierre-del-alcance"],
+      "plantilla": "10-mockups.md",
+      "campos": [
+        { "id": "pantallas", "nombre": "Pantallas", "tipo": "lista", "ayuda": "Una pantalla por línea: nombre, wireframe de origen y estados con diseño (ideal, vacía, con error, sin permiso). Solo las pantallas que quedaron dentro del alcance." }
+      ],
+      "checklist": [
+        { "id": "identidad-de-marca", "texto": "Identidad de marca aplicada." },
+        { "id": "contraste-y-tamanos", "texto": "Contraste y tamaños de texto revisados." },
+        { "id": "dentro-del-alcance", "texto": "Ninguna pantalla fuera del alcance cerrado." }
+      ],
+      "evidencia": "enlace-o-adjunto"
+    }
+  ],
+  "registros": [
+    {
+      "id": "acuerdos",
+      "nombre": "Acuerdos",
+      "plantilla": "transversal-acuerdos.md",
+      "campos": [],
+      "elementos": [
+        {
+          "id": "acuerdo",
+          "nombre": "Acuerdo",
+          "plantilla": "transversal-acuerdos.md",
+          "campos": [
+            { "id": "codigo", "nombre": "Número", "tipo": "texto", "ayuda": "A1, A2… Se añade, no se reescribe: el histórico evita volver a discutir lo ya decidido." },
+            { "id": "tema", "nombre": "Tema", "tipo": "texto", "ayuda": "Sobre qué tema es la decisión." },
+            { "id": "decision", "nombre": "La decisión, en una línea", "tipo": "texto" },
+            { "id": "detalle", "nombre": "Detalle", "tipo": "texto-largo", "ayuda": "Detalle de la decisión." },
+            { "id": "motivo", "nombre": "Motivo", "tipo": "texto-largo", "ayuda": "Por qué." },
+            { "id": "paso-del-proceso", "nombre": "Paso del proceso", "tipo": "texto", "ayuda": "En qué paso se tomó." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gaps-y-supuestos",
+      "nombre": "Gaps y supuestos",
+      "plantilla": "transversal-gaps-y-supuestos.md",
+      "campos": [],
+      "elementos": [
+        {
+          "id": "gap",
+          "nombre": "Gap",
+          "plantilla": "transversal-gaps-y-supuestos.md",
+          "campos": [
+            { "id": "codigo", "nombre": "Número", "tipo": "texto", "ayuda": "G1, G2… Un gap es algo que falta definir." },
+            { "id": "gap", "nombre": "Gap", "tipo": "texto-largo", "ayuda": "Qué falta." },
+            { "id": "donde-aparecio", "nombre": "Dónde apareció", "tipo": "texto", "ayuda": "Paso o artefacto." },
+            { "id": "donde-se-debio-definir", "nombre": "Dónde se debió definir", "tipo": "texto", "ayuda": "Paso." },
+            { "id": "estado", "nombre": "Estado", "tipo": "texto", "ayuda": "Abierto o Resuelto." },
+            { "id": "resolucion", "nombre": "Resolución", "tipo": "texto-largo", "ayuda": "Cómo y dónde quedó." }
+          ]
+        },
+        {
+          "id": "supuesto",
+          "nombre": "Supuesto",
+          "plantilla": "transversal-gaps-y-supuestos.md",
+          "campos": [
+            { "id": "codigo", "nombre": "Número", "tipo": "texto", "ayuda": "S1, S2… Un supuesto es algo que se da por hecho sin haberlo comprobado." },
+            { "id": "supuesto", "nombre": "Supuesto", "tipo": "texto-largo", "ayuda": "Lo que se da por hecho." },
+            { "id": "tipo", "nombre": "Tipo", "tipo": "texto", "ayuda": "Deseabilidad, Factibilidad, Usabilidad, Viabilidad o Ética." },
+            { "id": "riesgo-si-es-falso", "nombre": "Riesgo si es falso", "tipo": "texto-largo", "ayuda": "Impacto." },
+            { "id": "como-se-verifica", "nombre": "Cómo se verifica", "tipo": "texto-largo", "ayuda": "Prueba." },
+            { "id": "estado", "nombre": "Estado", "tipo": "texto", "ayuda": "Abierto, Confirmado o Desmentido." }
+          ]
+        }
+      ]
+    }
+  ]
+}

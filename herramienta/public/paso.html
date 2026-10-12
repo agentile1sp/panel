@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Paso del recorrido</title>
+    <link rel="stylesheet" href="/css/estilos.css" />
+    <script type="module" src="/js/paso.js"></script>
+  </head>
+  <body>
+    <a class="saltar" href="#principal" data-testid="paso-saltar">Saltar al contenido</a>
+    <header>
+      <nav aria-label="Navegación">
+        <a id="volver-recorrido" href="recorrido.html" data-testid="paso-volver-recorrido">Volver al recorrido</a>
+        ·
+        <a href="/" data-testid="paso-volver-catalogo">Catálogo</a>
+      </nav>
+    </header>
+    <main id="principal">
+      <p id="producto" class="producto" data-testid="paso-producto"></p>
+      <h1 id="titulo" data-testid="paso-titulo">Paso del recorrido</h1>
+      <p>Estado: <span id="estado-actual" class="estado" data-testid="paso-estado-actual"></span></p>
+      <p id="bloqueo" class="aviso" hidden data-testid="paso-bloqueo"></p>
+      <div id="mensaje" class="mensaje" role="status" aria-live="polite" hidden data-testid="paso-mensaje"></div>
+
+      <section aria-labelledby="titulo-estado">
+        <h2 id="titulo-estado">Estado del paso</h2>
+        <form id="form-estado" data-testid="paso-form-estado">
+          <fieldset id="grupo-estado" class="sin-borde">
+            <label for="selector-estado">Estado</label>
+            <select id="selector-estado" name="estado" data-testid="paso-selector-estado">
+              <option value="pendiente">Pendiente</option>
+              <option value="en-curso">En curso</option>
+              <option value="completo">Completo</option>
+            </select>
+            <button type="submit" data-testid="paso-cambiar-estado">Cambiar estado</button>
+          </fieldset>
+        </form>
+      </section>
+
+      <section aria-labelledby="titulo-contenido">
+        <h2 id="titulo-contenido">Contenido</h2>
+        <form id="form-contenido" data-testid="paso-form-contenido">
+          <fieldset id="grupo-contenido" class="sin-borde">
+            <div id="campos" data-testid="paso-campos"></div>
+            <div id="elementos" data-testid="paso-elementos"></div>
+
+            <fieldset id="seccion-checklist" hidden data-testid="paso-checklist">
+              <legend>Checklist</legend>
+              <div id="checklist"></div>
+            </fieldset>
+
+            <fieldset id="seccion-evidencia" hidden data-testid="paso-evidencia">
+              <legend>Enlace o archivo adjunto</legend>
+              <fieldset class="sin-borde">
+                <legend>¿Qué quieres guardar?</legend>
+                <span class="opcion">
+                  <input type="radio" id="evidencia-ninguna" name="evidencia-tipo" value="ninguna" data-testid="paso-evidencia-ninguna" />
+                  <label for="evidencia-ninguna">Nada por ahora</label>
+                </span>
+                <span class="opcion">
+                  <input type="radio" id="evidencia-enlace" name="evidencia-tipo" value="enlace" data-testid="paso-evidencia-enlace" />
+                  <label for="evidencia-enlace">Un enlace</label>
+                </span>
+                <span class="opcion">
+                  <input type="radio" id="evidencia-adjunto" name="evidencia-tipo" value="adjunto" data-testid="paso-evidencia-adjunto" />
+                  <label for="evidencia-adjunto">Un archivo adjunto</label>
+                </span>
+              </fieldset>
+              <div class="campo">
+                <label for="evidencia-url">Enlace (debe empezar por http:// o https://)</label>
+                <input type="url" id="evidencia-url" name="evidencia-url" data-testid="paso-evidencia-url" />
+              </div>
+              <p id="adjunto-actual" data-testid="paso-adjunto-actual">Todavía no hay ningún archivo adjunto.</p>
+              <div class="campo">
+                <label for="evidencia-archivo">Archivo para adjuntar (máximo 10 MB)</label>
+                <input type="file" id="evidencia-archivo" name="evidencia-archivo" data-testid="paso-evidencia-archivo" />
+              </div>
+              <button type="button" id="subir-adjunto" data-testid="paso-subir-adjunto">Subir adjunto</button>
+            </fieldset>
+          </fieldset>
+          <div class="acciones">
+            <button type="submit" id="guardar" class="principal" data-testid="paso-guardar">Guardar</button>
+            <p class="ayuda">Guardar no marca el paso como Completo: el estado se cambia en "Estado del paso".</p>
+          </div>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

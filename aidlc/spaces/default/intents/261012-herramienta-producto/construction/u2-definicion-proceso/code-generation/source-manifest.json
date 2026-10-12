@@ -1,0 +1,23 @@
+{
+  "stage": "code-generation",
+  "unit": "u2-definicion-proceso",
+  "version": 1,
+  "writes": [
+    { "path": "herramienta/proceso/definicion-proceso.json" },
+    { "path": "herramienta/src/definicion/cargar.js" },
+    { "path": "herramienta/src/definicion/validar.js" },
+    { "path": "herramienta/src/definicion/definicion.js" },
+    { "path": "herramienta/src/definicion/index.js" },
+    { "path": "herramienta/src/main.js" },
+    { "path": "herramienta/src/base/config.js" },
+    { "path": "herramienta/src/base/errores.js" },
+    { "path": "herramienta/docs/formato-datos.md" },
+    { "path": "herramienta/README.md" },
+    { "path": "herramienta/tests/ayudas/definicion-temporal.js" },
+    { "path": "herramienta/tests/u2-definicion-proceso/humo.test.js" },
+    { "path": "herramienta/tests/u2-definicion-proceso/archivo.test.js" },
+    { "path": "herramienta/tests/u2-definicion-proceso/validar.test.js" },
+    { "path": "herramienta/tests/u2-definicion-proceso/consultas.test.js" },
+    { "path": "herramienta/tests/u2-definicion-proceso/arranque.test.js" }
+  ]
+}

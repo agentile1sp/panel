@@ -1,0 +1,290 @@
+/* Estilos de las pantallas de la herramienta: sencillos, legibles y con el
+   foco del teclado siempre visible (NFR4). El estado de cada paso se muestra
+   siempre con texto; el color solo lo refuerza. */
+
+:root {
+  --texto: #1d1d1f;
+  --texto-suave: #4a4a4f;
+  --fondo: #ffffff;
+  --fondo-suave: #f4f5f7;
+  --borde: #c4c7cc;
+  --acento: #1a5fb4;
+  --foco: #f5a300;
+  --exito: #1e7b34;
+  --error: #b3261e;
+  --aviso: #8a5a00;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--texto);
+  background: var(--fondo);
+}
+
+main,
+header {
+  max-width: 52rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+header {
+  padding-top: 1rem;
+}
+
+h1 {
+  font-size: 1.75rem;
+  margin: 0.5rem 0;
+}
+
+h2 {
+  font-size: 1.3rem;
+  margin-top: 2rem;
+}
+
+a {
+  color: var(--acento);
+}
+
+/* Foco del teclado visible en todos los controles. */
+:focus-visible {
+  outline: 3px solid var(--foco);
+  outline-offset: 2px;
+}
+
+.saltar {
+  position: absolute;
+  left: -999px;
+}
+
+.saltar:focus {
+  left: 1rem;
+  top: 1rem;
+  background: var(--fondo);
+  padding: 0.5rem;
+  z-index: 1;
+}
+
+.producto {
+  color: var(--texto-suave);
+  margin: 0.5rem 0 0;
+}
+
+/* Estados: texto con un borde de color que solo lo refuerza. */
+.estado {
+  display: inline-block;
+  padding: 0 0.5rem;
+  border: 2px solid var(--borde);
+  border-radius: 0.25rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.estado-pendiente {
+  border-color: var(--borde);
+}
+
+.estado-en-curso {
+  border-color: var(--aviso);
+}
+
+.estado-completo {
+  border-color: var(--exito);
+}
+
+.lista-pasos {
+  padding-left: 1.5rem;
+}
+
+.lista-pasos li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--fondo-suave);
+}
+
+.lista-pasos .nombre-paso {
+  font-weight: 600;
+  margin-right: 0.5rem;
+}
+
+.faltan,
+.aviso {
+  color: var(--aviso);
+}
+
+.aviso {
+  border-left: 4px solid var(--aviso);
+  padding: 0.5rem 0.75rem;
+  background: var(--fondo-suave);
+}
+
+.mensaje {
+  padding: 0.5rem 0.75rem;
+  border-left: 4px solid var(--acento);
+  background: var(--fondo-suave);
+  white-space: pre-line;
+}
+
+.mensaje-exito {
+  border-left-color: var(--exito);
+}
+
+.mensaje-error {
+  border-left-color: var(--error);
+  color: var(--error);
+}
+
+fieldset {
+  border: 1px solid var(--borde);
+  border-radius: 0.25rem;
+  margin: 1rem 0;
+  padding: 0.75rem 1rem;
+}
+
+fieldset.sin-borde {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+legend {
+  font-weight: 600;
+  padding: 0 0.25rem;
+}
+
+.campo {
+  margin: 0.75rem 0;
+}
+
+.campo label {
+  display: block;
+  font-weight: 600;
+}
+
+.ayuda {
+  margin: 0.15rem 0 0.35rem;
+  color: var(--texto-suave);
+  font-size: 0.9rem;
+}
+
+input[type="text"],
+input[type="url"],
+textarea,
+select {
+  width: 100%;
+  padding: 0.4rem 0.5rem;
+  font: inherit;
+  border: 1px solid var(--borde);
+  border-radius: 0.25rem;
+  background: var(--fondo);
+  color: var(--texto);
+}
+
+select {
+  width: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.opcion {
+  display: block;
+  margin: 0.25rem 0;
+}
+
+button {
+  font: inherit;
+  padding: 0.4rem 0.9rem;
+  margin: 0.25rem 0.5rem 0.25rem 0;
+  border: 1px solid var(--acento);
+  border-radius: 0.25rem;
+  background: var(--fondo);
+  color: var(--acento);
+  cursor: pointer;
+}
+
+button.principal {
+  background: var(--acento);
+  color: #ffffff;
+}
+
+button:disabled,
+input:disabled,
+textarea:disabled,
+select:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.elemento {
+  background: var(--fondo-suave);
+}
+
+.acciones {
+  margin-top: 1rem;
+}
+
+/* Catálogo de productos (U4). */
+.lista-productos {
+  list-style: none;
+  padding: 0;
+}
+
+.lista-productos li {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--fondo-suave);
+}
+
+.lista-productos .nombre-producto {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.paso-actual {
+  margin: 0.25rem 0;
+}
+
+.acciones-producto button {
+  margin-top: 0;
+}
+
+.error-campo {
+  margin: 0.25rem 0 0;
+  color: var(--error);
+  font-weight: 600;
+}
+
+input[aria-invalid="true"] {
+  border: 2px solid var(--error);
+}
+
+button.peligro {
+  border-color: var(--error);
+  background: var(--error);
+  color: #ffffff;
+}
+
+dialog {
+  max-width: 32rem;
+  width: calc(100% - 2rem);
+  border: 1px solid var(--borde);
+  border-radius: 0.5rem;
+  padding: 1rem 1.25rem;
+  color: var(--texto);
+  background: var(--fondo);
+}
+
+dialog h2 {
+  margin-top: 0;
+}
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.45);
+}

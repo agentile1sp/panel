@@ -31,3 +31,6 @@ aidlc/.aidlc-readonly-latch
 
 # macOS
 .DS_Store
+
+# Herramienta de producto: datos locales de la persona usuaria
+herramienta/datos/

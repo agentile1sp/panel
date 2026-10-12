@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Recorrido del producto</title>
+    <link rel="stylesheet" href="/css/estilos.css" />
+    <script type="module" src="/js/recorrido.js"></script>
+  </head>
+  <body>
+    <a class="saltar" href="#principal" data-testid="recorrido-saltar">Saltar al contenido</a>
+    <header>
+      <nav aria-label="Navegación">
+        <a href="/" data-testid="recorrido-volver-catalogo">Volver al catálogo</a>
+      </nav>
+    </header>
+    <main id="principal">
+      <h1 id="titulo" data-testid="recorrido-titulo">Recorrido del producto</h1>
+      <p id="paso-actual" data-testid="recorrido-paso-actual"></p>
+      <div id="mensaje" class="mensaje" role="status" aria-live="polite" hidden data-testid="recorrido-mensaje"></div>
+
+      <section aria-labelledby="titulo-pasos">
+        <h2 id="titulo-pasos">Pasos del proceso</h2>
+        <ol id="lista-pasos" class="lista-pasos" data-testid="recorrido-lista-pasos"></ol>
+      </section>
+
+      <section aria-labelledby="titulo-registros">
+        <h2 id="titulo-registros">Registros</h2>
+        <p class="ayuda">Los registros de acuerdos, y de gaps y supuestos, se pueden usar siempre, en cualquier paso.</p>
+        <ul id="lista-registros" data-testid="recorrido-lista-registros"></ul>
+      </section>
+    </main>
+  </body>
+</html>
